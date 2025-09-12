@@ -28,11 +28,14 @@
                         <a class="nav-link active" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/about">About</a>
+                        <Link class="nav-link" href="/vocabulary">Vocabulary</Link>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/contact">Contact</a>
+                        <Link class="nav-link" href="/vocabulary-test">Vocabulary Test</Link>
                     </li>
+                   <li class="nav-item">
+                       <Link class="nav-link" href="/login">Login</Link>
+                   </li>
                 </ul>
             </div>
         </div>

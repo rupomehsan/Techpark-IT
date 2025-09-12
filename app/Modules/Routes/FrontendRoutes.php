@@ -28,3 +28,6 @@ Route::get('/login', [BackendAuthController::class, 'LoginPage'])->name('LoginPa
 
 // Website Routes
 Route::get('/', [FrontendController::class, 'HomePage'])->name("website");
+Route::get('/vocabulary', [FrontendController::class, 'VocabularyPage'])->name("vocabulary");
+Route::get('/vocabulary-test', [FrontendController::class, 'VocabularyTestPage'])->name("vocabulary-test");
+

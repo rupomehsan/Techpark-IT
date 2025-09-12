@@ -17,4 +17,20 @@ class FrontendController extends Controller
             ]
         ]);
     }
+    public function VocabularyPage()
+    {
+        return Inertia::render('Words/Index', [
+            'event' => [
+                'title' => 'Words Page',
+            ]
+        ]);
+    }
+    public function VocabularyTestPage()
+    {
+        return Inertia::render('VocabularyTest/Index', [
+            'event' => [
+                'title' => 'Words Page',
+            ]
+        ]);
+    }
 }
