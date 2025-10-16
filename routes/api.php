@@ -2,12 +2,26 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
-| API Routes
+| Admin API Routes
 |--------------------------------------------------------------------------
 */
 
+require_once __DIR__ . '/../Modules/Routes/Backend/ApiRoutes.php';
 
-require_once __DIR__ . '/../app/Modules/Routes/ApiRoutes.php';
+/*
+|--------------------------------------------------------------------------
+| Frontend API Routes
+|--------------------------------------------------------------------------
+*/
+
+require_once __DIR__ . '/../Modules/Routes/Frontend/ApiRoutes.php';
+
+/*
+|--------------------------------------------------------------------------
+| Test API Routes
+|--------------------------------------------------------------------------
+*/
+
+require_once __DIR__ . '/test.php';

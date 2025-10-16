@@ -1,6 +1,7 @@
 import "./Plugins/axios_setup.js";
 import "./Plugins/sweet_alert.js";
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { createApp, h } from "vue";
 import { createInertiaApp, Link, Head } from "@inertiajs/vue3";
 import { createPinia } from "pinia";
@@ -28,5 +29,5 @@ createInertiaApp({
         app.mount(el);
     },
 
-    title: (title) => `Boiler Template : ${title}`,
+    title: (title) => `My Dictionary : ${title}`,
 });

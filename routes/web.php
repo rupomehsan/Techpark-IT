@@ -7,7 +7,7 @@
 |
 */
 
-require_once __DIR__ . '/../app/Modules/Routes/FrontendRoutes.php';
+require_once __DIR__ . '/../Modules/Routes/Frontend/WebRoutes.php';
 
 /*
 |--------------------------------------------------------------------------
@@ -16,7 +16,7 @@ require_once __DIR__ . '/../app/Modules/Routes/FrontendRoutes.php';
 |
 */
 
-require_once __DIR__ . '/../app/Modules/Routes/BackendRoutes.php';
+require_once __DIR__ . '/../Modules/Routes/Backend/WebRoutes.php';
 
 /*
 |--------------------------------------------------------------------------
