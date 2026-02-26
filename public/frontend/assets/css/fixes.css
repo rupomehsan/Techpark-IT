@@ -1,0 +1,93 @@
+/* Fix for portfolio carousel dots - ensure proper positioning */
+#portfolio .portfolio-two__carousel .owl-dots {
+    position: relative;
+    margin-top: 40px;
+    text-align: center;
+}
+
+/* Fix for testimonial carousel dots - ensure only one set shows and properly positioned */
+#testimonial .testimonial-two__carousel .owl-dots {
+    position: relative;
+    margin-top: 40px;
+    text-align: center;
+}
+
+/* Ensure multiple owl-dots don't stack or duplicate */
+.owl-carousel .owl-dots + .owl-dots {
+    display: none !important;
+}
+
+/* Fix navSidebar button icon display */
+.navSidebar-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.navSidebar-button:hover {
+    opacity: 0.7;
+}
+
+/* Ensure icon dots are visible as circular dots */
+.icon-dots-menu-one,
+.icon-dots-menu-two,
+.icon-dots-menu-three {
+    display: block;
+    width: 6px;
+    height: 6px;
+    background-color: currentColor;
+    border-radius: 50%;
+}
+
+/* Alternative: if icons should be horizontal lines (hamburger style) */
+.navSidebar-button .icon-dots-menu-one,
+.navSidebar-button .icon-dots-menu-two,
+.navSidebar-button .icon-dots-menu-three {
+    width: 20px;
+    height: 2px;
+    background-color: var(--techguru-primary, #FE5D14);
+    border-radius: 2px;
+}
+
+
+/* Ensure titles are visible with fallback, but allow animations */
+.title-animation {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Fallback: ensure visibility if animations don't load within 2 seconds */
+.title-animation:not(.animated) {
+    animation: ensureVisible 0s 2s forwards;
+}
+
+@keyframes ensureVisible {
+    to {
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+}
+
+/* Make sure child elements are visible by default */
+.title-animation > div,
+.title-animation > span {
+    opacity: 1;
+}
+
+/* Ensure sidebar opens properly */
+.xs-sidebar-group.info-group {
+    transition: all 0.3s ease;
+}
+
+.xs-sidebar-group.info-group.isActive {
+    visibility: visible !important;
+}
+
+.xs-sidebar-group.info-group.isActive .xs-sidebar-widget {
+    transform: translateX(0) !important;
+}
