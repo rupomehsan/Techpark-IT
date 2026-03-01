@@ -82,7 +82,7 @@
                         <div class="content-inner">
                             <div class="logo">
                                 <a href="https://laravel-techguru.mnsithub.com/index"><img
-                                        src="{{ asset('frontend/assets/images/logo-1.png') }}" alt=""></a>
+                                        src="{{ asset('frontend/assets/images/logo_big.png') }}" alt=""></a>
                             </div>
                             <div class="content-box">
                                 <h4>About Us</h4>
@@ -184,12 +184,13 @@
                                 <li>
                                     <a href="#portfolio">Portfolio</a>
                                 </li>
+                                 <li>
+                                    <a href="#team">Our Team</a>
+                                </li>
                                 <li>
                                     <a href="#blog">Blog</a>
                                 </li>
-                                <li>
-                                    <a href="#events">Events</a>
-                                </li>
+                               
                                 <li>
                                     <a href="#testimonial">Testimonials</a>
                                 </li>
@@ -435,11 +436,7 @@
         </div><!-- /.stricky-header -->
         <!-- /.stricky-header -->
 
-        @php
-        // Include Homepage Dynamic Content Data
-        require resource_path('views/data/homepage-data.blade.php');
-        @endphp
-
+      
         <!--Main Slider Two Start-->
         <section id="home" class="main-slider-two">
             <div class="swiper-container thm-swiper__slider swiper-container-fade swiper-container-initialized swiper-container-horizontal"
@@ -458,17 +455,14 @@
                     &quot;delay&quot;: 8000
                 } 
             }">
+
                 <div class="swiper-wrapper">
                     @foreach ($sliderData as $index => $slide)
                         <div class="swiper-slide" data-swiper-slide-index="{{ $index }}">
                             <div class="main-slider-two__bg"
                                 style="background-image: url({{ asset($slide['background_image']) }});">
                             </div>
-                            <ul class="list-unstyled main-slider-two__menu">
-                                <li><a href="#about">Help</a></li>
-                                <li><a href="#contact">Support</a></li>
-                                <li><a href="#services">Services</a></li>
-                            </ul>
+                          
                             <div class="main-slider-two__social-box">
                                 <h4 class="main-slider-two__social-title">Follow Us:</h4>
                                 <div class="main-slider-two__social-box-inner">
@@ -613,8 +607,6 @@
                     @endforeach
                 </div>
 
-
-
                 <!-- If we need navigation buttons -->
                 <div class="main-slider-two__nav">
                     <div class="swiper-button-prev" id="main-slider__swiper-button-next" tabindex="0"
@@ -644,11 +636,11 @@
                         <div class="about-two__left">
                             <div class="about-two__img-box">
                                 <div class="about-two__img">
-                                    <img src="{{ asset('frontend/assets/images/about-two-img-1.jpg') }}"
+                                    <img src="{{ asset($aboutData['image']) }}"
                                         alt="">
                                 </div>
                                 <div class="about-two__img-2">
-                                    <img src="{{ asset('frontend/assets/images/about-two-img-2.jpg') }}"
+                                    <img src="{{ asset($aboutData['image_2']) }}"
                                         alt="">
                                 </div>
                                 <div class="about-two__shape-1"></div>
@@ -679,24 +671,9 @@
                                     </li>
                                 </ul>
                                 <p class="about-two__client-text"><span class="odometer odometer-auto-theme"
-                                        data-count="120">
-                                        <div class="odometer-inside"><span class="odometer-digit"><span
-                                                    class="odometer-digit-spacer">8</span><span
-                                                    class="odometer-digit-inner"><span class="odometer-ribbon"><span
-                                                            class="odometer-ribbon-inner"><span
-                                                                class="odometer-value">1</span></span></span></span></span><span
-                                                class="odometer-digit"><span
-                                                    class="odometer-digit-spacer">8</span><span
-                                                    class="odometer-digit-inner"><span class="odometer-ribbon"><span
-                                                            class="odometer-ribbon-inner"><span
-                                                                class="odometer-value">2</span></span></span></span></span><span
-                                                class="odometer-digit"><span
-                                                    class="odometer-digit-spacer">8</span><span
-                                                    class="odometer-digit-inner"><span class="odometer-ribbon"><span
-                                                            class="odometer-ribbon-inner"><span
-                                                                class="odometer-value">0</span></span></span></span></span>
-                                        </div>
-                                    </span><span>K</span> Satisfied Client</p>
+                                        data-count="{{ $aboutData['satisfied_clients'] }}">
+                                        
+                                    </span><span>+</span> Satisfied Client</p>
                             </div>
                         </div>
                     </div>
@@ -705,7 +682,7 @@
                             <div class="section-title text-left sec-title-animation animation-style2">
                                 <div class="section-title__tagline-box">
                                     <div class="section-title__tagline-shape-1"></div>
-                                    <span class="section-title__tagline">About Us</span>
+                                    <span class="section-title__tagline">{{ $aboutData['tagline'] }}</span>
                                     <div class="section-title__tagline-shape-2"></div>
                                 </div>
                                 <h2 class="section-title__title title-animation" style="perspective: 400px;">
@@ -947,43 +924,37 @@
                                     </div>
                                 </h2>
                             </div>
-                            <p class="about-two__text">Transform your business with our innovative IT solutions,
-                                tailored to address your unique challenges and drive growth in today’s digital
-                                landscape.</p>
+                            <p class="about-two__text">{{ $aboutData['description'] }}</p>
                             <div class="about-two__points-box">
                                 <ul class="about-two__points-list list-unstyled">
+                                    @foreach($aboutData['features'] as $index => $feature)
+                                        @if($index < 2)
                                     <li>
                                         <div class="icon">
-                                            <span class="fas fa-check-circle"></span>
+                                            <i class="{{ $feature['icon'] }}"></i>
                                         </div>
-                                        <p>Customized Solutions for<br> Every Business</p>
+                                        <p>{{ $feature['text'] }}</p>
                                     </li>
-                                    <li>
-                                        <div class="icon">
-                                            <span class="fas fa-check-circle"></span>
-                                        </div>
-                                        <p>Enhanced Security and Data<br> Protection</p>
-                                    </li>
+                                        @endif
+                                    @endforeach
                                 </ul>
                                 <ul class="about-two__points-list list-unstyled">
+                                    @foreach($aboutData['features'] as $index => $feature)
+                                        @if($index >= 2)
                                     <li>
                                         <div class="icon">
-                                            <span class="fas fa-check-circle"></span>
+                                            <i class="{{ $feature['icon'] }}"></i>
                                         </div>
-                                        <p>Scalable Infrastructure for<br> Growth</p>
+                                        <p>{{ $feature['text'] }}</p>
                                     </li>
-                                    <li>
-                                        <div class="icon">
-                                            <span class="fas fa-check-circle"></span>
-                                        </div>
-                                        <p>Continuous system<br> monitoring and expert<br> support</p>
-                                    </li>
+                                        @endif
+                                    @endforeach
                                 </ul>
                             </div>
                             <div class="about-two__experience-contact-and-btn">
                                 <div class="about-two__experience-box">
                                     <div class="about-two__experience-count-box">
-                                        <h3 class="odometer odometer-auto-theme" data-count="25">
+                                        <h3 class="odometer odometer-auto-theme" data-count="{{ $aboutData['experience_years'] }}">
                                             <div class="odometer-inside"><span class="odometer-digit"><span
                                                         class="odometer-digit-spacer">8</span><span
                                                         class="odometer-digit-inner"><span
@@ -1010,11 +981,11 @@
                                     </div>
                                     <div class="about-two__call-content">
                                         <span>call us for inquiry</span>
-                                        <p><a href="tel:00123456767"> 00 (123) 456767</a></p>
+                                        <p><a href="tel:{{ $aboutData['phone_raw'] }}">{{ $aboutData['phone'] }}</a></p>
                                     </div>
                                 </div>
                                 <div class="about-two__btn-box">
-                                    <a href="https://laravel-techguru.mnsithub.com/about" class="thm-btn">Learn
+                                    <a href="/#about" class="thm-btn">Learn
                                         More<span class="fas fa-arrow-right"></span></a>
                                 </div>
                             </div>
@@ -1032,17 +1003,18 @@
             </div>
             <div class="container">
                 <div class="row">
+                    @foreach($counterData as $counter)
                     <!--Counter Two Single Start-->
                     <div class="col-xl-3 col-lg-6 col-md-6">
                         <div class="counter-two__single">
                             <div class="counter-two__icon-inner">
                                 <div class="counter-two__icon">
-                                    <span class="fas fa-trophy"></span>
+                                    <span class="{{ $counter['icon'] }}"></span>
                                 </div>
                             </div>
                             <div class="counter-two__content">
                                 <div class="counter-two__count-box">
-                                    <h3 class="odometer odometer-auto-theme" data-count="120">
+                                    <h3 class="odometer odometer-auto-theme" data-count="{{ $counter['count'] }}">
                                         <div class="odometer-inside"><span class="odometer-digit"><span
                                                     class="odometer-digit-spacer">8</span><span
                                                     class="odometer-digit-inner"><span class="odometer-ribbon"><span
@@ -1060,113 +1032,20 @@
                                                                 class="odometer-value">0</span></span></span></span></span>
                                         </div>
                                     </h3>
-                                    <span> </span>
+                                    <span>{{ $counter['suffix'] }}</span>
                                 </div>
-                                <p class="counter-two__text">Creative Plus award</p>
+                                <p class="counter-two__text">{!! $counter['title'] !!}</p>
                             </div>
                         </div>
                     </div>
                     <!--Counter Two Single End-->
-                    <!--Counter Two Single Start-->
-                    <div class="col-xl-3 col-lg-6 col-md-6">
-                        <div class="counter-two__single">
-                            <div class="counter-two__icon-inner">
-                                <div class="counter-two__icon">
-                                    <span class="fas fa-user"></span>
-                                </div>
-                            </div>
-                            <div class="counter-two__content">
-                                <div class="counter-two__count-box">
-                                    <h3 class="odometer odometer-auto-theme" data-count="300">
-                                        <div class="odometer-inside"><span class="odometer-digit"><span
-                                                    class="odometer-digit-spacer">8</span><span
-                                                    class="odometer-digit-inner"><span class="odometer-ribbon"><span
-                                                            class="odometer-ribbon-inner"><span
-                                                                class="odometer-value">3</span></span></span></span></span><span
-                                                class="odometer-digit"><span
-                                                    class="odometer-digit-spacer">8</span><span
-                                                    class="odometer-digit-inner"><span class="odometer-ribbon"><span
-                                                            class="odometer-ribbon-inner"><span
-                                                                class="odometer-value">0</span></span></span></span></span><span
-                                                class="odometer-digit"><span
-                                                    class="odometer-digit-spacer">8</span><span
-                                                    class="odometer-digit-inner"><span class="odometer-ribbon"><span
-                                                            class="odometer-ribbon-inner"><span
-                                                                class="odometer-value">0</span></span></span></span></span>
-                                        </div>
-                                    </h3>
-                                    <span> </span>
-                                </div>
-                                <p class="counter-two__text">Expert Team Members</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Counter Two Single End-->
-                    <!--Counter Two Single Start-->
-                    <div class="col-xl-3 col-lg-6 col-md-6">
-                        <div class="counter-two__single">
-                            <div class="counter-two__icon-inner">
-                                <div class="counter-two__icon">
-                                    <span class="fas fa-comment"></span>
-                                </div>
-                            </div>
-                            <div class="counter-two__content">
-                                <div class="counter-two__count-box">
-                                    <h3 class="odometer odometer-auto-theme" data-count="20">
-                                        <div class="odometer-inside"><span class="odometer-digit"><span
-                                                    class="odometer-digit-spacer">8</span><span
-                                                    class="odometer-digit-inner"><span class="odometer-ribbon"><span
-                                                            class="odometer-ribbon-inner"><span
-                                                                class="odometer-value">2</span></span></span></span></span><span
-                                                class="odometer-digit"><span
-                                                    class="odometer-digit-spacer">8</span><span
-                                                    class="odometer-digit-inner"><span class="odometer-ribbon"><span
-                                                            class="odometer-ribbon-inner"><span
-                                                                class="odometer-value">0</span></span></span></span></span>
-                                        </div>
-                                    </h3>
-                                    <span>M</span>
-                                </div>
-                                <p class="counter-two__text">Happy Clients Review</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Counter Two Single End-->
-                    <!--Counter Two Single Start-->
-                    <div class="col-xl-3 col-lg-6 col-md-6">
-                        <div class="counter-two__single">
-                            <div class="counter-two__icon-inner">
-                                <div class="counter-two__icon">
-                                    <span class="fas fa-folder"></span>
-                                </div>
-                            </div>
-                            <div class="counter-two__content">
-                                <div class="counter-two__count-box">
-                                    <h3 class="odometer odometer-auto-theme" data-count="1.5">
-                                        <div class="odometer-inside"><span class="odometer-digit"><span
-                                                    class="odometer-digit-spacer">8</span><span
-                                                    class="odometer-digit-inner"><span class="odometer-ribbon"><span
-                                                            class="odometer-ribbon-inner"><span
-                                                                class="odometer-value">1</span></span></span></span></span><span
-                                                class="odometer-formatting-mark odometer-radix-mark">.</span><span
-                                                class="odometer-digit"><span
-                                                    class="odometer-digit-spacer">8</span><span
-                                                    class="odometer-digit-inner"><span class="odometer-ribbon"><span
-                                                            class="odometer-ribbon-inner"><span
-                                                                class="odometer-value">5</span></span></span></span></span>
-                                        </div>
-                                    </h3>
-                                    <span>K</span>
-                                </div>
-                                <p class="counter-two__text">Project Completed</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Counter Two Single End-->
+                    @endforeach
                 </div>
             </div>
         </section>
         <!-- Counter Two End -->
+
+     
 
         <!-- Services Two Start -->
         <section id="services" class="services-two">
@@ -1311,8 +1190,7 @@
                                     <div
                                         style="position: relative; display: inline-block; transform: translate(0px, 0px); opacity: 1;">
                                         s</div>
-                                </div> <img src="{{ asset('frontend/assets/images/section-title-img.jpg') }}"
-                                    alt=""><span>
+                                </div> - <span>
                                     <div style="position:relative;display:inline-block;">
                                         <div
                                             style="position: relative; display: inline-block; transform: translate(0px, 0px); opacity: 1;">
@@ -1544,117 +1422,29 @@
                 </div>
                 <div class="services-two__bottom">
                     <div class="services-two__services-list">
-                        <div class="services-two__services-list-single services-two__services-list-single-1">
+                        @foreach($servicesData as $index => $service)
+                        <div class="services-two__services-list-single {{ $index === 0 ? 'services-two__services-list-single-1' : '' }}">
                             <div class="services-two__count-and-title">
                                 <div class="services-two__count"></div>
-                                <h3 class="services-two__title"><a
-                                        href="https://laravel-techguru.mnsithub.com/advanced-technology">Software
-                                        Development
-                                        <br> Solutions</a></h3>
+                                <h3 class="services-two__title">
+                                    <a href="{{ $service['link'] }}">{{ $service['title'] }}</a>
+                                </h3>
                             </div>
                             <div class="services-two__service-list-box">
                                 <ul class="services-two__services-list-inner list-unstyled">
+                                    @foreach($service['features'] as $featurePair)
                                     <li>
-                                        <p><span class="fas fa-plus"></span>UI/UX Design</p>
-                                        <p><span class="fas fa-plus"></span>Mobile Application</p>
+                                        <p><span class="fas fa-plus"></span>{{ $featurePair[0] }}</p>
+                                        <p><span class="fas fa-plus"></span>{{ $featurePair[1] }}</p>
                                     </li>
-                                    <li>
-                                        <p><span class="fas fa-plus"></span>Mobile Application</p>
-                                        <p><span class="fas fa-plus"></span>Research</p>
-                                    </li>
-                                    <li>
-                                        <p><span class="fas fa-plus"></span>Research</p>
-                                        <p><span class="fas fa-plus"></span>UI/UX Design</p>
-                                    </li>
+                                    @endforeach
                                 </ul>
                             </div>
                             <div class="services-two__hover-img">
-                                <img src="{{ asset('frontend/assets/images/services-2-1.jpg') }}" alt="Image">
+                                <img src="{{ asset($service['image']) }}" alt="{{ $service['title'] }}">
                             </div>
                         </div>
-                        <div class="services-two__services-list-single">
-                            <div class="services-two__count-and-title">
-                                <div class="services-two__count"></div>
-                                <h3 class="services-two__title"><a
-                                        href="https://laravel-techguru.mnsithub.com/data-protection-privacy">Cybersecurity
-                                        Risk
-                                        <br> Management</a></h3>
-                            </div>
-                            <div class="services-two__service-list-box">
-                                <ul class="services-two__services-list-inner list-unstyled">
-                                    <li>
-                                        <p><span class="fas fa-plus"></span>Security</p>
-                                        <p><span class="fas fa-plus"></span>Performance</p>
-                                    </li>
-                                    <li>
-                                        <p><span class="fas fa-plus"></span>Scalability</p>
-                                        <p><span class="fas fa-plus"></span>Reliability</p>
-                                    </li>
-                                    <li>
-                                        <p><span class="fas fa-plus"></span>Innovation</p>
-                                        <p><span class="fas fa-plus"></span>Efficiency</p>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="services-two__hover-img">
-                                <img src="{{ asset('frontend/assets/images/services-2-2.jpg') }}" alt="Image">
-                            </div>
-                        </div>
-                        <div class="services-two__services-list-single">
-                            <div class="services-two__count-and-title">
-                                <div class="services-two__count"></div>
-                                <h3 class="services-two__title"><a
-                                        href="https://laravel-techguru.mnsithub.com/cloud-managed-services">Cloud
-                                        Solutions
-                                        <br> Provider</a></h3>
-                            </div>
-                            <div class="services-two__service-list-box">
-                                <ul class="services-two__services-list-inner list-unstyled">
-                                    <li>
-                                        <p><span class="fas fa-plus"></span>Cloud Security</p>
-                                        <p><span class="fas fa-plus"></span>Cloud Scalability</p>
-                                    </li>
-                                    <li>
-                                        <p><span class="fas fa-plus"></span>Cloud Integration</p>
-                                        <p><span class="fas fa-plus"></span>Cloud Performance</p>
-                                    </li>
-                                    <li>
-                                        <p><span class="fas fa-plus"></span>Cloud Backup</p>
-                                        <p><span class="fas fa-plus"></span>Cloud Optimization</p>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="services-two__hover-img">
-                                <img src="{{ asset('frontend/assets/images/services-2-3.jpg') }}" alt="Image">
-                            </div>
-                        </div>
-                        <div class="services-two__services-list-single">
-                            <div class="services-two__count-and-title">
-                                <div class="services-two__count"></div>
-                                <h3 class="services-two__title"><a
-                                        href="https://laravel-techguru.mnsithub.com/backup-recovery">Data Analytics
-                                        <br> Consulting</a></h3>
-                            </div>
-                            <div class="services-two__service-list-box">
-                                <ul class="services-two__services-list-inner list-unstyled">
-                                    <li>
-                                        <p><span class="fas fa-plus"></span>Data Insights</p>
-                                        <p><span class="fas fa-plus"></span>Predictive Analytics</p>
-                                    </li>
-                                    <li>
-                                        <p><span class="fas fa-plus"></span>Big Data</p>
-                                        <p><span class="fas fa-plus"></span>Business Intelligence</p>
-                                    </li>
-                                    <li>
-                                        <p><span class="fas fa-plus"></span>Data Visualization</p>
-                                        <p><span class="fas fa-plus"></span>Data Strategy</p>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="services-two__hover-img">
-                                <img src="{{ asset('frontend/assets/images/services-2-4.jpg') }}" alt="Image">
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -1669,13 +1459,13 @@
             <div class="why-choose-one__shape-4"></div>
             <div class="why-choose-one__shape-5"></div>
             <div class="container">
-                <div class="row">
+                <div class="row align-items-center justify-content-center g-3">
                     <div class="col-xl-5">
                         <div class="why-choose-one__left">
                             <div class="section-title text-left sec-title-animation animation-style2">
                                 <div class="section-title__tagline-box">
                                     <div class="section-title__tagline-shape-1"></div>
-                                    <span class="section-title__tagline">Why Chooses Us</span>
+                                    <span class="section-title__tagline">{{ $whyChooseData['tagline'] }}</span>
                                     <div class="section-title__tagline-shape-2"></div>
                                 </div>
                                 <h2 class="section-title__title title-animation" style="perspective: 400px;">
@@ -1869,46 +1659,33 @@
                                     </div>
                                 </h2>
                             </div>
-                            <p class="why-choose-one__text">Innovating and empowering businesses with tailored
-                                solutions
-                                for success and growth. Innovating and empowering </p>
+                            <p class="why-choose-one__text">{{ $whyChooseData['description'] }}</p>
                             <ul class="why-choose-one__progress-list list-unstyled">
+                                @foreach($whyChooseData['progress_bars'] as $progress)
                                 <li>
                                     <div class="why-choose-one__progress">
-                                        <h4 class="why-choose-one__progress-title">Camping Launches</h4>
+                                        <h4 class="why-choose-one__progress-title">{{ $progress['title'] }}</h4>
                                         <div class="bar">
-                                            <div class="bar-inner count-bar counted" data-percent="86%"
-                                                style="width: 86%;">
-                                                <div class="count-text">86%</div>
+                                            <div class="bar-inner count-bar" data-percent="{{ $progress['percentage'] }}%">
+                                                <div class="count-text">{{ $progress['percentage'] }}%</div>
                                             </div>
                                         </div>
                                     </div>
                                 </li>
-                                <li>
-                                    <div class="why-choose-one__progress">
-                                        <h4 class="why-choose-one__progress-title">Innovation Design</h4>
-                                        <div class="bar">
-                                            <div class="bar-inner count-bar counted" data-percent="76%"
-                                                style="width: 76%;">
-                                                <div class="count-text">76%</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
+                                @endforeach
                             </ul>
                             <div class="why-choose-one__btn-and-client-info">
                                 <div class="why-choose-one__btn-box">
-                                    <a href="https://laravel-techguru.mnsithub.com/about" class="thm-btn">About
-                                        Us<span class="fas fa-arrow-right"></span></a>
+                                    <a href="{{ $whyChooseData['btn_link'] }}" class="thm-btn">{{ $whyChooseData['btn_text'] }}<span class="fas fa-arrow-right"></span></a>
                                 </div>
                                 <div class="why-choose-one__client-box">
                                     <div class="why-choose-one__client-img">
-                                        <img src="{{ asset('frontend/assets/images/why-choose-one-client-img.jpg') }}"
-                                            alt="">
+                                        <img src="{{ asset($whyChooseData['client_info']['image']) }}"
+                                            alt="{{ $whyChooseData['client_info']['name'] }}">
                                     </div>
                                     <div class="why-choose-one__client-content">
-                                        <h3>Thomas Alison</h3>
-                                        <span>Founder &amp; CEO</span>
+                                        <h3>{{ $whyChooseData['client_info']['name'] }}</h3>
+                                        <span>{{ $whyChooseData['client_info']['position'] }}</span>
                                     </div>
                                 </div>
                             </div>
@@ -1919,8 +1696,8 @@
                             data-wow-duration="2500ms"
                             style="visibility: visible; animation-duration: 2500ms; animation-delay: 100ms; animation-name: slideInRight;">
                             <div class="why-choose-one__img">
-                                <img src="{{ asset('frontend/assets/images/why-choose-one-img-1.png') }}"
-                                    alt="">
+                                <img src="{{ asset($whyChooseData['image']) }}"
+                                    alt="Why Choose TechPark IT">
                             </div>
                             <div class="why-choose-one__shape-1 img-bounce">
                                 <img src="{{ asset('frontend/assets/images/why-choose-one-shape-1.png') }}"
@@ -2183,53 +1960,46 @@
                     </h2>
                 </div>
                 <ul class="row list-unstyled">
+                    @foreach($processData as $index => $process)
                     <!--Process Two Single Start-->
-                    <li class="col-xl-4 col-lg-4">
+                    <li class="col-xl-4 col-lg-4 col-md-6">
                         <div class="process-two__single">
+                            {{-- Arrow animations for step connections --}}
+                         
+                            @if($index === 1)
+                                {{-- Arrow from step 2 to step 3 (top row, right arrow) --}}
+                                <div class="process-two__shape-1 float-bob-x">
+                                    <img src="{{ asset('frontend/assets/images/process-two-shape-1.png') }}" alt="">
+                                </div>
+                                <div class="process-two__shape-2 float-bob-x">
+                                    <img src="{{ asset('frontend/assets/images/process-two-shape-2.png') }}" alt="">
+                                </div>
+                            
+                           
+                            @elseif($index === 4)
+                                {{-- Arrow from step 5 to step 6 (bottom row, right arrow) --}}
+                                <div class="process-two__shape-1 float-bob-x">
+                                    <img src="{{ asset('frontend/assets/images/process-two-shape-1.png') }}" alt="">
+                                </div>
+                                <div class="process-two__shape-2 float-bob-x">
+                                    <img src="{{ asset('frontend/assets/images/process-two-shape-2.png') }}" alt="">
+                                </div>
+                            @endif
+                            
                             <div class="process-two__count"></div>
-                            <h3 class="process-two__title">Research &amp; Discovery</h3>
-                            <p class="process-two__text">We begin by understanding your needs,<br> goals, and vision.
-                                Through brainstorming<br> sessions and strategic planning,</p>
+                            <h3 class="process-two__title">{{ $process['title'] }}</h3>
+                            <p class="process-two__text">{{ $process['description'] }}</p>
                         </div>
                     </li>
                     <!--Process Two Single End-->
-                    <!--Process Two Single Start-->
-                    <li class="col-xl-4 col-lg-4">
-                        <div class="process-two__single">
-                            <div class="process-two__shape-1 float-bob-x">
-                                <img src="{{ asset('frontend/assets/images/process-two-shape-1.png') }}"
-                                    alt="">
-                            </div>
-                            <div class="process-two__shape-2 float-bob-x">
-                                <img src="{{ asset('frontend/assets/images/process-two-shape-2.png') }}"
-                                    alt="">
-                            </div>
-                            <div class="process-two__count"></div>
-                            <h3 class="process-two__title">Design and Development</h3>
-                            <p class="process-two__text">Once the strategy is in place, we move to<br> designing and
-                                developing your vision. Our<br> team collaborates closely to bring your<br> ideas</p>
-                        </div>
-                    </li>
-                    <!--Process Two Single End-->
-                    <!--Process Two Single Start-->
-                    <li class="col-xl-4 col-lg-4">
-                        <div class="process-two__single">
-                            <div class="process-two__count"></div>
-                            <h3 class="process-two__title">Testing and Launch</h3>
-                            <p class="process-two__text">Before going live, we rigorously test to<br> ensure optimal
-                                functionality. After<br> thorough quality checks, we launch your<br> project </p>
-                        </div>
-                    </li>
-                    <li>
-                        <!--Process Two Single End-->
-                    </li>
+                    @endforeach
                 </ul>
             </div>
         </section>
         <!-- Process Two End -->
 
         <!-- Portfolio Two Start -->
-        <section id="portfolio" class="portfolio-two">
+        <section  class="portfolio-two d-none">
             <div class="portfolio-two__shape-1 float-bob-y">
                 <img src="{{ asset('frontend/assets/images/portfolio-two-shape-1.png') }}" alt="">
             </div>
@@ -3168,7 +2938,118 @@
                 </div>
             </div>
         </section>
+        <section id="portfolio" class="portfolio-page">
+            <h2 class="portfolio-one__big-text">portfolio</h2>
+            <div class="container" bis_skin_checked="1">
+                <div class="section-title text-center sec-title-animation animation-style1" bis_skin_checked="1">
+                    <div class="section-title__tagline-box" bis_skin_checked="1">
+                        <div class="section-title__tagline-shape-1" bis_skin_checked="1"></div>
+                        <span class="section-title__tagline">See Our Portfolio</span>
+                        <div class="section-title__tagline-shape-2" bis_skin_checked="1"></div>
+                    </div>
+                    <h2 class="section-title__title title-animation">Explore Our Creative <span>Journey</span><br>
+                        Crafting Success Through</h2>
+                </div>
+                <div class="portfolio-one__bottom" bis_skin_checked="1">
+                    <div class="container" bis_skin_checked="1">
+                        <div class="row" bis_skin_checked="1">
+                            @foreach($portfolioData as $portfolio)
+                            <!--Portfolio One Single Start-->
+                            <div class="col-xl-4 col-lg-6 col-md-6">
+                                <div class="portfolio-one__single">
+                                    <div class="portfolio-one__img-box">
+                                        <div class="portfolio-one__img">
+                                            <img src="{{ asset($portfolio['image']) }}" alt="{{ $portfolio['title'] }}">
+                                            <div class="portfolio-one__tag">
+                                                @foreach($portfolio['tags'] as $tag)
+                                                <span>{{ $tag }}</span>
+                                                @endforeach
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="portfolio-one__content">
+                                        <div class="portfolio-one__title-box">
+                                            <h3 class="portfolio-one__title">
+                                                <a href="{{ $portfolio['link'] }}">{{ $portfolio['title'] }}</a>
+                                            </h3>
+                                            <p class="portfolio-one__text">{{ $portfolio['description'] }}</p>
+                                        </div>
+                                        <div class="portfolio-one__arrow">
+                                            <a href="{{ asset($portfolio['image']) }}" class="img-popup">
+                                                <span class="icon-right-arrow"></span>
+                                            </a>
+                                        </div>
+                                        <div class="portfolio-one__year">
+                                            <span>{{ $portfolio['year'] }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Portfolio One Single End-->
+                            @endforeach
+                            <div class="blog-page__pagination">
+                                <a href="#portfolio" class="thm-btn">View
+                                    All Projects<span class="fas fa-arrow-right"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- Portfolio Two End -->
+        <!-- Team Section Start -->
+        <section class="team-page" id="team">
+            <div class="team-page__shape-1" bis_skin_checked="1">
+                <img src="{{ asset('frontend/assets/images/shapes/team-page-shape-1.png') }}" alt="">
+            </div>
+            <div class="container" bis_skin_checked="1">
+                <div class="section-title text-center sec-title-animation animation-style1">
+                    <div class="section-title__tagline-box">
+                        <div class="section-title__tagline-shape-1"></div>
+                        <span class="section-title__tagline">{{ $teamData['tagline'] }}</span>
+                        <div class="section-title__tagline-shape-2"></div>
+                    </div>
+                    <h2 class="section-title__title title-animation">{!! $teamData['title'] !!}</h2>
+                </div>
+                <p class="text-center" style="margin-bottom: 50px;">{{ $teamData['description'] }}</p>
+                <div class="row" bis_skin_checked="1">
+                    @foreach($teamData['members'] as $index => $member)
+                    <!--Team One Single Start-->
+                    <div class="col-xl-3 col-lg-6 col-md-6 wow {{ $index % 2 == 0 ? 'fadeInLeft' : 'fadeInRight' }} animated" data-wow-delay="{{ ($index + 1) * 100 }}ms" bis_skin_checked="1">
+                        <div class="team-one__single" bis_skin_checked="1">
+                            <div class="team-one__img-box" bis_skin_checked="1">
+                                <div class="team-one__img" bis_skin_checked="1">
+                                    <img src="{{ asset($member['image']) }}" alt="{{ $member['name'] }}">
+                                </div>
+                                <div class="team-one__social-box-inner" bis_skin_checked="1">
+                                    <div class="team-one__social-box" bis_skin_checked="1">
+                                        <div class="team-one__social" bis_skin_checked="1">
+                                            <a href="{{ $member['facebook'] }}"><span class="icon-facebook"></span></a>
+                                            <a href="{{ $member['dribble'] }}"><span class="icon-dribble"></span></a>
+                                        </div>
+                                        <div class="team-one__social" bis_skin_checked="1">
+                                            <a href="{{ $member['linkedin'] }}"><span class="icon-linkedin"></span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="team-one__content" bis_skin_checked="1">
+                                <div class="team-one__arrow" bis_skin_checked="1">
+                                    <a href="{{ $member['link'] }}" bis_skin_checked="1"><span class="icon-link"></span></a>
+                                </div>
+                                <div class="team-one__title-box" bis_skin_checked="1">
+                                    <p class="team-one__sub-title"><span></span>{{ $member['position'] }}</p>
+                                    <h3 class="team-one__title"><a href="{{ $member['link'] }}" bis_skin_checked="1">{{ $member['name'] }}</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Team One Single End-->
+                    @endforeach
+                </div>
+            </div>
+        </section>
+        <!-- Team Section End -->
         <!-- Blog Two Start -->
         <section id="blog" class="blog-two">
             <div class="container">
@@ -3192,176 +3073,94 @@
                                     All Blogs<span class="fas fa-arrow-right"></span></a>
                             </div>
                             <div class="blog-two__left-content-box">
+                                @if(isset($blogData[0]))
                                 <div class="blog-two__single">
                                     <div class="blog-two__img">
-                                        <img src="{{ asset('frontend/assets/images/blog-2-1.jpg') }}"
-                                            alt="">
+                                        <img src="{{ asset($blogData[0]['image']) }}"
+                                            alt="{{ $blogData[0]['title'] }}">
                                         <div class="blog-two__tags">
-                                            <span>Digital</span>
-                                            <span>Technology</span>
+                                            @foreach($blogData[0]['tags'] as $tag)
+                                            <span>{{ $tag }}</span>
+                                            @endforeach
                                         </div>
                                     </div>
                                     <div class="blog-two__content">
                                         <div class="blog-two__user">
                                             <div class="blog-two__user-img">
-                                                <img src="{{ asset('frontend/assets/images/blog-two-user-1.jpg') }}"
-                                                    alt="">
+                                                <img src="{{ asset($blogData[0]['author_image']) }}"
+                                                    alt="{{ $blogData[0]['author'] }}">
                                             </div>
-                                            <p class="blog-two__user-title">Jordan Walk</p>
+                                            <p class="blog-two__user-title">{{ $blogData[0]['author'] }}</p>
                                         </div>
                                         <ul class="blog-two__meta list-unstyled">
                                             <li>
-                                                <a href="https://laravel-techguru.mnsithub.com/blog-details"><span
-                                                        class="far fa-calendar-alt"></span>April 5,
-                                                    2025</a>
+                                                <a href="{{ $blogData[0]['link'] }}"><span
+                                                        class="far fa-calendar-alt"></span>{{ $blogData[0]['date'] }}</a>
                                             </li>
                                             <li>
-                                                <a href="https://laravel-techguru.mnsithub.com/blog-details"><span
-                                                        class="fal fa-comments"></span>80
+                                                <a href="{{ $blogData[0]['link'] }}"><span
+                                                        class="fal fa-comments"></span>{{ $blogData[0]['comments'] }}
                                                     Comments</a>
                                             </li>
                                         </ul>
                                         <h3 class="blog-two__title"><a
-                                                href="https://laravel-techguru.mnsithub.com/blog-details">The Future
-                                                is
-                                                Now: A
-                                                2025 Guide to Digital Transformation</a></h3>
-                                        <p class="blog-two__text">Winning the Digital Race: The 2025 Transformation
-                                            Roadmap. Next-Gen Digital Transformation</p>
+                                                href="{{ $blogData[0]['link'] }}">{{ $blogData[0]['title'] }}</a></h3>
+                                        <p class="blog-two__text">{{ $blogData[0]['excerpt'] }}</p>
                                         <div class="blog-two__btn-box">
-                                            <a href="https://laravel-techguru.mnsithub.com/blog-details"
-                                                class="thm-btn">Reed More<span
+                                            <a href="{{ $blogData[0]['link'] }}"
+                                                class="thm-btn">Read More<span
                                                     class="fas fa-arrow-right"></span></a>
                                         </div>
                                     </div>
                                 </div>
+                                @endif
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-6">
                         <div class="blog-two__right">
+                            @foreach($blogData as $index => $blog)
+                                @if($index > 0)
                             <!-- Blog Two Single Two Start -->
-                            <div class="blog-two__single-two wow fadeInLeft" data-wow-delay="100ms"
-                                style="visibility: hidden; animation-delay: 100ms; animation-name: none;">
+                            <div class="blog-two__single-two wow {{ $index % 2 == 1 ? 'fadeInLeft' : 'fadeInRight' }}" data-wow-delay="{{ $index * 100 }}ms">
                                 <div class="blog-two__img-two">
-                                    <img src="{{ asset('frontend/assets/images/blog-2-2.jpg') }}" alt="">
+                                    <img src="{{ asset($blog['image']) }}" alt="{{ $blog['title'] }}">
                                 </div>
                                 <div class="blog-two__content-two">
                                     <div class="blog-two__user-two">
                                         <div class="blog-two__user-two-img">
-                                            <img src="{{ asset('frontend/assets/images/blog-two-user-2.jpg') }}"
-                                                alt="">
+                                            <img src="{{ asset($blog['author_image']) }}"
+                                                alt="{{ $blog['author'] }}">
                                         </div>
-                                        <p class="blog-two__user-two-title">John Smith</p>
+                                        <p class="blog-two__user-two-title">{{ $blog['author'] }}</p>
                                     </div>
                                     <div class="blog-two__tags-two">
-                                        <span>Digital</span>
-                                        <span>Technology</span>
+                                        @foreach($blog['tags'] as $tag)
+                                        <span>{{ $tag }}</span>
+                                        @endforeach
                                     </div>
                                     <h3 class="blog-two__title-two"><a
-                                            href="https://laravel-techguru.mnsithub.com/blog-details">5 Key Trends
-                                            Shaping the
-                                            Future of Technology</a></h3>
+                                            href="{{ $blog['link'] }}">{{ $blog['title'] }}</a></h3>
                                     <ul class="blog-two__meta-two list-unstyled">
                                         <li>
-                                            <a href="https://laravel-techguru.mnsithub.com/blog-details"><span
-                                                    class="far fa-calendar-alt"></span>Jan 13,
-                                                2025</a>
+                                            <a href="{{ $blog['link'] }}"><span
+                                                    class="far fa-calendar-alt"></span>{{ $blog['date'] }}</a>
                                         </li>
                                         <li>
-                                            <a href="https://laravel-techguru.mnsithub.com/blog-details"><span
-                                                    class="fal fa-comments"></span>12
+                                            <a href="{{ $blog['link'] }}"><span
+                                                    class="fal fa-comments"></span>{{ $blog['comments'] }}
                                                 Comments</a>
                                         </li>
                                     </ul>
                                     <div class="blog-two__btn-box-two">
-                                        <a href="https://laravel-techguru.mnsithub.com/blog-details"
-                                            class="thm-btn">Reed More<span class="fas fa-arrow-right"></span></a>
+                                        <a href="{{ $blog['link'] }}"
+                                            class="thm-btn">Read More<span class="fas fa-arrow-right"></span></a>
                                     </div>
                                 </div>
                             </div>
                             <!-- Blog Two Single Two End -->
-                            <!-- Blog Two Single Two Start -->
-                            <div class="blog-two__single-two wow fadeInRight" data-wow-delay="200ms"
-                                style="visibility: hidden; animation-delay: 200ms; animation-name: none;">
-                                <div class="blog-two__img-two">
-                                    <img src="{{ asset('frontend/assets/images/blog-2-3.jpg') }}" alt="">
-                                </div>
-                                <div class="blog-two__content-two">
-                                    <div class="blog-two__user-two">
-                                        <div class="blog-two__user-two-img">
-                                            <img src="{{ asset('frontend/assets/images/blog-two-user-3.jpg') }}"
-                                                alt="">
-                                        </div>
-                                        <p class="blog-two__user-two-title">Alisa Olivia</p>
-                                    </div>
-                                    <div class="blog-two__tags-two">
-                                        <span>Digital</span>
-                                        <span>Technology</span>
-                                    </div>
-                                    <h3 class="blog-two__title-two"><a
-                                            href="https://laravel-techguru.mnsithub.com/blog-details">How to Maximize
-                                            Efficiency with Smart Business</a></h3>
-                                    <ul class="blog-two__meta-two list-unstyled">
-                                        <li>
-                                            <a href="https://laravel-techguru.mnsithub.com/blog-details"><span
-                                                    class="far fa-calendar-alt"></span>Jan 13,
-                                                2025</a>
-                                        </li>
-                                        <li>
-                                            <a href="https://laravel-techguru.mnsithub.com/blog-details"><span
-                                                    class="fal fa-comments"></span>12
-                                                Comments</a>
-                                        </li>
-                                    </ul>
-                                    <div class="blog-two__btn-box-two">
-                                        <a href="https://laravel-techguru.mnsithub.com/blog-details"
-                                            class="thm-btn">Reed More<span class="fas fa-arrow-right"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Blog Two Single Two End -->
-                            <!-- Blog Two Single Two Start -->
-                            <div class="blog-two__single-two wow fadeInLeft" data-wow-delay="300ms"
-                                style="visibility: hidden; animation-delay: 300ms; animation-name: none;">
-                                <div class="blog-two__img-two">
-                                    <img src="{{ asset('frontend/assets/images/blog-2-4.jpg') }}" alt="">
-                                </div>
-                                <div class="blog-two__content-two">
-                                    <div class="blog-two__user-two">
-                                        <div class="blog-two__user-two-img">
-                                            <img src="{{ asset('frontend/assets/images/blog-two-user-4.jpg') }}"
-                                                alt="">
-                                        </div>
-                                        <p class="blog-two__user-two-title">Jordan Walk</p>
-                                    </div>
-                                    <div class="blog-two__tags-two">
-                                        <span>Digital</span>
-                                        <span>Technology</span>
-                                    </div>
-                                    <h3 class="blog-two__title-two"><a
-                                            href="https://laravel-techguru.mnsithub.com/blog-details">The Ultimate
-                                            Guide to
-                                            Digital Transformation in 2025</a></h3>
-                                    <ul class="blog-two__meta-two list-unstyled">
-                                        <li>
-                                            <a href="https://laravel-techguru.mnsithub.com/blog-details"><span
-                                                    class="far fa-calendar-alt"></span>Jan 13,
-                                                2025</a>
-                                        </li>
-                                        <li>
-                                            <a href="https://laravel-techguru.mnsithub.com/blog-details"><span
-                                                    class="fal fa-comments"></span>12
-                                                Comments</a>
-                                        </li>
-                                    </ul>
-                                    <div class="blog-two__btn-box-two">
-                                        <a href="https://laravel-techguru.mnsithub.com/blog-details"
-                                            class="thm-btn">Reed More<span class="fas fa-arrow-right"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Blog Two Single Two End -->
+                                @endif
+                            @endforeach
                         </div>
                     </div>
                 </div>
@@ -3961,7 +3760,7 @@
 
 
         <!-- Event One Start -->
-        <section id="events" class="event-one">
+        <section id="events" class="event-one d-none">
             <div class="event-one__shape-1 float-bob-y">
                 <img src="{{ asset('frontend/assets/images/event-one-shape-1.png') }}" alt="">
             </div>
@@ -4009,195 +3808,41 @@
                         </div>
                         <div class="col-xl-7">
                             <div class="event-one__right">
+                                @foreach($eventsData as $index => $event)
                                 <!-- Event One Single Start -->
-                                <div class="event-one__single wow fadeInLeft" data-wow-delay="100ms"
-                                    style="visibility: hidden; animation-delay: 100ms; animation-name: none;">
+                                <div class="event-one__single wow {{ $index % 2 == 0 ? 'fadeInLeft' : 'fadeInRight' }}" data-wow-delay="{{ ($index + 1) * 100 }}ms">
                                     <div class="event-one__title-and-countdown-box">
                                         <div class="event-one__title">
-                                            <h5><a href="https://laravel-techguru.mnsithub.com/contact">Innovation
-                                                    Meets</a></h5>
-                                            <p>It is a long established fact that a reader will</p>
+                                            <h5><a href="#contact">{{ $event['title'] }}</a></h5>
+                                            <p>{{ $event['time'] }}</p>
                                         </div>
                                         <div class="event-one__countdown-box">
-                                            <div class="timer-box clearfix">
-                                                <div class="countdown-timer">
-                                                    <div class="default-coundown">
-                                                        <div class="default-coundown-box">
-                                                            <div class="countdown event-one-countdown"
-                                                                data-countdown-time="2025/05/28">
-                                                                <li>
-                                                                    <div class="box"><span
-                                                                            class="days">00</span><span
-                                                                            class="timeRef">days</span></div>
-                                                                </li>
-                                                                <li>
-                                                                    <div class="box"><span
-                                                                            class="hours">00</span><span
-                                                                            class="timeRef clr-1">hrs</span></div>
-                                                                </li>
-                                                                <li>
-                                                                    <div class="box"><span
-                                                                            class="minutes">00</span><span
-                                                                            class="timeRef clr-2">mins</span></div>
-                                                                </li>
-                                                                <li>
-                                                                    <div class="box"><span
-                                                                            class="seconds">00</span><span
-                                                                            class="timeRef clr-3">secs</span></div>
-                                                                </li>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                            <div class="event-one__date-box">
+                                                <h2>{{ $event['date'] }}</h2>
+                                                <p>{{ $event['month'] }}</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="event-one__meta-and-btn-box">
                                         <ul class="event-one__meta list-unstyled">
                                             <li>
-                                                <a href="https://laravel-techguru.mnsithub.com/index#"><span
-                                                        class="fas fa-map-marker-alt"></span>1629 N. Dixie
-                                                    Avenue</a>
+                                                <a href="#"><span
+                                                        class="fas fa-map-marker-alt"></span>{{ $event['location'] }}</a>
                                             </li>
                                             <li>
-                                                <a href="https://laravel-techguru.mnsithub.com/index#"><span
-                                                        class="fas fa-calendar-alt"></span>March 18, 2025</a>
+                                                <a href="#"><span
+                                                        class="fas fa-clock"></span>{{ $event['time'] }}</a>
                                             </li>
                                         </ul>
                                         <div class="event-one__btn-box">
-                                            <a href="https://laravel-techguru.mnsithub.com/contact"
-                                                class="event-one__btn">Book Seat<span
+                                            <a href="#contact"
+                                                class="event-one__btn">Join Event<span
                                                     class="fas fa-arrow-right"></span></a>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Event One Single End -->
-                                <!-- Event One Single Start -->
-                                <div class="event-one__single wow fadeInRight" data-wow-delay="200ms"
-                                    style="visibility: hidden; animation-delay: 200ms; animation-name: none;">
-                                    <div class="event-one__title-and-countdown-box">
-                                        <div class="event-one__title">
-                                            <h5><a href="https://laravel-techguru.mnsithub.com/contact">Unlock Your
-                                                    Potential</a></h5>
-                                            <p>It is a long established fact that a reader will</p>
-                                        </div>
-                                        <div class="event-one__countdown-box">
-                                            <div class="timer-box clearfix">
-                                                <div class="countdown-timer">
-                                                    <div class="default-coundown">
-                                                        <div class="default-coundown-box">
-                                                            <div class="countdown event-one-countdown"
-                                                                data-countdown-time="2025/07/28">
-                                                                <li>
-                                                                    <div class="box"><span
-                                                                            class="days">00</span><span
-                                                                            class="timeRef">days</span></div>
-                                                                </li>
-                                                                <li>
-                                                                    <div class="box"><span
-                                                                            class="hours">00</span><span
-                                                                            class="timeRef clr-1">hrs</span></div>
-                                                                </li>
-                                                                <li>
-                                                                    <div class="box"><span
-                                                                            class="minutes">00</span><span
-                                                                            class="timeRef clr-2">mins</span></div>
-                                                                </li>
-                                                                <li>
-                                                                    <div class="box"><span
-                                                                            class="seconds">00</span><span
-                                                                            class="timeRef clr-3">secs</span></div>
-                                                                </li>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="event-one__meta-and-btn-box">
-                                        <ul class="event-one__meta list-unstyled">
-                                            <li>
-                                                <a href="https://laravel-techguru.mnsithub.com/index#"><span
-                                                        class="fas fa-map-marker-alt"></span>1629 N. Dixie
-                                                    Avenue</a>
-                                            </li>
-                                            <li>
-                                                <a href="https://laravel-techguru.mnsithub.com/index#"><span
-                                                        class="fas fa-calendar-alt"></span>March 25, 2025</a>
-                                            </li>
-                                        </ul>
-                                        <div class="event-one__btn-box">
-                                            <a href="https://laravel-techguru.mnsithub.com/contact"
-                                                class="event-one__btn">Book Seat<span
-                                                    class="fas fa-arrow-right"></span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Event One Single End -->
-                                <!-- Event One Single Start -->
-                                <div class="event-one__single wow fadeInLeft" data-wow-delay="300ms"
-                                    style="visibility: hidden; animation-delay: 300ms; animation-name: none;">
-                                    <div class="event-one__title-and-countdown-box">
-                                        <div class="event-one__title">
-                                            <h5><a href="https://laravel-techguru.mnsithub.com/contact">Tech Talks
-                                                    Live</a></h5>
-                                            <p>It is a long established fact that a reader will</p>
-                                        </div>
-                                        <div class="event-one__countdown-box">
-                                            <div class="timer-box clearfix">
-                                                <div class="countdown-timer">
-                                                    <div class="default-coundown">
-                                                        <div class="default-coundown-box">
-                                                            <div class="countdown event-one-countdown"
-                                                                data-countdown-time="2025/09/28">
-                                                                <li>
-                                                                    <div class="box"><span
-                                                                            class="days">00</span><span
-                                                                            class="timeRef">days</span></div>
-                                                                </li>
-                                                                <li>
-                                                                    <div class="box"><span
-                                                                            class="hours">00</span><span
-                                                                            class="timeRef clr-1">hrs</span></div>
-                                                                </li>
-                                                                <li>
-                                                                    <div class="box"><span
-                                                                            class="minutes">00</span><span
-                                                                            class="timeRef clr-2">mins</span></div>
-                                                                </li>
-                                                                <li>
-                                                                    <div class="box"><span
-                                                                            class="seconds">00</span><span
-                                                                            class="timeRef clr-3">secs</span></div>
-                                                                </li>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="event-one__meta-and-btn-box">
-                                        <ul class="event-one__meta list-unstyled">
-                                            <li>
-                                                <a href="https://laravel-techguru.mnsithub.com/index#"><span
-                                                        class="fas fa-map-marker-alt"></span>1629 N. Dixie
-                                                    Avenue</a>
-                                            </li>
-                                            <li>
-                                                <a href="https://laravel-techguru.mnsithub.com/index#"><span
-                                                        class="fas fa-calendar-alt"></span>March 30, 2025</a>
-                                            </li>
-                                        </ul>
-                                        <div class="event-one__btn-box">
-                                            <a href="https://laravel-techguru.mnsithub.com/contact"
-                                                class="event-one__btn">Book Seat<span
-                                                    class="fas fa-arrow-right"></span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Event One Single End -->
+                                @endforeach
                             </div>
                         </div>
                     </div>
@@ -4220,588 +3865,41 @@
                     <h2 class="section-title__title title-animation">Customer Experiences <br>That <span>Speak
                             Volumes</span></h2>
                 </div>
-                <div class="testimonial-two__carousel owl-theme owl-carousel owl-loaded owl-drag">
+                <div class="testimonial-two__carousel owl-theme owl-carousel">
+                    @foreach($testimonialsData as $testimonial)
                     <!-- Testimonial Two Single Start -->
-
-                    <!-- Testimonial Two Single End -->
-                    <!-- Testimonial Two Single Start -->
-
-                    <!-- Testimonial Two Single End -->
-                    <!-- Testimonial Two Single Start -->
-
-                    <!-- Testimonial Two Single End -->
-                    <!-- Testimonial Two Single Start -->
-
-                    <!-- Testimonial Two Single End -->
-                    <!-- Testimonial Two Single Start -->
-
-                    <!-- Testimonial Two Single End -->
-                    <!-- Testimonial Two Single Start -->
-
-                    <!-- Testimonial Two Single End -->
-                    <!-- Testimonial Two Single Start -->
-
-                    <!-- Testimonial Two Single End -->
-                    <div class="owl-stage-outer">
-                        <div class="owl-stage"
-                            style="transform: translate3d(-2200px, 0px, 0px); transition: 0.5s; width: 6600px;">
-                            <div class="owl-item cloned" style="width: 410px; margin-right: 30px;">
-                                <div class="item">
-                                    <div class="testimonial-two__single">
-                                        <div class="testimonial-two__single-inner">
-                                            <div class="testimonial-two__star">
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                            </div>
-                                            <p class="testimonial-two__text">Absolutely fantastic experience! The team
-                                                exceeded our
-                                                expectations and delivered a solution that perfectly met our needs.
-                                                Their attention
-                                                to
-                                                detail and commitment to quality is unmatched.</p>
-                                        </div>
-                                        <div class="testimonial-two__client-info">
-                                            <div class="testimonial-two__client-img">
-                                                <img src="{{ asset('frontend/assets/images/testimonial-2-1.jpg') }}"
-                                                    alt="">
-                                            </div>
-                                            <div class="testimonial-two__client-content">
-                                                <h4 class="testimonial-two__client-name"><a
-                                                        href="https://laravel-techguru.mnsithub.com/testimonials">Thomas
-                                                        Alison</a></h4>
-                                                <p class="testimonial-two__sub-title">UI/UX Designer</p>
-                                            </div>
-                                        </div>
-                                        <div class="testimonial-two__quote">
-                                            <span class="fas fa-quote-right"></span>
-                                        </div>
-                                    </div>
+                    <div class="item">
+                        <div class="testimonial-two__single">
+                            <div class="testimonial-two__single-inner">
+                                <div class="testimonial-two__star">
+                                    @for($i = 0; $i < $testimonial['rating']; $i++)
+                                    <span class="fas fa-star"></span>
+                                    @endfor
+                                </div>
+                                <p class="testimonial-two__text">{{ $testimonial['content'] }}</p>
+                            </div>
+                            <div class="testimonial-two__client-info">
+                                <div class="testimonial-two__client-img">
+                                    <img src="{{ asset($testimonial['image']) }}" alt="{{ $testimonial['name'] }}">
+                                </div>
+                                <div class="testimonial-two__client-content">
+                                    <h4 class="testimonial-two__client-name">
+                                        <a href="#testimonial">{{ $testimonial['name'] }}</a>
+                                    </h4>
+                                    <p class="testimonial-two__sub-title">{{ $testimonial['position'] }}</p>
                                 </div>
                             </div>
-                            <div class="owl-item cloned" style="width: 410px; margin-right: 30px;">
-                                <div class="item">
-                                    <div class="testimonial-two__single">
-                                        <div class="testimonial-two__single-inner">
-                                            <div class="testimonial-two__star">
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                            </div>
-                                            <p class="testimonial-two__text">Absolutely fantastic experience! The team
-                                                exceeded our
-                                                expectations and delivered a solution that perfectly met our needs.
-                                                Their attention
-                                                to
-                                                detail and commitment to quality is unmatched.</p>
-                                        </div>
-                                        <div class="testimonial-two__client-info">
-                                            <div class="testimonial-two__client-img">
-                                                <img src="{{ asset('frontend/assets/images/testimonial-2-2.jpg') }}"
-                                                    alt="">
-                                            </div>
-                                            <div class="testimonial-two__client-content">
-                                                <h4 class="testimonial-two__client-name"><a
-                                                        href="https://laravel-techguru.mnsithub.com/testimonials">Sarah
-                                                        Williams</a></h4>
-                                                <p class="testimonial-two__sub-title">Marketing Manger</p>
-                                            </div>
-                                        </div>
-                                        <div class="testimonial-two__quote">
-                                            <span class="fas fa-quote-right"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="owl-item cloned" style="width: 410px; margin-right: 30px;">
-                                <div class="item">
-                                    <div class="testimonial-two__single">
-                                        <div class="testimonial-two__single-inner">
-                                            <div class="testimonial-two__star">
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                            </div>
-                                            <p class="testimonial-two__text">Absolutely fantastic experience! The team
-                                                exceeded our
-                                                expectations and delivered a solution that perfectly met our needs.
-                                                Their attention
-                                                to
-                                                detail and commitment to quality is unmatched.</p>
-                                        </div>
-                                        <div class="testimonial-two__client-info">
-                                            <div class="testimonial-two__client-img">
-                                                <img src="{{ asset('frontend/assets/images/testimonial-2-3.jpg') }}"
-                                                    alt="">
-                                            </div>
-                                            <div class="testimonial-two__client-content">
-                                                <h4 class="testimonial-two__client-name"><a
-                                                        href="https://laravel-techguru.mnsithub.com/testimonials">James
-                                                        Anderson</a></h4>
-                                                <p class="testimonial-two__sub-title">Product Designer</p>
-                                            </div>
-                                        </div>
-                                        <div class="testimonial-two__quote">
-                                            <span class="fas fa-quote-right"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="owl-item cloned" style="width: 410px; margin-right: 30px;">
-                                <div class="item">
-                                    <div class="testimonial-two__single">
-                                        <div class="testimonial-two__single-inner">
-                                            <div class="testimonial-two__star">
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                            </div>
-                                            <p class="testimonial-two__text">Absolutely fantastic experience! The team
-                                                exceeded our
-                                                expectations and delivered a solution that perfectly met our needs.
-                                                Their attention
-                                                to
-                                                detail and commitment to quality is unmatched.</p>
-                                        </div>
-                                        <div class="testimonial-two__client-info">
-                                            <div class="testimonial-two__client-img">
-                                                <img src="{{ asset('frontend/assets/images/testimonial-2-2.jpg') }}"
-                                                    alt="">
-                                            </div>
-                                            <div class="testimonial-two__client-content">
-                                                <h4 class="testimonial-two__client-name"><a
-                                                        href="https://laravel-techguru.mnsithub.com/testimonials">Sarah
-                                                        Williams</a></h4>
-                                                <p class="testimonial-two__sub-title">Marketing Manger</p>
-                                            </div>
-                                        </div>
-                                        <div class="testimonial-two__quote">
-                                            <span class="fas fa-quote-right"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="owl-item" style="width: 410px; margin-right: 30px;">
-                                <div class="item">
-                                    <div class="testimonial-two__single">
-                                        <div class="testimonial-two__single-inner">
-                                            <div class="testimonial-two__star">
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                            </div>
-                                            <p class="testimonial-two__text">Absolutely fantastic experience! The team
-                                                exceeded our
-                                                expectations and delivered a solution that perfectly met our needs.
-                                                Their attention
-                                                to
-                                                detail and commitment to quality is unmatched.</p>
-                                        </div>
-                                        <div class="testimonial-two__client-info">
-                                            <div class="testimonial-two__client-img">
-                                                <img src="{{ asset('frontend/assets/images/testimonial-2-1.jpg') }}"
-                                                    alt="">
-                                            </div>
-                                            <div class="testimonial-two__client-content">
-                                                <h4 class="testimonial-two__client-name"><a
-                                                        href="https://laravel-techguru.mnsithub.com/testimonials">Thomas
-                                                        Alison</a></h4>
-                                                <p class="testimonial-two__sub-title">UI/UX Designer</p>
-                                            </div>
-                                        </div>
-                                        <div class="testimonial-two__quote">
-                                            <span class="fas fa-quote-right"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="owl-item active" style="width: 410px; margin-right: 30px;">
-                                <div class="item">
-                                    <div class="testimonial-two__single">
-                                        <div class="testimonial-two__single-inner">
-                                            <div class="testimonial-two__star">
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                            </div>
-                                            <p class="testimonial-two__text">Absolutely fantastic experience! The team
-                                                exceeded our
-                                                expectations and delivered a solution that perfectly met our needs.
-                                                Their attention
-                                                to
-                                                detail and commitment to quality is unmatched.</p>
-                                        </div>
-                                        <div class="testimonial-two__client-info">
-                                            <div class="testimonial-two__client-img">
-                                                <img src="{{ asset('frontend/assets/images/testimonial-2-2.jpg') }}"
-                                                    alt="">
-                                            </div>
-                                            <div class="testimonial-two__client-content">
-                                                <h4 class="testimonial-two__client-name"><a
-                                                        href="https://laravel-techguru.mnsithub.com/testimonials">Sarah
-                                                        Williams</a></h4>
-                                                <p class="testimonial-two__sub-title">Marketing Manger</p>
-                                            </div>
-                                        </div>
-                                        <div class="testimonial-two__quote">
-                                            <span class="fas fa-quote-right"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="owl-item active" style="width: 410px; margin-right: 30px;">
-                                <div class="item">
-                                    <div class="testimonial-two__single">
-                                        <div class="testimonial-two__single-inner">
-                                            <div class="testimonial-two__star">
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                            </div>
-                                            <p class="testimonial-two__text">Absolutely fantastic experience! The team
-                                                exceeded our
-                                                expectations and delivered a solution that perfectly met our needs.
-                                                Their attention
-                                                to
-                                                detail and commitment to quality is unmatched.</p>
-                                        </div>
-                                        <div class="testimonial-two__client-info">
-                                            <div class="testimonial-two__client-img">
-                                                <img src="{{ asset('frontend/assets/images/testimonial-2-3.jpg') }}"
-                                                    alt="">
-                                            </div>
-                                            <div class="testimonial-two__client-content">
-                                                <h4 class="testimonial-two__client-name"><a
-                                                        href="https://laravel-techguru.mnsithub.com/testimonials">James
-                                                        Anderson</a></h4>
-                                                <p class="testimonial-two__sub-title">Product Designer</p>
-                                            </div>
-                                        </div>
-                                        <div class="testimonial-two__quote">
-                                            <span class="fas fa-quote-right"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="owl-item active" style="width: 410px; margin-right: 30px;">
-                                <div class="item">
-                                    <div class="testimonial-two__single">
-                                        <div class="testimonial-two__single-inner">
-                                            <div class="testimonial-two__star">
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                            </div>
-                                            <p class="testimonial-two__text">Absolutely fantastic experience! The team
-                                                exceeded our
-                                                expectations and delivered a solution that perfectly met our needs.
-                                                Their attention
-                                                to
-                                                detail and commitment to quality is unmatched.</p>
-                                        </div>
-                                        <div class="testimonial-two__client-info">
-                                            <div class="testimonial-two__client-img">
-                                                <img src="{{ asset('frontend/assets/images/testimonial-2-1.jpg') }}"
-                                                    alt="">
-                                            </div>
-                                            <div class="testimonial-two__client-content">
-                                                <h4 class="testimonial-two__client-name"><a
-                                                        href="https://laravel-techguru.mnsithub.com/testimonials">Thomas
-                                                        Alison</a></h4>
-                                                <p class="testimonial-two__sub-title">UI/UX Designer</p>
-                                            </div>
-                                        </div>
-                                        <div class="testimonial-two__quote">
-                                            <span class="fas fa-quote-right"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="owl-item" style="width: 410px; margin-right: 30px;">
-                                <div class="item">
-                                    <div class="testimonial-two__single">
-                                        <div class="testimonial-two__single-inner">
-                                            <div class="testimonial-two__star">
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                            </div>
-                                            <p class="testimonial-two__text">Absolutely fantastic experience! The team
-                                                exceeded our
-                                                expectations and delivered a solution that perfectly met our needs.
-                                                Their attention
-                                                to
-                                                detail and commitment to quality is unmatched.</p>
-                                        </div>
-                                        <div class="testimonial-two__client-info">
-                                            <div class="testimonial-two__client-img">
-                                                <img src="{{ asset('frontend/assets/images/testimonial-2-2.jpg') }}"
-                                                    alt="">
-                                            </div>
-                                            <div class="testimonial-two__client-content">
-                                                <h4 class="testimonial-two__client-name"><a
-                                                        href="https://laravel-techguru.mnsithub.com/testimonials">Sarah
-                                                        Williams</a></h4>
-                                                <p class="testimonial-two__sub-title">Marketing Manger</p>
-                                            </div>
-                                        </div>
-                                        <div class="testimonial-two__quote">
-                                            <span class="fas fa-quote-right"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="owl-item" style="width: 410px; margin-right: 30px;">
-                                <div class="item">
-                                    <div class="testimonial-two__single">
-                                        <div class="testimonial-two__single-inner">
-                                            <div class="testimonial-two__star">
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                            </div>
-                                            <p class="testimonial-two__text">Absolutely fantastic experience! The team
-                                                exceeded our
-                                                expectations and delivered a solution that perfectly met our needs.
-                                                Their attention
-                                                to
-                                                detail and commitment to quality is unmatched.</p>
-                                        </div>
-                                        <div class="testimonial-two__client-info">
-                                            <div class="testimonial-two__client-img">
-                                                <img src="{{ asset('frontend/assets/images/testimonial-2-3.jpg') }}"
-                                                    alt="">
-                                            </div>
-                                            <div class="testimonial-two__client-content">
-                                                <h4 class="testimonial-two__client-name"><a
-                                                        href="https://laravel-techguru.mnsithub.com/testimonials">James
-                                                        Anderson</a></h4>
-                                                <p class="testimonial-two__sub-title">Product Designer</p>
-                                            </div>
-                                        </div>
-                                        <div class="testimonial-two__quote">
-                                            <span class="fas fa-quote-right"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="owl-item" style="width: 410px; margin-right: 30px;">
-                                <div class="item">
-                                    <div class="testimonial-two__single">
-                                        <div class="testimonial-two__single-inner">
-                                            <div class="testimonial-two__star">
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                            </div>
-                                            <p class="testimonial-two__text">Absolutely fantastic experience! The team
-                                                exceeded our
-                                                expectations and delivered a solution that perfectly met our needs.
-                                                Their attention
-                                                to
-                                                detail and commitment to quality is unmatched.</p>
-                                        </div>
-                                        <div class="testimonial-two__client-info">
-                                            <div class="testimonial-two__client-img">
-                                                <img src="{{ asset('frontend/assets/images/testimonial-2-2.jpg') }}"
-                                                    alt="">
-                                            </div>
-                                            <div class="testimonial-two__client-content">
-                                                <h4 class="testimonial-two__client-name"><a
-                                                        href="https://laravel-techguru.mnsithub.com/testimonials">Sarah
-                                                        Williams</a></h4>
-                                                <p class="testimonial-two__sub-title">Marketing Manger</p>
-                                            </div>
-                                        </div>
-                                        <div class="testimonial-two__quote">
-                                            <span class="fas fa-quote-right"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="owl-item cloned" style="width: 410px; margin-right: 30px;">
-                                <div class="item">
-                                    <div class="testimonial-two__single">
-                                        <div class="testimonial-two__single-inner">
-                                            <div class="testimonial-two__star">
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                            </div>
-                                            <p class="testimonial-two__text">Absolutely fantastic experience! The team
-                                                exceeded our
-                                                expectations and delivered a solution that perfectly met our needs.
-                                                Their attention
-                                                to
-                                                detail and commitment to quality is unmatched.</p>
-                                        </div>
-                                        <div class="testimonial-two__client-info">
-                                            <div class="testimonial-two__client-img">
-                                                <img src="{{ asset('frontend/assets/images/testimonial-2-1.jpg') }}"
-                                                    alt="">
-                                            </div>
-                                            <div class="testimonial-two__client-content">
-                                                <h4 class="testimonial-two__client-name"><a
-                                                        href="https://laravel-techguru.mnsithub.com/testimonials">Thomas
-                                                        Alison</a></h4>
-                                                <p class="testimonial-two__sub-title">UI/UX Designer</p>
-                                            </div>
-                                        </div>
-                                        <div class="testimonial-two__quote">
-                                            <span class="fas fa-quote-right"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="owl-item cloned" style="width: 410px; margin-right: 30px;">
-                                <div class="item">
-                                    <div class="testimonial-two__single">
-                                        <div class="testimonial-two__single-inner">
-                                            <div class="testimonial-two__star">
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                            </div>
-                                            <p class="testimonial-two__text">Absolutely fantastic experience! The team
-                                                exceeded our
-                                                expectations and delivered a solution that perfectly met our needs.
-                                                Their attention
-                                                to
-                                                detail and commitment to quality is unmatched.</p>
-                                        </div>
-                                        <div class="testimonial-two__client-info">
-                                            <div class="testimonial-two__client-img">
-                                                <img src="{{ asset('frontend/assets/images/testimonial-2-2.jpg') }}"
-                                                    alt="">
-                                            </div>
-                                            <div class="testimonial-two__client-content">
-                                                <h4 class="testimonial-two__client-name"><a
-                                                        href="https://laravel-techguru.mnsithub.com/testimonials">Sarah
-                                                        Williams</a></h4>
-                                                <p class="testimonial-two__sub-title">Marketing Manger</p>
-                                            </div>
-                                        </div>
-                                        <div class="testimonial-two__quote">
-                                            <span class="fas fa-quote-right"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="owl-item cloned" style="width: 410px; margin-right: 30px;">
-                                <div class="item">
-                                    <div class="testimonial-two__single">
-                                        <div class="testimonial-two__single-inner">
-                                            <div class="testimonial-two__star">
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                            </div>
-                                            <p class="testimonial-two__text">Absolutely fantastic experience! The team
-                                                exceeded our
-                                                expectations and delivered a solution that perfectly met our needs.
-                                                Their attention
-                                                to
-                                                detail and commitment to quality is unmatched.</p>
-                                        </div>
-                                        <div class="testimonial-two__client-info">
-                                            <div class="testimonial-two__client-img">
-                                                <img src="{{ asset('frontend/assets/images/testimonial-2-3.jpg') }}"
-                                                    alt="">
-                                            </div>
-                                            <div class="testimonial-two__client-content">
-                                                <h4 class="testimonial-two__client-name"><a
-                                                        href="https://laravel-techguru.mnsithub.com/testimonials">James
-                                                        Anderson</a></h4>
-                                                <p class="testimonial-two__sub-title">Product Designer</p>
-                                            </div>
-                                        </div>
-                                        <div class="testimonial-two__quote">
-                                            <span class="fas fa-quote-right"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="owl-item cloned" style="width: 410px; margin-right: 30px;">
-                                <div class="item">
-                                    <div class="testimonial-two__single">
-                                        <div class="testimonial-two__single-inner">
-                                            <div class="testimonial-two__star">
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                                <span class="fas fa-star"></span>
-                                            </div>
-                                            <p class="testimonial-two__text">Absolutely fantastic experience! The team
-                                                exceeded our
-                                                expectations and delivered a solution that perfectly met our needs.
-                                                Their attention
-                                                to
-                                                detail and commitment to quality is unmatched.</p>
-                                        </div>
-                                        <div class="testimonial-two__client-info">
-                                            <div class="testimonial-two__client-img">
-                                                <img src="{{ asset('frontend/assets/images/testimonial-2-1.jpg') }}"
-                                                    alt="">
-                                            </div>
-                                            <div class="testimonial-two__client-content">
-                                                <h4 class="testimonial-two__client-name"><a
-                                                        href="https://laravel-techguru.mnsithub.com/testimonials">Thomas
-                                                        Alison</a></h4>
-                                                <p class="testimonial-two__sub-title">UI/UX Designer</p>
-                                            </div>
-                                        </div>
-                                        <div class="testimonial-two__quote">
-                                            <span class="fas fa-quote-right"></span>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="testimonial-two__quote">
+                                <span class="fas fa-quote-right"></span>
                             </div>
                         </div>
                     </div>
-                    <div class="owl-nav disabled"><button type="button" role="presentation"
-                            class="owl-prev"><span class="fas fa-arrow-up"></span></button><button type="button"
-                            role="presentation" class="owl-next"><span class="fas fa-arrow-up"></span></button>
-                    </div>
-                    <div class="owl-dots"><button role="button"
-                            class="owl-dot active"><span></span></button><button role="button"
-                            class="owl-dot"><span></span></button><button role="button"
-                            class="owl-dot"><span></span></button></div>
+                    <!-- Testimonial Two Single End -->
+                    @endforeach
                 </div>
             </div>
         </section>
         <!-- Testimonial Two End -->
-
-
-
 
         <!-- Contact Two Start -->
         <section id="contact" class="contact-two">

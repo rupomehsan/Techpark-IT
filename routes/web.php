@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\QuizGivenController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Import\QuizImportController;
 use App\Http\Controllers\Import\CourseImportController;
 use Illuminate\Support\Facades\Artisan;
@@ -18,6 +19,4 @@ use Illuminate\Support\Facades\Artisan;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',[HomeController::class,'index'])->name('home');
