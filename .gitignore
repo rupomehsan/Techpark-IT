@@ -9,6 +9,8 @@
 .env.backup
 .env.production
 .phpunit.result.cache
+/bootstrap/cache/*.php
+!/bootstrap/cache/.gitignore
 Homestead.json
 Homestead.yaml
 auth.json

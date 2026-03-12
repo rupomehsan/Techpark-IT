@@ -10,6 +10,9 @@ use App\Modules\Management\VocabularyManagement\Vocabulary\Actions\UpdateStatus;
 use App\Modules\Management\VocabularyManagement\Vocabulary\Actions\SoftDelete;
 use App\Modules\Management\VocabularyManagement\Vocabulary\Actions\RestoreData;
 use App\Modules\Management\VocabularyManagement\Vocabulary\Actions\ImportData;
+use App\Modules\Management\VocabularyManagement\Vocabulary\Actions\AddToRevision;
+use App\Modules\Management\VocabularyManagement\Vocabulary\Actions\RemoveFromRevision;
+use App\Modules\Management\VocabularyManagement\Vocabulary\Actions\GetRevisionVocabulary;
 use App\Modules\Management\VocabularyManagement\Vocabulary\Validations\BulkActionsValidation;
 use App\Modules\Management\VocabularyManagement\Vocabulary\Validations\DataStoreValidation;
 use App\Modules\Management\VocabularyManagement\Vocabulary\Actions\BulkActions;
@@ -71,6 +74,21 @@ class Controller extends ControllersController
     public function bulkAction(BulkActionsValidation $request)
     {
         $data = BulkActions::execute($request);
+        return $data;
+    }
+    public function AddToRevision()
+    {
+        $data = AddToRevision::execute();
+        return $data;
+    }
+    public function RemoveFromRevision()
+    {
+        $data = RemoveFromRevision::execute();
+        return $data;
+    }
+    public function GetRevisionVocabulary()
+    {
+        $data = GetRevisionVocabulary::execute();
         return $data;
     }
 

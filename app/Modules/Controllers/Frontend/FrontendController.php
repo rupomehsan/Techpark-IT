@@ -33,4 +33,28 @@ class FrontendController extends Controller
             ]
         ]);
     }
+    public function StoryPage()
+    {
+        return Inertia::render('Story/Index', [
+            'event' => [
+                'title' => 'Story Page',
+            ]
+        ]);
+    }
+    public function StoryTestPage()
+    {
+        return Inertia::render('Story/StoryTest', [
+            'event' => [
+                'title' => 'Story Test Page',
+            ]
+        ]);
+    }
+    public function ProfilePage()
+    {
+        return Inertia::render('Profile/Index', [
+            'event' => [
+                'title' => 'Profile Page',
+            ]
+        ]);
+    }
 }

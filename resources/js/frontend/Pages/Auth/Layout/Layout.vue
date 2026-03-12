@@ -1,14 +1,14 @@
 <template>
-
     <div id="authentication">
-        <div class="container">
-            <div class="background">
-                <div class="shape"></div>
-                <div class="shape"></div>
+        <div class="auth-background">
+            <div class="animated-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
             </div>
-            <div>
-                <slot></slot>
-            </div>
+        </div>
+        <div class="auth-layout-content">
+            <slot></slot>
         </div>
     </div>
 </template>
@@ -20,192 +20,238 @@ export default {
 </script>
 <style>
 #authentication {
-    background-color: #080710;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.auth-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.animated-shapes {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.shape {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    animation: float 20s infinite linear;
+}
+
+.shape-1 {
+    width: 200px;
+    height: 200px;
+    top: 10%;
+    left: -5%;
+    animation-delay: 0s;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(102, 126, 234, 0.2));
+}
+
+.shape-2 {
+    width: 150px;
+    height: 150px;
+    top: 60%;
+    right: -5%;
+    animation-delay: -10s;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(240, 147, 251, 0.2));
+}
+
+.shape-3 {
+    width: 100px;
+    height: 100px;
+    top: 30%;
+    left: 80%;
+    animation-delay: -5s;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(118, 75, 162, 0.2));
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+        opacity: 0.7;
+    }
+    33% {
+        transform: translateY(-20px) rotate(120deg);
+        opacity: 0.4;
+    }
+    66% {
+        transform: translateY(20px) rotate(240deg);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(0px) rotate(360deg);
+        opacity: 0.7;
+    }
+}
+
+.auth-layout-content {
+    position: relative;
+    z-index: 2;
     min-height: 100vh;
 }
 
-#authentication .background {
-    display: none;
-    width: 430px;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    left: 50%;
-    top: 50%;
+/* Override any conflicting Bootstrap or other framework styles */
+#authentication * {
+    box-sizing: border-box;
 }
 
-#authentication .background .shape {
-    height: 200px;
-    width: 200px;
-    position: absolute;
-    border-radius: 50%;
+#authentication .container {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
-#authentication .shape:first-child {
-    background: linear-gradient(#1845ad, #23a2f6);
-    left: -80px;
-    top: -80px;
-}
-
-#authentication .shape:last-child {
-    background: linear-gradient(to right, #ff512f, #f09819);
-    right: -30px;
-    bottom: -80px;
-}
-
+/* Remove old styles that might conflict */
 #authentication form {
-    background-color: rgba(255, 255, 255, 0.13);
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
-    padding: 20px 35px;
-    margin: 0 auto;
-}
-
-#authentication form * {
-    color: #ffffff;
-    letter-spacing: 0.5px;
-    outline: none;
-}
-
-#authentication form span {
-    font-size: 12px;
-    text-decoration: none;
-}
-
-#authentication form a {
-    font-size: 12px;
-    text-decoration: none;
-}
-
-#authentication form h3 {
-    font-size: 32px;
-    font-weight: 500;
-    line-height: 42px;
-    text-align: center;
-    border-bottom: 1px solid gray;
-    padding-bottom: 20px;
-}
-
-#authentication label {
-    display: block;
-    margin-top: 30px;
-    font-size: 16px;
-    font-weight: 500;
+    background: none;
+    border: none;
+    backdrop-filter: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
 }
 
 #authentication input {
-    display: block;
-    height: 50px;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.07);
-    border-radius: 3px;
-    padding: 0 10px;
-    margin-top: 8px;
-    font-size: 14px;
-    font-weight: 300;
+    background: none;
+    border: none;
+    height: auto;
+    width: auto;
+    padding: 0;
+    margin: 0;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
 }
 
-#authentication ::placeholder {
-    color: #e5e5e5;
+#authentication label {
+    display: inline;
+    margin: 0;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+#authentication h3 {
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    text-align: inherit;
+    border: none;
+    padding: 0;
+    margin: 0;
 }
 
 #authentication .btn-outline-success {
-    width: 100%;
-    color: #080710;
-    padding: 15px 0;
-    font-size: 18px;
-    font-weight: 600;
-    border-radius: 5px;
-    cursor: pointer;
-    border: 1px solid #424242;
+    width: auto;
+    color: inherit;
+    padding: 0;
+    font-size: inherit;
+    font-weight: inherit;
+    border-radius: 0;
+    cursor: auto;
+    border: none;
+    background: none;
+}
+
+#authentication ::placeholder {
+    color: inherit;
 }
 
 #authentication .social {
-    margin-top: 30px;
-    display: flex;
+    margin: 0;
+    display: block;
 }
 
 #authentication .social div {
-    background: red;
-    width: 150px;
-    border-radius: 3px;
-    padding: 5px 10px 10px 5px;
-    background-color: rgba(255, 255, 255, 0.27);
-    color: #eaf0fb;
-    text-align: center;
+    background: none;
+    width: auto;
+    border-radius: 0;
+    padding: 0;
+    background-color: transparent;
+    color: inherit;
+    text-align: inherit;
 }
 
 #authentication .social div:hover {
-    background-color: rgba(255, 255, 255, 0.47);
+    background-color: transparent;
 }
 
 #authentication .social .fb {
-    margin-left: 25px;
+    margin: 0;
 }
 
 #authentication .social i {
-    margin-right: 4px;
+    margin: 0;
 }
 
 #authentication .alert-warning {
-    color: red;
-    padding: 5px 10px;
+    color: inherit;
+    padding: 0;
 }
 
 #authentication #toasterMessage {
-    position: absolute;
-    top: 20px;
-    right: 0px;
-    display: none;
+    position: static;
+    top: auto;
+    right: auto;
+    display: block;
 }
 
 #authentication #toasterMessage p {
-    color: rgb(255, 255, 255);
-    background-color: #f09819;
-    padding: 5px 10px;
-    font-size: 20px;
-}
-
-@media only screen and (max-width: 500px) {
-    #authentication .background {
-        width: 300px;
-        height: 520px;
-        position: absolute;
-        transform: translate(-50%, -50%);
-        left: 30%;
-        top: 50%;
-    }
-
-    #authentication form {
-        width: 300px;
-    }
-
-    #authentication .shape:first-child {
-        left: 60px;
-    }
+    color: inherit;
+    background-color: transparent;
+    padding: 0;
+    font-size: inherit;
 }
 
 #authentication #userList {
-    overflow-y: auto;
-    background-color: rgba(255, 255, 255, 0.13);
-    backdrop-filter: blur(10px);
+    overflow: visible;
+    background-color: transparent;
+    backdrop-filter: none;
 }
 
 #authentication .spinner-border {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: auto;
+    height: auto;
 }
 
 #authentication .password-icon {
-    position: relative;
+    position: static;
 }
 
 #authentication .password-icon i {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
+    position: static;
+    right: auto;
+    top: auto;
+    transform: none;
+    cursor: auto;
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 500px) {
+    .shape-1 {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .shape-2 {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .shape-3 {
+        width: 80px;
+        height: 80px;
+    }
 }
 </style>

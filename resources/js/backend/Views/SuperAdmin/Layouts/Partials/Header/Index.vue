@@ -183,7 +183,7 @@ export default {
     logout: async function () {
       let con = await window.s_confirm("Are you sure want to logout?");
       if (con) {
-        localStorage.removeItem("admin_token");
+        localStorage.removeItem("auth_token");
         window.location.href = "/";
       }
     },

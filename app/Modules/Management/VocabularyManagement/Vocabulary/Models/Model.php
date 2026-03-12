@@ -65,4 +65,9 @@ class Model extends EloquentModel
             'vocabolary_story_id'
         );
     }
+
+    public function userRevisionVocabularies()
+    {
+        return $this->hasMany(UserRevisionVocabulary::class, 'vocabulary_id');
+    }
 }
