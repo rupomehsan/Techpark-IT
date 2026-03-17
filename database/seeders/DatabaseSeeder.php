@@ -10,14 +10,10 @@ use Illuminate\Database\Seeder;
  * User seeder management.
  */
 
-use App\Modules\Management\UserManagement\Role\Seeder\Seeder as RoleSeeder;
-use App\Modules\Management\UserManagement\User\Seeder\Seeder as UserSeeder;
-use App\Modules\Management\SettingManagement\WebsiteSettings\Seeder\Seeder as WebsiteSettingsSeeder;
+use Modules\Management\UserManagement\Role\Seeders\Seeder as RoleSeeder;
+use Modules\Management\UserManagement\User\Seeders\Seeder as UserSeeder;
+use Modules\Management\SettingManagement\WebsiteSettings\Seeders\Seeder as WebsiteSettingsSeeder;
 
-/**
- * Suppliyer seeder management.
- */
-use App\Modules\Management\BlogCategory\Seeder\Seeder as BlogCategorySeeder;
 
 class DatabaseSeeder extends Seeder
 {

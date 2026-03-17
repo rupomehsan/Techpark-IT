@@ -40,11 +40,11 @@ if (!function_exists('GetAllData')) {
         $content = <<<"EOD"
         <?php
 
-        namespace App\\Modules\\Management\\{$moduleName}\\Actions;
+        namespace Modules\\Management\\{$moduleName}\\Actions;
 
         class GetAllData
         {
-            static \$model = \App\Modules\\Management\\{$moduleName}\\Models\\Model::class;
+            static \$model = \Modules\\Management\\{$moduleName}\\Models\\Model::class;
 
             public static function execute()
             {

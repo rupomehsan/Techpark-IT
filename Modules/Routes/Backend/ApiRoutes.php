@@ -34,3 +34,4 @@ include_once base_path("Modules/Management/UserManagement/Role/Routes/Route.php"
 | Others Management Module
 |--------------------------------------------------------------------------
 */
+include_once base_path("Modules/Management/TestManagement/Test/Routes/Route.php");

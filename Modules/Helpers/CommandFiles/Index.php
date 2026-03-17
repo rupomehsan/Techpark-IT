@@ -24,13 +24,13 @@ include_once(__DIR__ . '/BackendModule/Others/ImportJob.php');
 
 include_once(__DIR__ . '/BackendModule/Controller/Controller.php');
 
-include_once(__DIR__ . '/BackendModule/Models/Model.php');
+include_once(__DIR__ . '/BackendModule/Database/Models/Model.php');
 
-include_once(__DIR__ . '/BackendModule/Database/Migration.php');
+include_once(__DIR__ . '/BackendModule/Database/Migrations/Migration.php');
 
 include_once(__DIR__ . '/BackendModule/Routes/Route.php');
 
-include_once(__DIR__ . '/BackendModule/Seeder/Seeder.php');
+include_once(__DIR__ . '/BackendModule/Database/Seeders/Seeder.php');
 
 include_once(__DIR__ . '/BackendModule/Validations/BulkActionsValidation.php');
 include_once(__DIR__ . '/BackendModule/Validations/DataStoreValidation.php');

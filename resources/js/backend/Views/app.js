@@ -1,10 +1,10 @@
 // setup  files
 // setup  files
 import "./bootstrap.js";
-import "../../plugins/axios_setup.js";
-import "../../plugins/sweet_alert.js";
-import "../../plugins/moment_setup.js";
-import "../../plugins/number_to_text.js";
+import "../plugins/axios_setup.js";
+import "../plugins/sweet_alert.js";
+import "../plugins/moment_setup.js";
+import "../plugins/number_to_text.js";
 // CSS imports
 import '@fortawesome/fontawesome-free/css/all.min.css';
 // Root components
@@ -15,8 +15,8 @@ import { createPinia } from "pinia";
 import App from "./Layouts/App.vue";
 // common components
 // common components
-import CommonInput from "../../GlobalComponents/FormComponents/CommonInput.vue";
-import Pagination from "../../GlobalComponents/Pagination.vue";
+import CommonInput from "../GlobalComponents/FormComponents/CommonInput.vue";
+import Pagination from "../GlobalComponents/Pagination.vue";
 // project rotes
 // project rotes
 import Routes from "./Routes/routes.js";

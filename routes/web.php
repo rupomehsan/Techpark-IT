@@ -1,11 +1,15 @@
 <?php
-
+use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
 | frontend Routes
 |--------------------------------------------------------------------------
 |
 */
+
+Route::get('/', function () {
+    return redirect()->route('LoginPage');
+});
 
 require_once __DIR__ . '/../Modules/Routes/Frontend/WebRoutes.php';
 

@@ -1,5 +1,5 @@
 import { mapState, mapWritableState } from "pinia";
-import { anyObject } from "../../../../../../../../../common_types/object";
+import { anyObject } from "@/common_types/object";
 import { store } from "..";
 import fetchDataAndUpdateCache from "../helpers/http";
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Modules\Commands;
+namespace Modules\Commands;
 
 
 use Illuminate\Console\Command;
@@ -26,17 +26,25 @@ class ModelingDirectory extends Command
 
     public function handle()
     {
-        $this->initializeProperties();
-        $this->parseFields();
-        $this->createBaseDirectories();
-        $this->createSubDirectories();
-        $this->generateFiles();
-        $this->runMigration();
-        $this->runSeeder();
-        $this->appendRouteToApiRoutes();
+        try {
+            $this->initializeProperties();
+            $this->parseFields();
+            $this->createBaseDirectories();
+            $this->createSubDirectories();
+            $this->generateFiles();
+            $this->runMigration();
+            $this->runSeeder();
+            $this->appendRouteToApiRoutes();
 
-        if ($this->withVue) {
-            $this->generateVueFiles();
+            if ($this->withVue) {
+                $this->generateVueFiles();
+            }
+            
+            $this->info("Module {$this->moduleName} created successfully!");
+        } catch (\Exception $e) {
+            $this->error("Error creating module: " . $e->getMessage());
+            \Log::error("Module creation error: " . $e->getFile() . ":" . $e->getLine() . "\n" . $e->getTraceAsString());
+            return 1;
         }
     }
 
@@ -51,7 +59,7 @@ class ModelingDirectory extends Command
         $this->moduleName = $this->argument('module_name');
         $this->ViewModuleName = $this->moduleName;
         $this->withVue = $this->option('vue');
-        $this->baseDirectory = app_path("Modules/Management/");
+        $this->baseDirectory = base_path("Modules/Management/");
     }
 
     protected function parseFields()
@@ -110,9 +118,15 @@ class ModelingDirectory extends Command
 
     protected function createSubDirectories()
     {
-        $subDirs = ['Actions', 'Validations', 'Models', 'Database', 'Controller', 'Others', 'Routes', 'Seeder'];
+        $subDirs = ['Actions', 'Validations', 'Controller', 'Others', 'Routes'];
         foreach ($subDirs as $dir) {
             File::ensureDirectoryExists($this->baseDirectory . $this->moduleName . "/{$dir}");
+        }
+        
+        // Create Database subfolders for organized structure
+        $databaseSubDirs = ['Migrations', 'Models', 'Seeders'];
+        foreach ($databaseSubDirs as $dir) {
+            File::ensureDirectoryExists($this->baseDirectory . $this->moduleName . "/Database/{$dir}");
         }
     }
 
@@ -136,13 +150,13 @@ class ModelingDirectory extends Command
             'Validations/DataStoreValidation.php' => DataStoreValidation($module_path, $fields),
             'Validations/BulkActionsValidation.php' => BulkActionsValidation($module_path, $fields),
             'Controller/Controller.php' => Controller($module_path),
-            'Models/Model.php' => Model($module_path, $this->moduleName, $this->jsonFields, $this->hasJsonUploads, $this->fieldsWithBraces),
-            "Database/create_" . Str::plural(Str::snake($this->moduleName)) . "_table.php" => Migration($module_path, $fields),
+            'Database/Models/Model.php' => Model($module_path, $this->moduleName, $this->jsonFields, $this->hasJsonUploads, $this->fieldsWithBraces),
+            "Database/Migrations/create_" . Str::plural(Str::snake($this->moduleName)) . "_table.php" => Migration($module_path, $fields),
             'Routes/Route.php' => RouteContent($module_path, $this->moduleName),
             'Others/Api.http' => ApiDocumentation($this->moduleName),
             'Others/Doc.txt' => Documentation(),
             'Others/ImportJob.php' => ImportJob($module_path),
-            'Seeder/Seeder.php' => Seeder($module_path, $this->moduleName, $fields),
+            'Database/Seeders/Seeder.php' => Seeder($module_path, $this->moduleName, $fields),
         ];
 
         foreach ($files as $relativePath => $content) {
@@ -153,21 +167,21 @@ class ModelingDirectory extends Command
     protected function runMigration()
     {
         $table = Str::plural(Str::snake($this->moduleName));
-        $migrationPath = "/app/Modules/Management/{$this->ViewModuleName}/Database/create_{$table}_table.php";
+        $migrationPath = "/Modules/Management/{$this->ViewModuleName}/Database/Migrations/create_{$table}_table.php";
         Artisan::call('migrate', ['--path' => $migrationPath]);
     }
 
     protected function runSeeder()
     {
         $path = str_replace('/', '\\', $this->ViewModuleName);
-        $seederClass = "\\App\\Modules\\Management\\{$path}\\Seeder\\Seeder";
+        $seederClass = "\\Modules\\Management\\{$path}\\Database\\Seeders\\Seeder";
         Artisan::call('db:seed', ['--class' => $seederClass]);
     }
 
     protected function appendRouteToApiRoutes()
     {
-        $filePath = base_path("app/Modules/Routes/ApiRoutes.php");
-        $routeInclude = "include_once base_path(\"app/Modules/Management/{$this->ViewModuleName}/Routes/Route.php\");\n";
+        $filePath = base_path("Modules/Routes/Backend/ApiRoutes.php");
+        $routeInclude = "include_once base_path(\"Modules/Management/{$this->ViewModuleName}/Routes/Route.php\");\n";
 
         if (!str_contains(file_get_contents($filePath), $routeInclude)) {
             file_put_contents($filePath, $routeInclude, FILE_APPEND);

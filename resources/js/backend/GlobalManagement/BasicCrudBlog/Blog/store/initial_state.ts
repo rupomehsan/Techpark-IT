@@ -1,4 +1,4 @@
-import { anyObject } from '../../../../../../../../common_types/object'
+import { anyObject } from '@/common_types/object'
 import setup from '../setup';
 export const initialState = {
     /** loading status */

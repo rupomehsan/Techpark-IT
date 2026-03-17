@@ -31,18 +31,7 @@
     <hr />
     <ul class="metismenu" id="menu">
       <!-- <li class="menu-label">Management</li> -->
-      <li>
-        <router-link
-          :to="{ name: `adminDashboard` }"
-          class="border"
-          href="javascript:void();"
-        >
-          <div class="parent-icon">
-            <i class="zmdi zmdi-view-dashboard"></i>
-          </div>
-          <div class="menu-title">Dashboard</div>
-        </router-link>
-      </li>
+     
       <side-bar-single-menu
         :icon="`zmdi zmdi-view-dashboard`"
         :menu_title="`Dashboard`"
@@ -96,8 +85,8 @@
 
 <script>
 //auth_store
-import { auth_store } from "../../../../../GlobalStore/auth_store";
-import { site_settings_store } from "../../../../../GlobalStore/site_settings_store";
+import { auth_store } from "../../../../GlobalStore/auth_store";
+import { site_settings_store } from "../../../../GlobalStore/site_settings_store";
 import { mapState, mapActions } from "pinia";
 //components
 import SideBarDropDownMenus from "./SideBarDropDownMenus.vue";

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Modules\Commands;
+namespace Modules\Commands;
 
 
 use Illuminate\Console\Command;
@@ -55,7 +55,7 @@ class TableModelingCommand extends Command
 
     protected function prepareDirectories()
     {
-        $this->baseDirectory = app_path("Modules/Management/");
+        $this->baseDirectory = base_path("Modules/Management/");
         $parts = explode('/', $this->moduleName);
         $this->finalModule = end($parts);
 
