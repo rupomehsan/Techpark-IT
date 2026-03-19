@@ -17,6 +17,13 @@ class GetAllData
             $fields = request()->input('fields') ?? '*';
             $start_date = request()->input('start_date');
             $end_date = request()->input('end_date');
+            
+            // Log for debugging
+            \Log::info('Test GetAllData filter params', [
+                'start_date' => $start_date,
+                'end_date' => $end_date,
+                'status' => $status,
+            ]);
 
                             $with = [];
 
@@ -32,11 +39,22 @@ class GetAllData
             }
 
             if ($start_date && $end_date) {
-                 if ($end_date > $start_date) {
-                    $data->whereBetween('created_at', [$start_date . ' 00:00:00', $end_date . ' 23:59:59']);
-                } elseif ($end_date == $start_date) {
-                    $data->whereDate('created_at', $start_date);
+                 if ($start_date === $end_date) {
+                    // Same day filter
+                    $data = $data->whereDate('created_at', $start_date);
+                } elseif ($end_date > $start_date) {
+                    // Date range filter
+                    $data = $data->whereBetween('created_at', [
+                        $start_date . ' 00:00:00', 
+                        $end_date . ' 23:59:59'
+                    ]);
                 }
+            } elseif ($start_date) {
+                // Only start date provided
+                $data = $data->whereDate('created_at', '>=', $start_date);
+            } elseif ($end_date) {
+                // Only end date provided
+                $data = $data->whereDate('created_at', '<=', $end_date);
             }
 
             if ($status == 'trased') {

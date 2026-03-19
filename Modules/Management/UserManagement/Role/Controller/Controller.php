@@ -9,6 +9,7 @@ use Modules\Management\UserManagement\Role\Actions\UpdateData;
 use Modules\Management\UserManagement\Role\Actions\SoftDelete;
 use Modules\Management\UserManagement\Role\Actions\RestoreData;
 use Modules\Management\UserManagement\Role\Actions\ImportData;
+use Modules\Management\UserManagement\Role\Actions\UpdateStatus;
 use Modules\Management\UserManagement\Role\Validations\BulkActionsValidation;
 use Modules\Management\UserManagement\Role\Validations\DataStoreValidation;
 use Modules\Management\UserManagement\Role\Actions\BulkActions;
@@ -65,6 +66,12 @@ class Controller extends ControllersController
     public function bulkAction(BulkActionsValidation $request)
     {
         $data = BulkActions::execute($request);
+        return $data;
+    }
+
+    public function updateStatus()
+    {
+        $data = UpdateStatus::execute();
         return $data;
     }
 

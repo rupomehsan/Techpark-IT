@@ -33,6 +33,7 @@
         :icon="`zmdi zmdi-view-dashboard`"
         :menu_title="`Dashboard`"
         :route_name="`adminDashboard`"
+        :class="'border border-primary rounded'"
       />
       <!-- Management start -->
       <side-bar-drop-down-menus
@@ -42,6 +43,11 @@
           {
             route_name: `AllUser`,
             title: `User`,
+            icon: `zmdi zmdi-dot-circle-alt`,
+          },
+           {
+            route_name: `AllRole`,
+            title: `User Role`,
             icon: `zmdi zmdi-dot-circle-alt`,
           },
         ]"

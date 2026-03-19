@@ -7,7 +7,7 @@ import SettingsRoutes from "../Management/Settings/setup/routes.js";
 //UserRoutes
 import UserRoutes from "../Management/UserManagement/User/setup/routes.js";
 //routes
-
+import UserRoleRoutes from "../Management/UserManagement/Role/setup/routes.js";
 
 const routes = {
   path: "",
@@ -24,6 +24,7 @@ const routes = {
 
     //user routes
     UserRoutes,
+    UserRoleRoutes,
     //settings
     SettingsRoutes,
   ],

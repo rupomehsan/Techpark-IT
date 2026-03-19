@@ -729,25 +729,6 @@ export default {
       },
       immediate: true,
     },
-
-    start_date: {
-      handler: function (v) {
-        let data = {
-          start_date: v,
-        };
-        this.set_filter_criteria(data);
-      },
-      deep: true,
-    },
-    end_date: {
-      handler: function (v) {
-        let data = {
-          end_date: v,
-        };
-        this.set_filter_criteria(data);
-      },
-      deep: true,
-    },
   },
 };
 </script>

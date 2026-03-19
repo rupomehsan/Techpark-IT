@@ -218,183 +218,11 @@
                 </div>
             </div>
         </div>
-        <div class="loader export_loader">
-            <div class="loader_body">
-                <div class="progress"></div>
-                <div class="load_amount">
-                    <h4>0</h4>
-                    <h5>%</h5>
-                </div>
-            </div>
-        </div>
-        <div class="off_canvas quick_view d-none">
-            <div class="off_canvas_body">
-                <div class="header">
-                    <h3 class="heading_text">Quick View</h3>
-                    <button class="btn btn-sm btn-outline-danger">
-                        <i class="fa fa-close"></i>
-                    </button>
-                </div>
-                <div class="data_content">
-                    <table class="table quick_modal_table">
-                        <tbody>
-                            {$tableRows}
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <div class="off_canvas_overlay"></div>
-        </div>
-        <div
-            class="off_canvas data_filter"
-            :class="`${show_filter_canvas ? 'active' : ''}`"
-        >
-            <div class="off_canvas_body">
-                <div class="header">
-                    <h3 class="heading_text">Filter</h3>
-                    <button
-                        class="close_button"
-                        @click="set_show_filter_canvas(false)"
-                    >
-                        <span class="fa fa-close border p-2"></span>
-                    </button>
-                </div>
-                <div class="data_content">
-                    <div class="filter_item">
-                        <label for="start_date">Start Date</label>
-                        <label
-                            for="start_date"
-                            class="text-capitalize d-block date_custom_control"
-                        >
-                            <input
-                                v-model="start_date"
-                                type="date"
-                                id="start_date"
-                                name="start_date"
-                                class="form-control"
-                            />
-                            <!-- <div class="form-control preview"></div> -->
-                        </label>
-                    </div>
-                    <div class="filter_item">
-                        <label for="end_date">End Date</label>
-                        <label
-                            for="end_date"
-                            class="text-capitalize d-block date_custom_control"
-                        >
-                            <input
-                                v-model="end_date"
-                                type="date"
-                                id="end_date"
-                                name="end_date"
-                                class="form-control"
-                            />
-                            <!-- <div class="form-control preview"></div> -->
-                        </label>
-                    </div>
-                    <div class="filter_item">
-                        <label for="sort_by_col">Sort By Col</label
-                        ><label
-                            for="sort_by_col"
-                            class="text-capitalize d-block date_custom_control"
-                        >
-                            <select v-model="sort_by_col" class="form-control">
-                                <option v-for="col in sort_by_cols" :key="col">
-                                    {{ col }}
-                                </option>
-                            </select>
-                        </label>
-                    </div>
-                    <div class="filter_item">
-                        <label for="sort_by_col">Sort Type</label
-                        ><label
-                            for="sort_by_col"
-                            class="text-capitalize d-block date_custom_control"
-                        >
-                            <select v-model="sort_type" class="form-control">
-                                <option
-                                    v-for="col in ['ASC', 'DESC']"
-                                    :key="col"
-                                >
-                                    {{ col }}
-                                </option>
-                            </select>
-                        </label>
-                    </div>
-                    <div class="filter_item">
-                        <button
-                            @click.prevent="get_all()"
-                            type="button"
-                            class="btn btn-sm btn-outline-info"
-                        >
-                            Submit
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="off_canvas_overlay"></div>
-        </div>
-        <div
-            class="modal fade"
-            :class="`${import_csv_modal_show ? 'show d-block' : 'd-none'}`"
-            id="primarymodal"
-            aria-modal="true"
-        >
-            <div class="modal-dialog modal-dialog-centered">
-                <form @submit.prevent="FileUploadHandler">
-                    <div class="modal-content border-primary">
-                        <div class="modal-header bg-primary">
-                            <h5 class="modal-title text-white">
-                                Import {{ setup.prefix }}
-                            </h5>
-                            <button
-                                @click="import_csv_modal_show = false"
-                                type="button"
-                                class="close text-white"
-                                data-dismiss="modal"
-                                aria-label="Close"
-                            >
-                                <span aria-hidden="true">×</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="">
-                                <label for="">Upload file</label>
-                                <input
-                                    type="file"
-                                    name="file"
-                                    class="form-control"
-                                    required
-                                />
-                            </div>
-                            <p class="mt-3">
-                                Please check the sample CSV file below to ensure
-                                compatibility with the demo data import.
-                            </p>
-                            <a
-                                href=""
-                                @click.prevent="export_demo_csv"
-                                class="btn btn-sm btn-primary"
-                                >Download Demo CSV</a
-                            >
-                        </div>
-                        <div class="modal-footer">
-                            <button
-                                @click="import_csv_modal_show = false"
-                                type="button"
-                                class="btn btn-light"
-                                data-dismiss="modal"
-                            >
-                                <i class="fa fa-times"></i> Close
-                            </button>
-                            <button type="submit" class="btn btn-primary">
-                                <i class="fa fa-download"></i> Import
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
+        <!-- Canvas and Modal Components -->
+        <export-loader />
+        <quick-view />
+        <filter-data />
+        <import-modal />
     </div>
 </template>
 
@@ -410,17 +238,34 @@ import debounce from "../helpers/debounce";
 
 import TableHead from '../components/all_data_page/TableHead.vue';
 import TableBody from '../components/all_data_page/TableBody.vue';
+// Import canvas components from shared
+import FilterData from '@/shared/components/canvas/FilterData.vue';
+import ImportModal from '@/shared/components/canvas/ImportModal.vue';
+import QuickView from '@/shared/components/canvas/QuickView.vue';
+import ExportLoader from '@/shared/components/canvas/ExportLoader.vue';
+
 export default {
     
     components: {
         TableHead,
         TableBody,
+        FilterData,
+        ImportModal,
+        QuickView,
+        ExportLoader,
+    },
+
+    // Provide setup and store to child components via dependency injection
+    provide() {
+        return {
+            moduleSetup: this.setup,
+            dataStoreConstructor: data_store,
+        };
     },
 
     data: () => ({
         setup,
         is_trashed_data: false,
-        import_csv_modal_show: false,
         filePath:
             "resources/js/backend/Views/SuperAdmin/Management/TestModule/helpers/demo.csv",
     }),
@@ -593,7 +438,8 @@ export default {
         },
 
         FileUploadHandler: async function ($event) {
-            let response = await this.import_data($event);
+            let formData = new FormData($event.target);
+            let response = await this.import_data(formData);
             if (response.data.status === "success") {
                 await this.get_all();
                 window.s_alert(response.data.message);
@@ -631,6 +477,7 @@ export default {
             "end_date",
             "search_key",
             "page",
+            "import_csv_modal_show",
         ]),
         isAllSelected() {
             return (
@@ -648,25 +495,6 @@ export default {
                 this.is_trashed_data = newValue;
             },
             immediate: true,
-        },
-
-        start_date: {
-            handler: function (v) {
-                let data = {
-                    start_date: v,
-                };
-                this.set_filter_criteria(data);
-            },
-            deep: true,
-        },
-        end_date: {
-            handler: function (v) {
-                let data = {
-                    end_date: v,
-                };
-                this.set_filter_criteria(data);
-            },
-            deep: true,
         },
     },
 };

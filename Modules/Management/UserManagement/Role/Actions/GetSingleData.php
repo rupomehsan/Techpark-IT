@@ -12,7 +12,13 @@ class GetSingleData
     {
         try {
             $with = [];
-            $fields = request()->input('fields') ?? ['*'];
+            
+            // Handle fields parameter - can be passed as fields[0], fields[1], etc.
+            $fields = request()->input('fields');
+            if (empty($fields) || !is_array($fields)) {
+                $fields = '*'; // Default to all fields
+            }
+            
             if (!$data = self::$model::query()->with($with)->select($fields)->where('slug', $slug)->first()) {
                 return messageResponse('Data not found...',$data, 404, 'error');
             }

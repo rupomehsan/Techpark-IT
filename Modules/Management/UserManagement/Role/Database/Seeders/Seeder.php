@@ -9,7 +9,7 @@ class Seeder extends SeederClass
 {
     /**
      * Run the database seeds.
-     php artisan db:seed --class="\Modules\Management\UserManagement\Role\Seeder\Seeder"
+     php artisan db:seed --class="\Modules\Management\UserManagement\Role\Database\Seeders\Seeder"
      */
     static $model = \Modules\Management\UserManagement\Role\Database\Models\Model::class;
 
@@ -26,6 +26,36 @@ class Seeder extends SeederClass
             'name' => "admin",
             'serial_no' => 2,
         ]);
-        
+
+        // Generate 100 additional roles
+        $roles = [
+            'Editor', 'Viewer', 'Contributor', 'Manager', 'Moderator', 'Analyst', 'Specialist',
+            'Coordinator', 'Supervisor', 'Officer', 'Developer', 'Designer', 'Consultant',
+            'Analyst Junior', 'Senior Manager', 'Team Lead', 'Quality Assurance', 'Product Manager',
+            'Marketing Manager', 'Sales Manager', 'Finance Manager', 'HR Manager', 'Operations Manager',
+            'Support Agent', 'Support Manager', 'Content Writer', 'SEO Specialist', 'Graphic Designer',
+            'UI Designer', 'UX Designer', 'Frontend Developer', 'Backend Developer', 'Full Stack Developer',
+            'Database Administrator', 'System Administrator', 'Network Administrator', 'Security Officer',
+            'Data Analyst', 'Business Analyst', 'QA Tester', 'QA Lead', 'Project Manager', 'Scrum Master',
+            'DevOps Engineer', 'Cloud Architect', 'Solutions Architect', 'Technical Writer', 'Documentation Officer',
+            'Community Manager', 'Social Media Manager', 'Brand Manager', 'Customer Success Manager', 'Account Manager',
+            'Sales Executive', 'Sales Representative', 'Business Development', 'Strategic Planner', 'Compliance Officer',
+            'Legal Advisor', 'Financial Analyst', 'Accountant', 'Audit Officer', 'Risk Manager',
+            'Procurement Officer', 'Supply Chain Manager', 'Logistics Coordinator', 'Warehouse Manager', 'Inventory Manager',
+            'Research Associate', 'Research Director', 'Lab Technician', 'Field Coordinator', 'Training Manager',
+            'Recruiter', 'Talent Acquisition', 'Performance Manager', 'Compensation Analyst', 'Benefits Administrator',
+            'Executive Assistant', 'Administrative Officer', 'Office Manager', 'Receptionist', 'Customer Representative',
+            'Technical Support', 'User Support', 'Help Desk', 'IT Support', 'Service Desk', 'Trainer', 'Instructor'
+        ];
+
+        $serialNo = 3;
+        for ($i = 0; $i < 100; $i++) {
+            $roleName = $roles[$i % count($roles)] . ($i >= count($roles) ? ' ' . intval($i / count($roles)) : '');
+            
+            self::$model::create([
+                'name' => strtolower(str_replace(' ', '_', $roleName)),
+                'serial_no' => $serialNo++,
+            ]);
+        }
     }
 }
