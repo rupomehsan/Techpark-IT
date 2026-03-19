@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\Management\UserManagement\Role\Seeders;
+namespace Modules\Management\UserManagement\Role\Database\Seeders;
 
 use Illuminate\Database\Seeder as SeederClass;
 use Faker\Factory as Faker;
@@ -11,7 +11,7 @@ class Seeder extends SeederClass
      * Run the database seeds.
      php artisan db:seed --class="\Modules\Management\UserManagement\Role\Seeder\Seeder"
      */
-    static $model = \Modules\Management\UserManagement\Role\Models\Model::class;
+    static $model = \Modules\Management\UserManagement\Role\Database\Models\Model::class;
 
     public function run(): void
     {

@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Mail;
 
 class SendOtp
 {
-    static $userModel = \Modules\Management\UserManagement\User\Models\Model::class;
+    static $userModel = \Modules\Management\UserManagement\User\Database\Models\Model::class;
 
     public static function execute($request)
     {

@@ -32,7 +32,7 @@ class ImportJob implements ShouldQueue
     public function handle(): void
     {
 
-        $model = \Modules\Management\UserManagement\User\Models\Model::class;
+        $model = \Modules\Management\UserManagement\User\Database\Models\Model::class;
         foreach ($this->data as $item) {
             $StoreData = array_combine($this->header, $item);
             $model::create($StoreData);

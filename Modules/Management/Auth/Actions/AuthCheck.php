@@ -2,7 +2,7 @@
 
 namespace Modules\Management\Auth\Actions;
 
-use Modules\UserManagement\User\Models\Model as UserModel;
+use Modules\Management\UserManagement\User\Database\Models\Model as UserModel;
 
 class AuthCheck
 {

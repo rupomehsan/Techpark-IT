@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Hash;
 
 class ResetPassword
 {
-    static $model = \Modules\Management\UserManagement\User\Models\Model::class;
+    static $model = \Modules\Management\UserManagement\User\Database\Models\Model::class;
 
     public static function execute($request)
     {

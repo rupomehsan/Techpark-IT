@@ -7,6 +7,7 @@ import "../plugins/moment_setup.js";
 import "../plugins/number_to_text.js";
 // CSS imports
 import '@fortawesome/fontawesome-free/css/all.min.css';
+
 // Root components
 // Root components
 import { createApp } from "vue";

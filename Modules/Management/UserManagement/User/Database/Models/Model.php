@@ -23,10 +23,10 @@ class Model extends Authenticatable
 
 
 
-    public static $roleModel = \Modules\Management\UserManagement\Role\Models\Database\Model::class;
-    static $UserAddressModel = \Modules\Management\UserManagement\User\Models\Database\UserAddressModel::class;
-    static $UserLogModel = \Modules\Management\UserManagement\User\Models\Database\UserLogModel::class;
-    static $UserSocialLinkModel = \Modules\Management\UserManagement\User\Models\Database\UserSocialLinkModel::class;
+    public static $roleModel = \Modules\Management\UserManagement\Role\Database\Models\Model::class;
+    static $UserAddressModel = \Modules\Management\UserManagement\User\Database\Models\UserAddressModel::class;
+    static $UserLogModel = \Modules\Management\UserManagement\User\Database\Models\UserLogModel::class;
+    static $UserSocialLinkModel = \Modules\Management\UserManagement\User\Database\Models\UserSocialLinkModel::class;
 
     protected static function booted()
     {

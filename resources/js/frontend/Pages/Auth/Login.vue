@@ -258,15 +258,10 @@ export default {
             let redirectUrl = "";
             if (data.user.role_id === 1) {
               redirectUrl =
-                prevUrl && prevUrl.startsWith("/super-admin")
+                prevUrl && prevUrl.startsWith("/admin")
                   ? prevUrl
-                  : "/super-admin#/dashboard";
-            } else if (data.user.role_id === 3) {
-              redirectUrl =
-                prevUrl && prevUrl.startsWith("/profile")
-                  ? prevUrl
-                  : "/profile";
-            }
+                  : "/admin#/dashboard";
+            } 
 
             if (redirectUrl) {
               // Small delay to ensure token is saved before redirect

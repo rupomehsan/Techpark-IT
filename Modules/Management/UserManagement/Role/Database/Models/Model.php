@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\Management\UserManagement\Role\Models;
+namespace Modules\Management\UserManagement\Role\Database\Models;
 
 use Illuminate\Database\Eloquent\Model as EloquentModel;
 use Illuminate\Support\Str;

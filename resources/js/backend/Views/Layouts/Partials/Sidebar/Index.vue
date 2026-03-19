@@ -2,10 +2,7 @@
   <!--Start sidebar-wrapper-->
   <div id="sidebar-wrapper">
     <div class="brand-logo">
-      <router-link
-        :to="{ name: `adminDashboard` }"
-        class="d-flex align-items-center"
-      >
+      <router-link :to="{ name: `adminDashboard` }" class="d-flex align-items-center">
         <img
           :src="`${get_setting_value('image') ?? 'avatar.png'} `"
           class="logo-icon"
@@ -31,7 +28,7 @@
     <hr />
     <ul class="metismenu" id="menu">
       <!-- <li class="menu-label">Management</li> -->
-     
+
       <side-bar-single-menu
         :icon="`zmdi zmdi-view-dashboard`"
         :menu_title="`Dashboard`"
@@ -45,34 +42,6 @@
           {
             route_name: `AllUser`,
             title: `User`,
-            icon: `zmdi zmdi-dot-circle-alt`,
-          },
-        ]"
-      />
-
-      <side-bar-drop-down-menus
-        :icon="`fa fa-plus`"
-        :menu_title="`BlogManagement`"
-        :menus="[
-          {
-            route_name: `AllBlogCategory`,
-            title: `BlogCategory`,
-            icon: `zmdi zmdi-dot-circle-alt`,
-          },
-
-          {
-            route_name: `AllBlogWriter`,
-            title: `BlogWriter`,
-            icon: `zmdi zmdi-dot-circle-alt`,
-          },
-          {
-            route_name: `AllBlogTag`,
-            title: `BlogTag`,
-            icon: `zmdi zmdi-dot-circle-alt`,
-          },
-          {
-            route_name: `AllBlog`,
-            title: `Blog`,
             icon: `zmdi zmdi-dot-circle-alt`,
           },
         ]"

@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\Management\SettingManagement\WebsiteSettings\Models;
+namespace Modules\Management\SettingManagement\WebsiteSettings\Database\Models;
 
 use Illuminate\Database\Eloquent\Model as EloquentModel;
 use Illuminate\Support\Str;
@@ -12,7 +12,7 @@ class Model extends EloquentModel
     protected $table = "con_setting_title";
     protected $guarded = [];
 
-    public static $SettingValueModel = \Modules\Management\SettingManagement\WebsiteSettings\Models\SettingValueModel::class;
+    public static $SettingValueModel = \Modules\Management\SettingManagement\WebsiteSettings\Database\Models\SettingValueModel::class;
 
 
     protected static function booted()

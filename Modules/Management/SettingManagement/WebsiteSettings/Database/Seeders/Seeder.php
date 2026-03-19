@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\Management\SettingManagement\WebsiteSettings\Seeders;
+namespace Modules\Management\SettingManagement\WebsiteSettings\Database\Seeders;
 
 use Illuminate\Database\Seeder as SeederClass;
 use Faker\Factory as Faker;
@@ -11,8 +11,8 @@ class Seeder extends SeederClass
      * Run the database seeds.
      php artisan db:seed --class="\Modules\Management\SettingManagement\WebsiteSettings\Seeder\Seeder"
      */
-    static $SettingTitleModel = \Modules\Management\SettingManagement\WebsiteSettings\Models\Model::class;
-    static $SettingValueModel = \Modules\Management\SettingManagement\WebsiteSettings\Models\SettingValueModel::class;
+    static $SettingTitleModel = \Modules\Management\SettingManagement\WebsiteSettings\Database\Models\Model::class;
+    static $SettingValueModel = \Modules\Management\SettingManagement\WebsiteSettings\Database\Models\SettingValueModel::class;
 
 
 

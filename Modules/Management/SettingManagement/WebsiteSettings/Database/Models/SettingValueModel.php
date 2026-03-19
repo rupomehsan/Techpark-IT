@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\Management\SettingManagement\WebsiteSettings\Models;
+namespace Modules\Management\SettingManagement\WebsiteSettings\Database\Models;
 
 use Illuminate\Database\Eloquent\Model as EloquentModel;
 use Illuminate\Support\Str;

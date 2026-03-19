@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Hash;
 
 class UserChangePassword
 {
-    static $model = \Modules\Management\UserManagement\User\Models\Model::class;
+    static $model = \Modules\Management\UserManagement\User\Database\Models\Model::class;
 
     public static function execute($request)
     {

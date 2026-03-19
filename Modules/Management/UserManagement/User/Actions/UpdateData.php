@@ -10,10 +10,10 @@ class UpdateData
 {
     use LogsUserActivity;
 
-    static $model = \Modules\Management\UserManagement\User\Models\Model::class;
-    static $UserAddressModel = \Modules\Management\UserManagement\User\Models\UserAddressModel::class;
-    static $UserSocialLinkModel = \Modules\Management\UserManagement\User\Models\UserSocialLinkModel::class;
-    static $UserLogModel = \Modules\Management\UserManagement\User\Models\UserLogModel::class;
+    static $model = \Modules\Management\UserManagement\User\Database\Models\Model::class;
+    static $UserAddressModel = \Modules\Management\UserManagement\User\Database\Models\UserAddressModel::class;
+    static $UserSocialLinkModel = \Modules\Management\UserManagement\User\Database\Models\UserSocialLinkModel::class;
+    static $UserLogModel = \Modules\Management\UserManagement\User\Database\Models\UserLogModel::class;
     public static function execute($request, $slug)
     {
         try {

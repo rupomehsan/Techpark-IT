@@ -4,10 +4,10 @@ namespace Modules\Management\UserManagement\User\Actions;
 
 class UserProfileUpdate
 {
-    static $model = \Modules\Management\UserManagement\User\Models\Model::class;
+    static $model = \Modules\Management\UserManagement\User\Database\Models\Model::class;
 
-    static $UserAddressModel = \Modules\Management\UserManagement\User\Models\UserAddressModel::class;
-    static $UserSocialLinkModel = \Modules\Management\UserManagement\User\Models\UserSocialLinkModel::class;
+    static $UserAddressModel = \Modules\Management\UserManagement\User\Database\Models\UserAddressModel::class;
+    static $UserSocialLinkModel = \Modules\Management\UserManagement\User\Database\Models\UserSocialLinkModel::class;
 
     public static function execute($request)
     {

@@ -20,6 +20,8 @@ import Footer from "../Layouts/Partials/Footer/Index.vue";
 import { auth_store } from "../../GlobalStore/auth_store";
 import { site_settings_store } from "../../GlobalStore/site_settings_store";
 import { mapActions, mapState } from "pinia";
+
+
 export default {
   components: { TopHeader, Footer },
   data: () => ({
@@ -27,6 +29,9 @@ export default {
     isInitialized: false,
   }),
   created: async function () {
+    // Initialize theme system before other operations
+    
+
     // Prevent multiple initialization calls
     if (this.isInitialized) {
       return;
@@ -39,16 +44,16 @@ export default {
 
       if (this.is_auth) {
         let prev_url = window.sessionStorage.getItem("prevurl");
-         window.location.href = "/admin#/dashboard";
-          if (this.$route.path === "/admin#") {
-            this.$router.push("/dashboard");
-          }
-          window.location.hash = prev_url || "/admin#/dashboard";
+        window.location.href = "/admin#/dashboard";
+        if (this.$route.path === "/admin#") {
+          this.$router.push("/dashboard");
+        }
+        window.location.hash = prev_url || "/admin#/dashboard";
       } else {
         window.location.href = "login";
       }
     } catch (error) {
-      console.error('Initialization error:', error);
+      console.error("Initialization error:", error);
       this.isInitialized = false; // Reset flag on error
     }
   },

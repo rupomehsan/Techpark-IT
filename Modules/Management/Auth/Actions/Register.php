@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Hash;
 
 class Register
 {
-    static $model = \Modules\Management\UserManagement\User\Models\Model::class;
+    static $model = \Modules\Management\UserManagement\User\Database\Models\Model::class;
 
     public static function Register($request)
     {

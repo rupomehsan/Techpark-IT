@@ -8,7 +8,7 @@ use Maatwebsite\Excel\Facades\Excel;
 
 class ImportData
 {
-    static $model = \Modules\Management\UserManagement\User\Models\Model::class;
+    static $model = \Modules\Management\UserManagement\User\Database\Models\Model::class;
 
     public static function execute()
     {

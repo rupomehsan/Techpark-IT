@@ -4,7 +4,7 @@ namespace Modules\Management\UserManagement\Role\Actions;
 
 class DestroyData
 {
-    static $model = \Modules\Management\UserManagement\Role\Models\Model::class;
+    static $model = \Modules\Management\UserManagement\Role\Database\Models\Model::class;
 
     public static function execute($slug)
     {

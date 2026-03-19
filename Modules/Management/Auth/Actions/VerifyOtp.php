@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\DB;
 
 class VerifyOtp
 {
-    protected static $model = \Modules\Management\UserManagement\User\Models\Model::class;
+    protected static $model = \Modules\Management\UserManagement\User\Database\Models\Model::class;
 
     public static function execute()
     {
