@@ -37,8 +37,8 @@ class GetAllData
                 }
             }
 
-            if ($status == 'trased') {
-                $data = $data->trased();
+            if ($status == 'trashed') {
+                $data = $data->onlyTrashed();
             }
 
             if (request()->has('get_all') && (int)request()->input('get_all') === 1) {
@@ -50,7 +50,7 @@ class GetAllData
                     ->limit($pageLimit)
                     ->orderBy($orderByColumn, $orderByType)
                     ->get();
-            } else if ($status == 'trased') {
+            } else if ($status == 'trashed') {
                 $data = $data
                     ->with($with)
                     ->select($fields)
@@ -71,7 +71,7 @@ class GetAllData
                 ...$data->toArray(),
                 "active_data_count" => self::$model::active()->count(),
                 "inactive_data_count" => self::$model::inactive()->count(),
-                "trased_data_count" => self::$model::trased()->count(),
+                "trashed_data_count" => self::$model::onlyTrashed()->count(),
             ]);
 
         } catch (\Exception $e) {

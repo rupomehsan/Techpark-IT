@@ -3,7 +3,7 @@
             <a href="" @click.prevent="change_status(`trased`)"
                 class="btn action_btn btn-sm btn-danger d-flex align-items-center">
                 <i class="fa fa-trash mr-2"></i> Trased
-                ({{ trased_data_count }})
+                ({{ trashed_data_count }})
             </a>
         </div>
 </template>
@@ -20,7 +20,7 @@ export default {
             'set_page',
         ]),
         change_status: function (status = 'active') {
-            if (status == 'trased') {
+            if (status == 'trashed') {
                 this.is_trashed_data = true;
             } else {
                 this.is_trashed_data = false
@@ -36,7 +36,7 @@ export default {
     },
     computed: {
         ...mapState(store, [
-            'trased_data_count',
+            'trashed_data_count',
         ]),
     }
 }

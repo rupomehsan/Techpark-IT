@@ -26,7 +26,7 @@ if (!function_exists('ImportData')) {
             use Maatwebsite\Excel\Facades\Excel;
             class ImportData
             {
-                static \$model = \Modules\\Management\\{$moduleName}\\Models\\Model::class;
+                static \$model = \Modules\\Management\\{$moduleName}\\Database\\Models\\Model::class;
 
                 public static function execute()
                 {

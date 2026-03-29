@@ -33,7 +33,7 @@ if (!function_exists('GetSingleData')) {
 
             class GetSingleData
             {
-                static \$model = \Modules\\Management\\{$moduleName}\\Models\\Model::class;
+                static \$model = \Modules\\Management\\{$moduleName}\\Database\\Models\\Model::class;
 
                 public static function execute(\$slug)
                 {

@@ -3,7 +3,7 @@
         <a href="" @click.prevent="change_status(`trased`)"
             class="btn action_btn btn-sm btn-danger d-flex align-items-center mx-1">
             <i class="fa fa-trash mr-2"></i> Trased
-            ({{ trased_data_count }})
+            ({{ trashed_data_count }})
         </a>
     </div>
 </template>
@@ -17,9 +17,9 @@ export default {
         const store = dataStoreConstructor();
         
         return {
-            trased_data_count: computed(() => store.trased_data_count),
+            trashed_data_count: computed(() => store.trashed_data_count),
             change_status(status = 'active') {
-                if (status == 'trased') {
+                if (status == 'trashed') {
                     store.set_only_latest_data(true);
                 } else {
                     store.set_only_latest_data(false);

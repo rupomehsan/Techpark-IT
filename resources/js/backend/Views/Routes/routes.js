@@ -8,6 +8,7 @@ import SettingsRoutes from "../Management/Settings/setup/routes.js";
 import UserRoutes from "../Management/UserManagement/User/setup/routes.js";
 //routes
 import UserRoleRoutes from "../Management/UserManagement/Role/setup/routes.js";
+import FreeQuoteRoutes from "../Management/FreeQuote/setup/routes.js";
 
 const routes = {
   path: "",
@@ -20,7 +21,7 @@ const routes = {
     },
     //management routes
 
-   
+    FreeQuoteRoutes,
 
     //user routes
     UserRoutes,

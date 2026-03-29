@@ -218,7 +218,7 @@ class ModelingDirectory extends Command
         $globalVueDirectory = $this->createGlobalVueDirectories($globalVueDirectory, $vue_format_dir);
 
         // Create the Vue directory structure for the role
-        $roleVueDirectory = resource_path("js/backend/Views/{$role}/Management/");
+        $roleVueDirectory = resource_path("js/backend/Views/Management/");
         $roleVueDirectory = $this->createRoleBaseVueDirectories($roleVueDirectory, $vue_format_dir);
 
         //Global Vue Directory

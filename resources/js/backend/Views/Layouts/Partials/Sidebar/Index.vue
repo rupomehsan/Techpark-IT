@@ -2,7 +2,10 @@
   <!--Start sidebar-wrapper-->
   <div id="sidebar-wrapper">
     <div class="brand-logo">
-      <router-link :to="{ name: `adminDashboard` }" class="d-flex align-items-center">
+      <router-link
+        :to="{ name: `adminDashboard` }"
+        class="d-flex align-items-center"
+      >
         <img
           :src="`${get_setting_value('image') ?? 'avatar.png'} `"
           class="logo-icon"
@@ -45,12 +48,18 @@
             title: `User`,
             icon: `zmdi zmdi-dot-circle-alt`,
           },
-           {
+          {
             route_name: `AllRole`,
             title: `User Role`,
             icon: `zmdi zmdi-dot-circle-alt`,
           },
         ]"
+      />
+      <side-bar-single-menu
+        :icon="`zmdi zmdi-view-dashboard`"
+        :menu_title="`Free Quote`"
+        :route_name="`AllFreeQuote`"
+        :class="'border border-primary rounded'"
       />
 
       <!-- Management end -->
@@ -90,7 +99,7 @@ export default {
       window.dispatchEvent(
         new CustomEvent("collapse-all-menus", {
           detail: { except: null },
-        })
+        }),
       );
     },
   },

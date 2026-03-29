@@ -42,7 +42,7 @@ export class StoriesService {
                     counts: {
                         active: response.data.active_data_count || 0,
                         inactive: response.data.inactive_data_count || 0,
-                        trashed: response.data.trased_data_count || 0
+                        trashed: response.data.trashed_data_count || 0
                     }
                 };
             } else {

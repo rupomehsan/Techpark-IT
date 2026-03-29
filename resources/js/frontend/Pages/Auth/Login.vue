@@ -261,7 +261,7 @@ export default {
                 prevUrl && prevUrl.startsWith("/admin")
                   ? prevUrl
                   : "/admin#/dashboard";
-            } 
+            }
 
             if (redirectUrl) {
               // Small delay to ensure token is saved before redirect
@@ -272,13 +272,13 @@ export default {
           } else {
             window.s_alert(
               "Login failed. Invalid response from server.",
-              "error"
+              "error",
             );
           }
         } else {
           window.s_alert(
             response.data?.message || "Login failed. Please try again.",
-            "error"
+            "error",
           );
         }
       } catch (error) {
@@ -294,12 +294,12 @@ export default {
         } else if (error.response && error.response.status === 401) {
           window.s_alert(
             "Invalid credentials. Please check your email and password.",
-            "error"
+            "error",
           );
         } else {
           window.s_alert(
             "Login failed. Please check your connection and try again.",
-            "error"
+            "error",
           );
         }
       } finally {
@@ -315,7 +315,7 @@ export default {
       };
       localStorage.setItem(
         "rememberedCredentials",
-        JSON.stringify(credentials)
+        JSON.stringify(credentials),
       );
     },
 
@@ -361,12 +361,15 @@ export default {
 /* Main Container */
 .login-container {
   min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
 }
 
 /* Login Card */
@@ -410,12 +413,16 @@ export default {
   margin: 0 auto 20px;
   color: white;
 }
+.shield-icon svg {
+  color: white !important;
+}
 
 .login-title {
   font-size: 1.75rem;
   font-weight: 700;
   margin: 0 0 8px 0;
   letter-spacing: -0.025em;
+  color: white !important;
 }
 
 .login-subtitle {

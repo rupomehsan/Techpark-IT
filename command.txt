@@ -27,5 +27,3 @@ php artisan make:module BlogManagement/BlogTag [title:string-150] --vue
 
 
 
-
-

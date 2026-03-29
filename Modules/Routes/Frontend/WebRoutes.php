@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Modules\Controllers\Frontend\Auth\AuthController;
-
+use App\Http\Controllers\HomeController;
 
 
 /*
@@ -21,10 +21,13 @@ Route::get('/forgot-password', [AuthController::class, 'ForgotPassword'])->name(
 |--------------------------------------------------------------------------
 */
 
+
+
 // Website Routes
-// Route::get('/', [FrontendController::class, 'HomePage'])->name("website");
-// Route::get('/vocabulary', [FrontendController::class, 'VocabularyPage'])->name("vocabulary");
-// Route::get('/vocabulary-test', [FrontendController::class, 'VocabularyTestPage'])->name("vocabulary-test");
-// Route::get('/story', [FrontendController::class, 'StoryPage'])->name("story");
-// Route::get('/story-test', [FrontendController::class, 'StoryTestPage'])->name("story-test");
-// Route::get('/profile', [FrontendController::class, 'ProfilePage'])->name("profile");
+Route::get('/', [HomeController::class, 'index'])->name("website");
+Route::get('about-us', [HomeController::class, 'aboutUs'])->name("aboutUs");
+Route::get('services', [HomeController::class, 'services'])->name("service");
+Route::get('projects', [HomeController::class, 'projects'])->name("projects");
+Route::get('contact-us', [HomeController::class, 'contactUs'])->name("contact");
+Route::get('blog', [HomeController::class, 'blog'])->name("blog");
+

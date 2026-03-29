@@ -24,7 +24,7 @@ export default {
         return {
             inactive_data_count: computed(() => store.inactive_data_count),
             change_status(status = 'active') {
-                if (status == 'trased') {
+                if (status == 'trashed') {
                     store.set_only_latest_data(true);
                 } else {
                     store.set_only_latest_data(false);

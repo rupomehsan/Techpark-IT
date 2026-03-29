@@ -35,7 +35,7 @@ if (!function_exists('StoreData')) {
 
             class StoreData
             {
-                static \$model = \Modules\\Management\\{$moduleName}\\Models\\Model::class;
+                static \$model = \Modules\\Management\\{$moduleName}\\Database\\Models\\Model::class;
 
                 public static function execute(\$request)
                 {
@@ -61,7 +61,7 @@ if (!function_exists('StoreData')) {
 
             class StoreData
             {
-                static \$model = \Modules\\Management\\{$moduleName}\\Models\\Model::class;
+                static \$model = \Modules\\Management\\{$moduleName}\\Database\\Models\\Model::class;
 
                 public static function execute(\$request)
                 {

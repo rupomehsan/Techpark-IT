@@ -30,7 +30,7 @@ export default {
             `set_page`,
         ]),
         change_status: function (status = 'active') {
-            if (status == 'trased') {
+            if (status == 'trashed') {
                 this.is_trashed_data = true;
             } else {
                 this.is_trashed_data = false

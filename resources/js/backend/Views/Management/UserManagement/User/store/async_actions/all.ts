@@ -28,7 +28,7 @@ let execute = async () => {
     "all_data_count",
     "active_data_count",
     "inactive_data_count",
-    "trased_data_count",
+    "trashed_data_count",
   ]);
 
   let qparams: anyObject = {
@@ -95,7 +95,7 @@ let execute = async () => {
   state.all_data_count.set(response.data.total);
   state.active_data_count.set(response.data.active_data_count);
   state.inactive_data_count.set(response.data.inactive_data_count);
-  state.trased_data_count.set(response.data.trased_data_count);
+  state.trashed_data_count.set(response.data.trashed_data_count);
 
   state.is_loading.set(false);
   state.loading_text.set("");

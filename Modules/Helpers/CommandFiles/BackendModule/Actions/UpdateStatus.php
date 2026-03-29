@@ -21,7 +21,7 @@ if (!function_exists('UpdateStatus')) {
 
             class UpdateStatus
             {
-                static \$model = \Modules\\Management\\{$moduleName}\\Models\\Model::class;
+                static \$model = \Modules\\Management\\{$moduleName}\\Database\\Models\\Model::class;
 
                 public static function execute()
                 {

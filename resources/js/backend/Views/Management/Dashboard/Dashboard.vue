@@ -62,6 +62,67 @@
         </div>
       </div>
     </div>
+    <div class="row g-4 mb-4">
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="stat-card">
+          <div class="stat-icon product-views">
+            <i class="fas fa-cube"></i>
+          </div>
+          <div class="stat-content">
+            <h3 class="stat-value">$24,92</h3>
+            <p class="stat-label">Product Views</p>
+            <span class="stat-change positive">
+              <i class="fas fa-arrow-up"></i> 2.2%
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="stat-card">
+          <div class="stat-icon product-sold">
+            <i class="fas fa-dollar-sign"></i>
+          </div>
+          <div class="stat-content">
+            <h3 class="stat-value">8,430</h3>
+            <p class="stat-label">Product Sold</p>
+            <span class="stat-change negative">
+              <i class="fas fa-arrow-down"></i> 0.5%
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="stat-card">
+          <div class="stat-icon total-likes">
+            <i class="fas fa-thumbs-up"></i>
+          </div>
+          <div class="stat-content">
+            <h3 class="stat-value">46,256</h3>
+            <p class="stat-label">Total Likes</p>
+            <span class="stat-change positive">
+              <i class="fas fa-arrow-up"></i> 1.2%
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="stat-card">
+          <div class="stat-icon conversation">
+            <i class="fas fa-comments"></i>
+          </div>
+          <div class="stat-content">
+            <h3 class="stat-value">$200,56</h3>
+            <p class="stat-label">Conversation</p>
+            <span class="stat-change positive">
+              <i class="fas fa-arrow-up"></i> 3.2%
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Charts Section -->
     <div class="row g-4 mb-4">
@@ -80,7 +141,10 @@
             </div>
           </div>
           <div class="card-body">
-            <canvas ref="storeAnalyticsChart" style="max-height: 300px"></canvas>
+            <canvas
+              ref="storeAnalyticsChart"
+              style="max-height: 300px"
+            ></canvas>
           </div>
         </div>
       </div>
@@ -91,21 +155,27 @@
           <div class="card-header">
             <h5 class="card-title">Active Users</h5>
           </div>
-          <div class="card-body d-flex justify-content-center align-items-center" style="min-height: 300px">
-            <canvas ref="activeUsersChart" style="width: 250px; height: 250px"></canvas>
+          <div
+            class="card-body d-flex justify-content-center align-items-center"
+            style="min-height: 300px"
+          >
+            <canvas
+              ref="activeUsersChart"
+              style="width: 250px; height: 250px"
+            ></canvas>
           </div>
           <div class="card-footer">
             <div class="user-stats">
               <div class="stat-item">
-                <span class="stat-dot" style="background: #8B5CF6;"></span>
+                <span class="stat-dot" style="background: #8b5cf6"></span>
                 <span>55.6% Desktop</span>
               </div>
               <div class="stat-item">
-                <span class="stat-dot" style="background: #FBBF24;"></span>
+                <span class="stat-dot" style="background: #fbbf24"></span>
                 <span>33.3% Mobile</span>
               </div>
               <div class="stat-item">
-                <span class="stat-dot" style="background: #F87171;"></span>
+                <span class="stat-dot" style="background: #f87171"></span>
                 <span>11.1% Tablet</span>
               </div>
             </div>
@@ -131,19 +201,47 @@
                 <!-- Simplified world map visualization -->
                 <text x="100" y="150" class="country-name">United States</text>
                 <text x="100" y="180" class="percentage">50%</text>
-                <rect x="20" y="190" width="150" height="12" class="progress-bar" style="background: #3B82F6;"></rect>
+                <rect
+                  x="20"
+                  y="190"
+                  width="150"
+                  height="12"
+                  class="progress-bar"
+                  style="background: #3b82f6"
+                ></rect>
 
                 <text x="600" y="250" class="country-name">Australia</text>
                 <text x="600" y="280" class="percentage">35%</text>
-                <rect x="520" y="290" width="105" height="12" class="progress-bar" style="background: #10B981;"></rect>
+                <rect
+                  x="520"
+                  y="290"
+                  width="105"
+                  height="12"
+                  class="progress-bar"
+                  style="background: #10b981"
+                ></rect>
 
                 <text x="100" y="350" class="country-name">Brazil</text>
                 <text x="100" y="380" class="percentage">22%</text>
-                <rect x="20" y="390" width="66" height="12" class="progress-bar" style="background: #8B5CF6;"></rect>
+                <rect
+                  x="20"
+                  y="390"
+                  width="66"
+                  height="12"
+                  class="progress-bar"
+                  style="background: #8b5cf6"
+                ></rect>
 
                 <text x="400" y="100" class="country-name">Germany</text>
                 <text x="400" y="130" class="percentage">52%</text>
-                <rect x="320" y="140" width="156" height="12" class="progress-bar" style="background: #F59E0B;"></rect>
+                <rect
+                  x="320"
+                  y="140"
+                  width="156"
+                  height="12"
+                  class="progress-bar"
+                  style="background: #f59e0b"
+                ></rect>
               </svg>
             </div>
             <div class="location-stats">
@@ -184,11 +282,16 @@
               <div class="card-body">
                 <div class="product-showcase">
                   <div class="product-image">
-                    <img src="https://via.placeholder.com/100x100?text=Sunglass" alt="Product">
+                    <img
+                      src="https://via.placeholder.com/100x100?text=Sunglass"
+                      alt="Product"
+                    />
                   </div>
                   <div class="product-info">
                     <h6 class="product-name">Stylish Sunglass</h6>
-                    <p class="product-offer">New offer only <strong>$26.00</strong></p>
+                    <p class="product-offer">
+                      New offer only <strong>$26.00</strong>
+                    </p>
                     <div class="product-rating">
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
@@ -215,11 +318,16 @@
               <div class="card-body">
                 <div class="product-showcase">
                   <div class="product-image">
-                    <img src="https://via.placeholder.com/100x100?text=Shoes" alt="Product">
+                    <img
+                      src="https://via.placeholder.com/100x100?text=Shoes"
+                      alt="Product"
+                    />
                   </div>
                   <div class="product-info">
                     <h6 class="product-name">Trending Oz Pro Shoes</h6>
-                    <p class="product-offer">New offer only <strong>$105.00</strong></p>
+                    <p class="product-offer">
+                      New offer only <strong>$105.00</strong>
+                    </p>
                     <div class="product-rating">
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
@@ -254,7 +362,9 @@
                 <div class="metric-info">
                   <h6>Retargeted</h6>
                   <p class="metric-value">14,679</p>
-                  <span class="metric-change positive"><i class="fas fa-arrow-up"></i> 20%</span>
+                  <span class="metric-change positive"
+                    ><i class="fas fa-arrow-up"></i> 20%</span
+                  >
                 </div>
               </div>
 
@@ -265,7 +375,9 @@
                 <div class="metric-info">
                   <h6>Opened</h6>
                   <p class="metric-value">12,675</p>
-                  <span class="metric-change positive"><i class="fas fa-arrow-up"></i> 35%</span>
+                  <span class="metric-change positive"
+                    ><i class="fas fa-arrow-up"></i> 35%</span
+                  >
                 </div>
               </div>
 
@@ -276,7 +388,9 @@
                 <div class="metric-info">
                   <h6>Clicked</h6>
                   <p class="metric-value">6,320</p>
-                  <span class="metric-change negative"><i class="fas fa-arrow-down"></i> 10%</span>
+                  <span class="metric-change negative"
+                    ><i class="fas fa-arrow-down"></i> 10%</span
+                  >
                 </div>
               </div>
 
@@ -287,7 +401,9 @@
                 <div class="metric-info">
                   <h6>Complaints</h6>
                   <p class="metric-value">575</p>
-                  <span class="metric-change negative"><i class="fas fa-arrow-down"></i> 2%</span>
+                  <span class="metric-change negative"
+                    ><i class="fas fa-arrow-down"></i> 2%</span
+                  >
                 </div>
               </div>
             </div>
@@ -312,7 +428,9 @@
                   <h6>Social Network</h6>
                   <p class="visitor-text">31.4k</p>
                 </div>
-                <span class="change negative"><i class="fas fa-arrow-down"></i> 20%</span>
+                <span class="change negative"
+                  ><i class="fas fa-arrow-down"></i> 20%</span
+                >
               </div>
 
               <div class="source-item">
@@ -323,7 +441,9 @@
                   <h6>Direct Source</h6>
                   <p class="visitor-text">1.4k</p>
                 </div>
-                <span class="change positive"><i class="fas fa-arrow-up"></i> 15%</span>
+                <span class="change positive"
+                  ><i class="fas fa-arrow-up"></i> 15%</span
+                >
               </div>
 
               <div class="source-item">
@@ -334,7 +454,9 @@
                   <h6>ADVT</h6>
                   <p class="visitor-text">31.2k</p>
                 </div>
-                <span class="change positive"><i class="fas fa-arrow-up"></i> 16%</span>
+                <span class="change positive"
+                  ><i class="fas fa-arrow-up"></i> 16%</span
+                >
               </div>
 
               <div class="source-item">
@@ -345,7 +467,9 @@
                   <h6>Referrals</h6>
                   <p class="visitor-text">345</p>
                 </div>
-                <span class="change negative"><i class="fas fa-arrow-down"></i> 8%</span>
+                <span class="change negative"
+                  ><i class="fas fa-arrow-down"></i> 8%</span
+                >
               </div>
             </div>
           </div>
@@ -377,7 +501,10 @@
                 <tr>
                   <td>
                     <div class="seller-info">
-                      <img src="https://via.placeholder.com/40x40?text=WW" alt="Wade Warren">
+                      <img
+                        src="https://via.placeholder.com/40x40?text=WW"
+                        alt="Wade Warren"
+                      />
                       <div>
                         <h6>Wade Warren</h6>
                         <p class="company">Apple Store Online</p>
@@ -394,7 +521,10 @@
                 <tr>
                   <td>
                     <div class="seller-info">
-                      <img src="https://via.placeholder.com/40x40?text=AB" alt="Afrad Bhuyian">
+                      <img
+                        src="https://via.placeholder.com/40x40?text=AB"
+                        alt="Afrad Bhuyian"
+                      />
                       <div>
                         <h6>Afrad Bhuyian</h6>
                         <p class="company">Acme Corporation</p>
@@ -411,7 +541,10 @@
                 <tr>
                   <td>
                     <div class="seller-info">
-                      <img src="https://via.placeholder.com/40x40?text=RF" alt="Robert Fox">
+                      <img
+                        src="https://via.placeholder.com/40x40?text=RF"
+                        alt="Robert Fox"
+                      />
                       <div>
                         <h6>Robert Fox</h6>
                         <p class="company">Omega Solutions</p>
@@ -428,7 +561,10 @@
                 <tr>
                   <td>
                     <div class="seller-info">
-                      <img src="https://via.placeholder.com/40x40?text=JW" alt="John William">
+                      <img
+                        src="https://via.placeholder.com/40x40?text=JW"
+                        alt="John William"
+                      />
                       <div>
                         <h6>John William</h6>
                         <p class="company">Phoenix Electronics</p>
@@ -445,7 +581,10 @@
                 <tr>
                   <td>
                     <div class="seller-info">
-                      <img src="https://via.placeholder.com/40x40?text=AI" alt="Ahmed Imtiaz">
+                      <img
+                        src="https://via.placeholder.com/40x40?text=AI"
+                        alt="Ahmed Imtiaz"
+                      />
                       <div>
                         <h6>Ahmed Imtiaz</h6>
                         <p class="company">Thunderbolt Inc</p>
@@ -469,10 +608,10 @@
 </template>
 
 <script>
-import Chart from 'chart.js/auto';
+import Chart from "chart.js/auto";
 
 export default {
-  name: 'Dashboard',
+  name: "Dashboard",
   data() {
     return {
       data: {},
@@ -491,10 +630,10 @@ export default {
       // Use global ThemeManager if available
       if (window.themeManager) {
         this.isDarkMode = window.themeManager.isDarkTheme();
-        
+
         // Listen to global theme changes
-        window.addEventListener('themechange', (event) => {
-          this.isDarkMode = event.detail.theme === 'dark-theme';
+        window.addEventListener("themechange", (event) => {
+          this.isDarkMode = event.detail.theme === "dark-theme";
           this.reinitCharts();
         });
       }
@@ -518,10 +657,10 @@ export default {
           this.data = response.data.data;
         }
       } catch (error) {
-        console.error('Error fetching dashboard data:', error);
+        console.error("Error fetching dashboard data:", error);
       }
     },
-    
+
     initCharts() {
       this.initStoreAnalyticsChart();
       this.initActiveUsersChart();
@@ -536,38 +675,59 @@ export default {
       }
 
       const isDark = this.isDarkMode;
-      const textColor = isDark ? '#d1d5db' : '#9CA3AF';
-      const gridColor = isDark ? 'rgba(75, 85, 99, 0.2)' : 'rgba(107, 114, 128, 0.1)';
+      const textColor = isDark ? "#d1d5db" : "#9CA3AF";
+      const gridColor = isDark
+        ? "rgba(75, 85, 99, 0.2)"
+        : "rgba(107, 114, 128, 0.1)";
 
       this.storeAnalyticsChart = new Chart(ctx, {
-        type: 'line',
+        type: "line",
         data: {
-          labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+          labels: [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec",
+          ],
           datasets: [
             {
-              label: 'Visitors',
-              data: [12000, 19000, 15000, 25000, 22000, 30000, 28000, 35000, 32000, 40000, 45000, 48000],
-              borderColor: '#8B5CF6',
-              backgroundColor: 'rgba(139, 92, 246, 0.1)',
+              label: "Visitors",
+              data: [
+                12000, 19000, 15000, 25000, 22000, 30000, 28000, 35000, 32000,
+                40000, 45000, 48000,
+              ],
+              borderColor: "#8B5CF6",
+              backgroundColor: "rgba(139, 92, 246, 0.1)",
               borderWidth: 3,
               fill: true,
               tension: 0.4,
               pointRadius: 6,
-              pointBackgroundColor: '#8B5CF6',
-              pointBorderColor: isDark ? '#2d3748' : '#fff',
+              pointBackgroundColor: "#8B5CF6",
+              pointBorderColor: isDark ? "#2d3748" : "#fff",
               pointBorderWidth: 2,
             },
             {
-              label: 'Orders',
-              data: [8000, 12000, 10000, 15000, 12000, 20000, 18000, 25000, 22000, 28000, 32000, 35000],
-              borderColor: '#3B82F6',
-              backgroundColor: 'rgba(59, 130, 246, 0.1)',
+              label: "Orders",
+              data: [
+                8000, 12000, 10000, 15000, 12000, 20000, 18000, 25000, 22000,
+                28000, 32000, 35000,
+              ],
+              borderColor: "#3B82F6",
+              backgroundColor: "rgba(59, 130, 246, 0.1)",
               borderWidth: 3,
               fill: true,
               tension: 0.4,
               pointRadius: 6,
-              pointBackgroundColor: '#3B82F6',
-              pointBorderColor: isDark ? '#2d3748' : '#fff',
+              pointBackgroundColor: "#3B82F6",
+              pointBorderColor: isDark ? "#2d3748" : "#fff",
               pointBorderWidth: 2,
             },
           ],
@@ -616,14 +776,14 @@ export default {
       const isDark = this.isDarkMode;
 
       this.activeUsersChart = new Chart(ctx, {
-        type: 'doughnut',
+        type: "doughnut",
         data: {
-          labels: ['Desktop', 'Mobile', 'Tablet'],
+          labels: ["Desktop", "Mobile", "Tablet"],
           datasets: [
             {
               data: [55.6, 33.3, 11.1],
-              backgroundColor: ['#8B5CF6', '#FBBF24', '#F87171'],
-              borderColor: isDark ? '#2d3748' : '#fff',
+              backgroundColor: ["#8B5CF6", "#FBBF24", "#F87171"],
+              borderColor: isDark ? "#2d3748" : "#fff",
               borderWidth: 3,
             },
           ],
@@ -651,7 +811,7 @@ export default {
 }
 
 .dark-theme {
-    background-color: #0f172a;
+  background-color: #0f172a;
 }
 
 /* KPI Cards */
@@ -842,11 +1002,11 @@ export default {
 }
 
 .legend-dot.visitors {
-  background-color: #8B5CF6;
+  background-color: #8b5cf6;
 }
 
 .legend-dot.orders {
-  background-color: #3B82F6;
+  background-color: #3b82f6;
 }
 
 /* User Stats */
