@@ -11,7 +11,7 @@
                 <a href="index.html">
                   <img
                     src="{{ asset('frontend/asset/img/logo_big.png') }}"
-                    alt="Bdtask Logo White"
+                    alt="techparkit Logo White"
                     style="max-width: 200px"
                   />
                 </a>
@@ -26,7 +26,7 @@
                 <li>
                   <a
                     class="align-items-center d-flex justify-content-center text-decoration-none text-white social_icon"
-                    href="https://www.facebook.com/ITorg/"
+                    href="https://www.facebook.com/TechParkITorg/"
                     rel="nofollow"
                     title="Facebook"
                     target="_blank"
@@ -48,7 +48,7 @@
                 <li>
                   <a
                     class="align-items-center d-flex justify-content-center text-decoration-none text-white social_icon"
-                    href="https://www.linkedin.com/company/it/posts/?feedView=all"
+                    href="https://www.linkedin.com/company/techparkit/posts/?feedView=all"
                     rel="nofollow"
                     title="LinkedIn"
                     target="_blank"
@@ -69,7 +69,7 @@
                 <li>
                   <a
                     class="align-items-center d-flex justify-content-center text-decoration-none text-white social_icon"
-                    href="#"
+                    href="https://twitter.com/TechParkITOrg"
                     rel="nofollow"
                     title="Twitter"
                     target="_blank"
@@ -90,7 +90,7 @@
                 <li>
                   <a
                     class="align-items-center d-flex justify-content-center text-decoration-none text-white social_icon"
-                    href="https://www.youtube.com/@ITOrg/videos"
+                    href="https://www.youtube.com/@TechParkITOrg/videos"
                     rel="nofollow"
                     title="YouTube"
                     target="_blank"
@@ -112,29 +112,39 @@
             </div>
 
             <!-- Useful Links Column -->
-            <div class="col-lg-2 col-md-6">
+            <div class="col-lg-3 col-md-6">
               <h5 class="footer-title text-white mb-4">Useful Links</h5>
               <ul class="nav flex-column gap-2">
                 <li class="nav-item">
                   <a
                     href="{{route('aboutUs')}}"
                     class="text-decoration-none footer-text lh-30"
+                    target="_blank"
                   >
                     <span class="arrow me-2">→</span>About Us
                   </a>
                 </li>
                 <li class="nav-item">
                   <a
-                    href="blog/index.html"
+                    href="{{ route('projects') }}"
                     class="text-decoration-none footer-text lh-30"
                     target="_blank"
                   >
-                    <span class="arrow me-2">→</span>Blog
+                    <span class="arrow me-2">→</span>Our Portfolio
+                  </a>
+                </li>
+                  <li class="nav-item">
+                  <a
+                    href="#"
+                    class="text-decoration-none footer-text lh-30"
+                   
+                  >
+                    <span class="arrow me-2">→</span>Our Blogs
                   </a>
                 </li>
                 <li class="nav-item">
                   <a
-                    href="career.html"
+                    href="#"
                     class="text-decoration-none footer-text lh-30"
                     target="_blank"
                   >
@@ -143,36 +153,28 @@
                 </li>
                 <li class="nav-item">
                   <a
-                    href="terms.html"
+                    href="{{ route('termsAndCondition') }}"
                     class="text-decoration-none footer-text lh-30"
                     target="_blank"
                   >
-                    <span class="arrow me-2">→</span>Terms of Use
+                    <span class="arrow me-2">→</span>Terms & Conditions
                   </a>
                 </li>
                 <li class="nav-item">
                   <a
-                    href="yourprivacy.html"
+                    href="{{ route('privacyPolicy') }}"
                     class="text-decoration-none footer-text lh-30"
                     target="_blank"
                   >
                     <span class="arrow me-2">→</span>Privacy Policy
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a
-                    href="client-list.html"
-                    class="text-decoration-none footer-text lh-30"
-                    target="_blank"
-                  >
-                    <span class="arrow me-2">→</span>Client List
-                  </a>
-                </li>
+                
               </ul>
             </div>
 
             <!-- Services Column -->
-            <div class="col-lg-2 col-md-6">
+            <div class="col-lg-3 col-md-6">
               <h5 class="footer-title text-white mb-4">Services</h5>
               <ul class="nav flex-column gap-2">
                 <li class="nav-item">
@@ -181,7 +183,16 @@
                     class="text-decoration-none footer-text lh-30"
                     target="_blank"
                   >
-                    <span class="arrow me-2">→</span>Custom Software
+                    <span class="arrow me-2">→</span>Web Design
+                  </a>
+                </li>
+                 <li class="nav-item">
+                  <a
+                    href="custom-software-development-service.html"
+                    class="text-decoration-none footer-text lh-30"
+                    target="_blank"
+                  >
+                    <span class="arrow me-2">→</span>Web Development
                   </a>
                 </li>
                 <li class="nav-item">
@@ -193,33 +204,26 @@
                     <span class="arrow me-2">→</span>Graphics Design
                   </a>
                 </li>
-                <li class="nav-item">
+                 <li class="nav-item">
                   <a
-                    href="clipping-path-service-provider.html"
+                    href="graphic-design-services.html"
                     class="text-decoration-none footer-text lh-30"
                     target="_blank"
                   >
-                    <span class="arrow me-2">→</span>Clipping Path
+                    <span class="arrow me-2">→</span>UI/UX Design
                   </a>
                 </li>
+               
                 <li class="nav-item">
                   <a
-                    href="bdtask-academy/index.html"
+                    href="techparkit-academy/index.html"
                     class="text-decoration-none footer-text lh-30"
                     target="_blank"
                   >
-                    <span class="arrow me-2">→</span>Bdtask Academy
+                    <span class="arrow me-2">→</span>App Development
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a
-                    href="cyber-security-service.html"
-                    class="text-decoration-none footer-text lh-30"
-                    target="_blank"
-                  >
-                    <span class="arrow me-2">→</span>Cyber Security
-                  </a>
-                </li>
+               
                 <li class="nav-item">
                   <a
                     href="digital-marketing-agency-in-dubai.html"
@@ -233,7 +237,7 @@
             </div>
 
             <!-- Support Column -->
-            <div class="col-lg-2 col-md-6">
+            {{-- <div class="col-lg-2 col-md-6">
               <h5 class="footer-title text-white mb-4">Support</h5>
               <ul class="nav flex-column gap-2">
                 <li class="nav-item">
@@ -271,7 +275,7 @@
                   </a>
                 </li>
               </ul>
-            </div>
+            </div> --}}
 
             <!-- Contact Info Column -->
             <div class="col-lg-3 col-md-6">

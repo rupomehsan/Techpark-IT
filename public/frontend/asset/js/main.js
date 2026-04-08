@@ -1,5 +1,5 @@
 /**
- * Main JavaScript File - Bdtask Website
+ * Main JavaScript File - techparkit Website
  * Handles: Mega Dropdown, Video Modals, Tabs, and Owl Carousel
  */
 
@@ -78,20 +78,35 @@
       $("body").append('<div class="mobile-menu-overlay"></div>');
     }
 
+    var menuScrollPosition = 0;
+
+    function lockBodyScroll() {
+      menuScrollPosition =
+        window.pageYOffset || document.documentElement.scrollTop;
+      $("body")
+        .addClass("menu-open")
+        .css("top", -menuScrollPosition + "px");
+    }
+
+    function unlockBodyScroll() {
+      $("body").removeClass("menu-open").css("top", "");
+      window.scrollTo(0, menuScrollPosition);
+    }
+
     // Open mobile menu
     $(".menu_call").on("click", function (e) {
       e.preventDefault();
       e.stopPropagation();
       $(".sideNav").addClass("open");
       $(".mobile-menu-overlay").addClass("active");
-      $("body").css("overflow", "hidden");
+      lockBodyScroll();
     });
 
     // Close mobile menu
     function closeMobileMenu() {
       $(".sideNav").removeClass("open");
       $(".mobile-menu-overlay").removeClass("active");
-      $("body").css("overflow", "auto");
+      unlockBodyScroll();
     }
 
     // Close button
@@ -114,7 +129,9 @@
 
     // Close mobile menu when clicking on links
     $(".mobileNav a").on("click", function (e) {
-      var href = $(this).attr("href");
+      var href = $(this).attr("href") || "";
+      var hashIndex = href.indexOf("#");
+      var hash = hashIndex >= 0 ? href.slice(hashIndex) : "";
 
       // Close menu after a short delay for better UX
       setTimeout(function () {
@@ -122,19 +139,22 @@
       }, 300);
 
       // Handle internal links (anchors)
-      if (href && href.startsWith("#") && href.length > 1) {
+      if (hash && hash.length > 1) {
         e.preventDefault();
-        var target = $(href);
+        var target = $(hash);
         if (target.length) {
           closeMobileMenu();
           setTimeout(function () {
+            var headerOffset = $(".header_area").outerHeight() || 0;
             $("html, body").animate(
               {
-                scrollTop: target.offset().top - 100,
+                scrollTop: target.offset().top - headerOffset - 10,
               },
               800,
             );
           }, 400);
+        } else {
+          window.location.href = href;
         }
       }
     });
@@ -459,10 +479,10 @@
       var scrollTop = $(window).scrollTop();
       if (scrollTop > 300) {
         $goto.addClass("show");
-        console.log("Adding show class, scroll:", scrollTop);
+        // console.log("Adding show class, scroll:", scrollTop);
       } else {
         $goto.removeClass("show");
-        console.log("Removing show class, scroll:", scrollTop);
+        // console.log("Removing show class, scroll:", scrollTop);
       }
     }
 

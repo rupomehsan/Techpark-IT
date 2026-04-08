@@ -1,12 +1,12 @@
       <div class="header_area">
         <!--<div class="align-items-center d-flex justify-content-center midSaleBg px-4 py-2 text-white">-->
-        <!--	<span class="me-2">Mid-Year Software Sale 2023 | Save Upto 50% </span> <a href="https://bdtask.com/mid-year-sale.php" target="_blank" class="btn btn-sm btn-warning" style="white-space: nowrap;">Grab it now</a>-->
+        <!--	<span class="me-2">Mid-Year Software Sale 2023 | Save Upto 50% </span> <a href="https://techparkit.com/mid-year-sale.php" target="_blank" class="btn btn-sm btn-warning" style="white-space: nowrap;">Grab it now</a>-->
         <!--</div>-->
 
          
 
           <!--<div class="align-items-center d-flex justify-content-center midSaleBg px-4 py-2 text-white">-->
-          <!--	<span class="me-4">Black Friday & Cyber Monday Deals | Up To 80% Off </span> <a href="https://www.bdtask.com/cyber-week-sale.php" target="_blank" class="btn btn-sm btn-warning" style="white-space: nowrap;">Buy Now</a>-->
+          <!--	<span class="me-4">Black Friday & Cyber Monday Deals | Up To 80% Off </span> <a href="https://www.techparkit.com/cyber-week-sale.php" target="_blank" class="btn btn-sm btn-warning" style="white-space: nowrap;">Buy Now</a>-->
           <!--</div>-->
           <div class="container-lg">
             <!-- Start Navigation -->
@@ -22,7 +22,7 @@
                 <img
                   id="headerImage"
                   src="{{ asset('frontend/asset/img/logo.jpg') }}"
-                  alt="Bdtask Logo"
+                  alt="techparkit Logo"
                 />
               </a>
 
@@ -1153,29 +1153,19 @@
                   </div>
                 </li> -->
                 <li class="nav-item">
-                  <a href="#about-us" class="nav-link" target="_blank"
-                    >About Us</a
-                  >
-                </li>
-                   <li class="nav-item">
-                  <a href="#portfolio" class="nav-link" target="_blank"
-                    >Portfolio</a
-                  >
-                </li>
-                 <li class="nav-item">
-                  <a href="#service" class="nav-link" target="_blank"
-                    >Service</a
-                  >
+                  <a href="{{ url('/') }}#about-us" class="nav-link">About Us</a>
                 </li>
                 <li class="nav-item">
-                  <a href="#testimonials"  class="nav-link" 
-                    >Testimonials</a
-                  >
+                  <a href="{{ url('/') }}#portfolio" class="nav-link">Portfolio</a>
                 </li>
                 <li class="nav-item">
-                  <a href="#contact" class="nav-link" target="_blank"
-                    >Contact Us</a
-                  >
+                  <a href="{{ url('/') }}#service" class="nav-link">Service</a>
+                </li>
+                <li class="nav-item">
+                  <a href="{{ url('/') }}#testimonials" class="nav-link">Testimonials</a>
+                </li>
+                <li class="nav-item">
+                  <a href="{{ url('/') }}#contact" class="nav-link">Contact Us</a>
                 </li>
               </ul>
 
@@ -1195,38 +1185,27 @@
             <button class="btn close_icon fs-5 mb-3 px-0">&#10005;</button>
           </div>
           <ul class="list-unstyled ps-0 mobileNav">
-            <li class="mb-2">
-              <a href="{{route('service')}}" class="d-block py-2 px-3 text-dark text-decoration-none" target="_blank">
-                <i class="ti-home me-2"></i> Home
-              </a>
-            </li>
-        
-            <li class="mb-2">
-              <a href="{{route('aboutUs')}}" class="d-block py-2 px-3 text-dark text-decoration-none" target="_blank">
-                <i class="ti-info-alt me-2"></i> About Us
-              </a>
-            </li>
-             </li>
-                   <li class="nav-item">
-                  <a href="#portfolio" class="nav-link" target="_blank"
-                    >Portfolio</a
+             <li class="nav-item">
+                  <a href="/" class="nav-link" 
+                    >Home</a
                   >
                 </li>
-            <li class="mb-2">
-              <a href="{{route('service')}}" class="d-block py-2 px-3 text-dark text-decoration-none" target="_blank">
-                <i class="ti-briefcase me-2"></i> Service
-              </a>
-            </li>
-            <li class="mb-2">
-              <a href="#testimonials" class="d-block py-2 px-3 text-dark text-decoration-none">
-                <i class="ti-comments me-2"></i> Testimonials
-              </a>
-            </li>
-            <li class="mb-2">
-              <a href="{{route('contact')}}" class="d-block py-2 px-3 text-dark text-decoration-none" target="_blank">
-                <i class="ti-email me-2"></i> Contact Us
-              </a>
-            </li>
+        
+              <li class="nav-item">
+                <a href="{{ url('/') }}#about-us" class="nav-link">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ url('/') }}#portfolio" class="nav-link">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ url('/') }}#service" class="nav-link">Service</a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ url('/') }}#testimonials" class="nav-link">Testimonials</a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ url('/') }}#contact" class="nav-link">Contact Us</a>
+              </li>
           </ul>
         </div>
       </div>

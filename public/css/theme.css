@@ -10,18 +10,18 @@
   --bg-input: #ffffff;
   --bg-hover: #f1f5f9;
   --bg-disabled: #e2e8f0;
-  
+
   /* Text Colors */
   --text-primary: #0f172a;
   --text-secondary: #475569;
   --text-tertiary: #64748b;
   --text-light: #94a3b8;
-  
+
   /* Border Colors */
   --border-color: #e2e8f0;
   --border-light: #f1f5f9;
   --border-dark: #cbd5e1;
-  
+
   /* Component Specific */
   --sidebar-bg: #ffffff;
   --navbar-bg: #ffffff;
@@ -33,7 +33,7 @@
   --dropdown-bg: #ffffff;
   --modal-bg: #ffffff;
   --form-bg: #ffffff;
-  
+
   /* Accent Colors */
   --primary-color: #3b82f6;
   --primary-hover: #2563eb;
@@ -41,13 +41,13 @@
   --danger-color: #ef4444;
   --warning-color: #f59e0b;
   --info-color: #0891b2;
-  
+
   /* Shadow */
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-  
+
   /* Opacity */
   --opacity-hover: 0.9;
   --opacity-disabled: 0.5;
@@ -56,25 +56,25 @@
 /* Dark Theme */
 body.dark-theme {
   --tw-bg-opacity: 1;
-  
+
   /* Background Colors */
   --bg-main: rgb(15 23 42 / var(--tw-bg-opacity));
   --bg-card: rgb(30 41 59 / var(--tw-bg-opacity));
   --bg-input: rgb(30 41 59 / var(--tw-bg-opacity));
   --bg-hover: rgb(51 65 85 / var(--tw-bg-opacity));
   --bg-disabled: rgb(71 84 103 / var(--tw-bg-opacity));
-  
+
   /* Text Colors */
   --text-primary: #e2e8f0;
   --text-secondary: #cbd5e1;
   --text-tertiary: #94a3b8;
   --text-light: #64748b;
-  
+
   /* Border Colors */
   --border-color: rgb(51 65 85 / var(--tw-bg-opacity));
   --border-light: rgb(71 84 103 / var(--tw-bg-opacity));
   --border-dark: rgb(30 41 59 / var(--tw-bg-opacity));
-  
+
   /* Component Specific */
   --sidebar-bg: rgb(30 41 59 / var(--tw-bg-opacity));
   --navbar-bg: rgb(30 41 59 / var(--tw-bg-opacity));
@@ -86,7 +86,7 @@ body.dark-theme {
   --dropdown-bg: rgb(30 41 59 / var(--tw-bg-opacity));
   --modal-bg: rgb(30 41 59 / var(--tw-bg-opacity));
   --form-bg: rgb(30 41 59 / var(--tw-bg-opacity));
-  
+
   /* Accent Colors */
   --primary-color: #60a5fa;
   --primary-hover: #3b82f6;
@@ -94,13 +94,13 @@ body.dark-theme {
   --danger-color: #f87171;
   --warning-color: #fbbf24;
   --info-color: #06b6d4;
-  
+
   /* Shadow - More subtle in dark mode */
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
   --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6);
-  
+
   /* Opacity */
   --opacity-hover: 0.95;
   --opacity-disabled: 0.6;
@@ -113,16 +113,16 @@ body.light-theme {
   --bg-input: #ffffff;
   --bg-hover: #f1f5f9;
   --bg-disabled: #e2e8f0;
-  
+
   --text-primary: #0f172a;
   --text-secondary: #475569;
   --text-tertiary: #64748b;
   --text-light: #94a3b8;
-  
+
   --border-color: #e2e8f0;
   --border-light: #f1f5f9;
   --border-dark: #cbd5e1;
-  
+
   --sidebar-bg: #ffffff;
   --navbar-bg: #ffffff;
   --table-header-bg: #f1f5f9;
@@ -133,14 +133,14 @@ body.light-theme {
   --dropdown-bg: #ffffff;
   --modal-bg: #ffffff;
   --form-bg: #ffffff;
-  
+
   --primary-color: #3b82f6;
   --primary-hover: #2563eb;
   --success-color: #10b981;
   --danger-color: #ef4444;
   --warning-color: #f59e0b;
   --info-color: #0891b2;
-  
+
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
@@ -153,7 +153,11 @@ body.light-theme {
 
 body,
 body * {
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 /* Prevent transitions on theme switch toggle */
@@ -219,8 +223,7 @@ body,
 /* ====================================
    NAVBAR / HEADER STYLING
    ==================================== */
-
-.navbar,
+v-if="is_auth" .navbar,
 .navbar-header,
 .header,
 .top-header,
@@ -239,7 +242,7 @@ body,
 
 .navbar a:hover,
 .navbar-header a:hover,
-.header a:hover {
+v-if="is_auth" .header a:hover {
   color: var(--text-primary);
 }
 
@@ -271,7 +274,7 @@ body,
 }
 
 /* ====================================
-   TABLE STYLING
+   TABLE STYLINGv-if="is_auth"
    ==================================== */
 
 .table,
@@ -279,8 +282,7 @@ table {
   color: var(--text-primary);
   background-color: var(--bg-card);
 }
-
-.table thead,
+v-if="is_auth" .table thead,
 table thead {
   background-color: var(--table-header-bg);
   color: var(--text-primary);
@@ -297,8 +299,7 @@ table thead th {
 table tbody tr {
   border-color: var(--border-color);
 }
-
-.table tbody tr:hover,
+v-if="is_auth" .table tbody tr:hover,
 table tbody tr:hover {
   background-color: var(--table-row-hover);
 }
@@ -313,8 +314,7 @@ table tbody td {
 table.table-striped tbody tr:nth-of-type(odd) {
   background-color: var(--bg-card);
 }
-
-.table-striped tbody tr:nth-of-type(even),
+v-if="is_auth" .table-striped tbody tr:nth-of-type(even),
 table.table-striped tbody tr:nth-of-type(even) {
   background-color: var(--bg-hover);
 }
@@ -351,8 +351,7 @@ table.table-striped tbody tr:nth-of-type(even) {
   background-color: var(--table-active-row-bg) !important;
   color: var(--table-active-text) !important;
 }
-
-.table_responsive table tbody tr.active td {
+v-if="is_auth" .table_responsive table tbody tr.active td {
   background-color: var(--table-active-row-bg) !important;
   color: var(--table-active-text) !important;
   border-bottom-color: rgba(0, 0, 0, 0.1);
@@ -454,6 +453,10 @@ select:focus {
 .form-label,
 label {
   color: var(--text-primary);
+}
+
+.form-control {
+  color: var(--text-primary) !important;
 }
 
 /* ====================================
@@ -820,7 +823,7 @@ body.light-theme .breadcrumb-item.active {
   color: var(--text-primary) !important;
 }
 
-body.light-theme .breadcrumb-item+.breadcrumb-item::before {
+body.light-theme .breadcrumb-item + .breadcrumb-item::before {
   color: var(--text-secondary) !important;
 }
 
@@ -1909,22 +1912,22 @@ body.dark-theme .filter-section select {
   .filter-row {
     grid-template-columns: 1fr;
   }
-  
+
   .date-range-wrapper,
   .sort-wrapper {
     grid-template-columns: 1fr;
   }
-  
+
   .filter-actions,
   .filter-buttons {
     flex-direction: column;
   }
-  
+
   .filter-actions button,
   .filter-buttons button {
     width: 100%;
   }
-  
+
   .filter-section {
     padding: 15px;
   }

@@ -62,7 +62,8 @@
         :class="'border border-primary rounded'"
       />
 
-      <!-- Management end -->
+      <side-bar-single-menu :icon="`fa fa-plus`" :menu_title="`Contact`"  :route_name="`AllContact`" />
+<!-- Management end -->
     </ul>
   </div>
 </template>

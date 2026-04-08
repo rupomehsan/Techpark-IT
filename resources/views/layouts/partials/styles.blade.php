@@ -24,7 +24,7 @@
 <link href="{{ asset('frontend/asset/plugins/video-popup/videoPopUp.css') }}" rel="stylesheet" />
 
 {{-- Main Stylesheet --}}
-<link href="{{ asset('frontend/asset/css/style.css') }}" rel="stylesheet" />
+<link href="{{ asset('frontend/asset/css/style.css?v=' . rand(100000, 999999)) }}" rel="stylesheet" />
 
 {{-- Google Tag Manager --}}
 <script>

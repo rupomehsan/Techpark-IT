@@ -30,4 +30,6 @@ Route::get('services', [HomeController::class, 'services'])->name("service");
 Route::get('projects', [HomeController::class, 'projects'])->name("projects");
 Route::get('contact-us', [HomeController::class, 'contactUs'])->name("contact");
 Route::get('blog', [HomeController::class, 'blog'])->name("blog");
+Route::get('terms-and-conditions', [HomeController::class, 'termsAndCondition'])->name("termsAndCondition");
+Route::get('privacy-policy', [HomeController::class, 'privacyPolicy'])->name("privacyPolicy");
 

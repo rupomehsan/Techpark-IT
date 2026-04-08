@@ -1,16 +1,16 @@
 @extends('layouts.app')
 
-@section('title', 'Bdtask | Best Software Development Company')
+@section('title', 'techparkit | Best Software Development Company')
 
-@section('meta_description', 'Bdtask, Inc. is the best software development company that provides all types of business solutions globally with modern technology and next-level professionals.')
+@section('meta_description', 'techparkit, Inc. is the best software development company that provides all types of business solutions globally with modern technology and next-level professionals.')
 
 @push('meta_tags')
 <meta name="google-site-verification" content="acwUugMnJnDo2MlMGz5wzzT2gWOTR4P68xbiEd5VzfI" />
 <meta name="yandex-verification" content="598e72dfa3eeba81" />
 <meta name="msvalidate.01" content="93D27DC816FE2DFFE3C578BB39C17386" />
-<meta property="og:title" content="Bdtask | Best Software Development Company" />
-<meta property="og:description" content="Bdtask, Inc. is the best software development company that provides all types of business solutions globally with modern technology and next-level professionals." />
-<meta property="og:image" content="{{ asset('frontend/asset/img/bdtask-software-development-company.jpg') }}" />
+<meta property="og:title" content="techparkit | Best Software Development Company" />
+<meta property="og:description" content="techparkit, Inc. is the best software development company that provides all types of business solutions globally with modern technology and next-level professionals." />
+<meta property="og:image" content="{{ asset('frontend/asset/img/techparkit-software-development-company.jpg') }}" />
 <meta property="og:image:width" content="760" />
 <meta property="og:image:height" content="420" />
 <style>
@@ -50,9 +50,9 @@
               <div class="col-xl-6">
                 <h1 class="fw-bold wow fadeInUp main_title">
                   Crafting
-                  <span class="text-bdtask animate-text">Innovative </span>
+                  <span class="text-techparkit animate-text">Innovative </span>
                   Software <span class="fw-light"></span>For
-                  <span class="text-bdtask">Tomorrow’s World.</span>
+                  <span class="text-techparkit">Tomorrow’s World.</span>
                 </h1>
                 <p
                   class="my-4 wow fadeInUp info_text text-justify"
@@ -193,7 +193,7 @@
         <div class="container-md">
           <div class="row align-items-center">
             <div class="col-lg-5">
-              <p class="text-bdtask wow fadeInUp mb-2 fw_500 fs-16 lh-sm">
+              <p class="text-techparkit wow fadeInUp mb-2 fw_500 fs-16 lh-sm">
                 About Us
               </p>
               <h1
@@ -201,13 +201,13 @@
                 style="visibility: visible; animation-name: fadeInUp"
               >
                 We are From
-                <span class="text-bdtask animate-text">Another Space to </span>
+                <span class="text-techparkit animate-text">Another Space to </span>
                 Automate
-                <span class="text-bdtask">the World.</span>
+                <span class="text-techparkit">the World.</span>
               </h1>
 
               <p class="mb-4 wow fadeInUp sub_text" data-wow-delay="0.4s">
-                Bdtask works in multiple areas including software development,
+                techparkit works in multiple areas including software development,
                 website development, customized software solution, mobile app
                 development, theme design, and development. Our dream is to
                 continue your journey with success.
@@ -237,7 +237,7 @@
           <div class="row justify-content-center">
             <div class="col-xl-6 col-md-10 col-lg-8">
               <div class="text-center mb-5">
-                <h2 class="fs-1 fw-bold text-bdtask animate-text">
+                <h2 class="fs-1 fw-bold text-techparkit animate-text">
                   At a Glance
                 </h2>
               </div>
@@ -562,7 +562,7 @@
             <div class="col-xl-6 col-lg-8 col-md-10">
               <div class="text-center mb_40">
                 <h2 class="fs-1 fw-bold mb-4">
-                  <span class="text-bdtask animate-text"
+                  <span class="text-techparkit animate-text"
                     >Our Portfolio</span
                   >
                 </h2>
@@ -1003,13 +1003,13 @@
               <div class="text-center mb-5">
                 <h2 class="fs-1 fw-bold mb-4 wow fadeInUp">
                  Our Software Development Services
-                  <span class="text-bdtask animate-text"
+                  <span class="text-techparkit animate-text"
                     >Design Any Customized</span
                   >
                   Software
                 </h2>
                 <p class="wow fadeInUp sub_text mx-5" data-wow-delay="0.2s">
-                  Bdtask, Inc. focuses on the exact requirements of the clients.
+                  techparkit, Inc. focuses on the exact requirements of the clients.
                   We design and develop the best and most advanced software for
                   all types of businesses.
                 </p>
@@ -1481,7 +1481,7 @@
               <div class="text-center mb-5">
                 <h2 class="fs-1 fw-bold mb-4">
                   Our Customer's
-                  <span class="text-bdtask animate-text">Feedback</span>
+                  <span class="text-techparkit animate-text">Feedback</span>
                 </h2>
                 <p>
                   Our honorable and valuable clients share their values with us.
@@ -1534,16 +1534,16 @@
                       <div class="d-flex mb-4 ms-0 ms-lg-5">
                         <div class="d-block">
                           <p class="fw_600 fs-5 mb-1">Victor Gbenga Afolabi</p>
-                          <div class="fw-normal text-bdtask">
+                          <div class="fw-normal text-techparkit">
                             CEO &amp; Founder Hazon Holdings
                           </div>
                         </div>
                       </div>
                       <div class="d-block ms-0 ms-lg-5">
                         <p>
-                          Bdtask, Inc. had a lot of clients over the world and I
+                          techparkit, Inc. had a lot of clients over the world and I
                           saw they were already working for other countries in
-                          Africa. I must say that Bdtask has a strong management
+                          Africa. I must say that techparkit has a strong management
                           and qualified resources. Also, I like that they have a
                           good heart to their clients all over the world.
                         </p>
@@ -1592,16 +1592,16 @@
                       <div class="d-flex mb-4 ms-0 ms-lg-5">
                         <div class="d-block">
                           <p class="fw_600 fs-5 mb-1">Victor Gbenga Afolabi</p>
-                          <div class="fw-normal text-bdtask">
+                          <div class="fw-normal text-techparkit">
                             CEO &amp; Founder Hazon Holdings
                           </div>
                         </div>
                       </div>
                       <div class="d-block ms-0 ms-lg-5">
                         <p>
-                          Bdtask, Inc. had a lot of clients over the world and I
+                          techparkit, Inc. had a lot of clients over the world and I
                           saw they were already working for other countries in
-                          Africa. I must say that Bdtask has a strong management
+                          Africa. I must say that techparkit has a strong management
                           and qualified resources. Also, I like that they have a
                           good heart to their clients all over the world.
                         </p>
@@ -1623,7 +1623,7 @@
               <div class="text-center mb-4">
                 <h2 class="fs-1 fw-bold mb-3">
                   Our
-                  <span class="text-bdtask animate-text">Global Clients</span>
+                  <span class="text-techparkit animate-text">Global Clients</span>
                 </h2>
               </div>
             </div>
@@ -1631,9 +1631,9 @@
           <div class="row">
             <div class="col-md-12">
               <img
-                src="{{ asset('frontend/asset/img/map-bdtask.webp') }}"
+                src="{{ asset('frontend/asset/img/map-techparkit.webp') }}"
                 class="img-fluid"
-                alt="Bdtask Map"
+                alt="techparkit Map"
               />
             </div>
           </div>
@@ -1821,7 +1821,7 @@
             <div class="col-xl-6 col-lg-8 col-md-10">
               <div class="text-center mb-5">
                 <h2 class="fs-1 fw-bold mb-4">
-                  Get In <span class="text-bdtask animate-text">Touch With Us</span>
+                  Get In <span class="text-techparkit animate-text">Touch With Us</span>
                 </h2>
                 <p class="sub_text">
                   Have a project in mind? Let's discuss how we can help you achieve your goals. Fill out the form below and we'll get back to you within 24 hours.
@@ -1843,6 +1843,7 @@
                         type="text"
                         class="form-control py-2"
                         id="contactName"
+                        name="full_name"
                         placeholder="Enter your full name"
                         required
                       />
@@ -1860,6 +1861,7 @@
                         type="email"
                         class="form-control py-2"
                         id="contactEmail"
+                        name="email"
                         placeholder="your@email.com"
                         required
                       />
@@ -1877,6 +1879,7 @@
                         type="tel"
                         class="form-control py-2"
                         id="contactPhone"
+                        name="phone"
                         placeholder="+880 123 456 7890"
                         required
                       />
@@ -1890,7 +1893,7 @@
                       <label for="contactSubject" class="form-label fw-500"
                         >Subject <span class="text-danger">*</span></label
                       >
-                      <select class="form-select py-2" id="contactSubject" required>
+                      <select class="form-select py-2" id="contactSubject" name="subject" required>
                         <option value="" selected disabled>Select a subject</option>
                         <option value="general-inquiry">General Inquiry</option>
                         <option value="project-quote">Project Quote Request</option>
@@ -1912,6 +1915,7 @@
                       <textarea
                         class="form-control"
                         id="contactMessage"
+                        name="message"
                         rows="5"
                         placeholder="Tell us about your inquiry, project requirements, or any questions you have..."
                         required
@@ -2068,3 +2072,106 @@
      
 
 @endsection
+
+@push('footer_scripts')
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("contactForm");
+    if (!form) return;
+
+    const submitButton = form.querySelector('button[type="submit"]');
+    const csrfToken = document.querySelector('meta[name="csrf-token"]')?.getAttribute("content");
+
+    const showToast = (type, message) => {
+      const toast = document.createElement("div");
+      const isSuccess = type === "success";
+      const background = isSuccess ? "#198754" : "#dc3545";
+
+      toast.style.position = "fixed";
+      toast.style.top = "16px";
+      toast.style.right = "16px";
+      toast.style.zIndex = "9999";
+      toast.style.background = background;
+      toast.style.color = "#fff";
+      toast.style.padding = "12px 16px";
+      toast.style.borderRadius = "8px";
+      toast.style.boxShadow = "0 10px 30px rgba(0, 0, 0, 0.2)";
+      toast.style.maxWidth = "320px";
+      toast.textContent = message;
+
+      document.body.appendChild(toast);
+      setTimeout(() => toast.remove(), 2500);
+    };
+
+    const showMessage = (type, message) => {
+      if (typeof window !== "undefined") {
+        if (type === "success" && typeof window.s_alert === "function") {
+          window.s_alert(message);
+          return;
+        }
+        if (type === "error" && typeof window.s_warning === "function") {
+          window.s_warning(message);
+          return;
+        }
+      }
+      showToast(type, message);
+    };
+
+    form.addEventListener("submit", async function (event) {
+      event.preventDefault();
+      event.stopPropagation();
+
+      if (!form.checkValidity()) {
+        form.classList.add("was-validated");
+        return;
+      }
+
+      const formData = new FormData(form);
+      const payload = Object.fromEntries(formData.entries());
+
+      if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.dataset.originalText = submitButton.innerHTML;
+        submitButton.innerHTML = "Sending...";
+      }
+
+      try {
+        const response = await fetch("/api/v1/contacts/store", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+            ...(csrfToken ? { "X-CSRF-TOKEN": csrfToken } : {}),
+          },
+          body: JSON.stringify(payload),
+        });
+
+        const data = await response.json().catch(() => ({}));
+
+        if (response.ok && data?.status !== "validation_error") {
+          form.reset();
+          form.classList.remove("was-validated");
+          showMessage("success",  "Your message sent successfully. We will contact you soon.");
+          return;
+        }
+
+        if (data?.errors) {
+          const firstError = Object.values(data.errors)[0];
+          const message = Array.isArray(firstError) ? firstError[0] : "Validation error.";
+          showMessage("error", message);
+          return;
+        }
+
+        showMessage("error", data?.message || "Unable to send message. Please try again.");
+      } catch (error) {
+        showMessage("error", "Network error. Please try again.");
+      } finally {
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.innerHTML = submitButton.dataset.originalText || "Send Message";
+        }
+      }
+    });
+  });
+</script>
+@endpush

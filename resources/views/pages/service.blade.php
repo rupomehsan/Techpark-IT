@@ -37,7 +37,7 @@
 					<div class="col-md-9 text-center">
                       <h1 class="fw-bold mb-2 page-title text-center">Our Services</h1>
                       <h2 class="fs-3 fw-bold mb-4 text-center">Best Offshore Software, Application, Digital & IT Solutions</h2>
-                      <p class="fs-17">At Bdtask, we prioritize innovation, reliability, and client satisfaction. Let's accelerate together to your goal with our best software & IT service today.</p>
+                      <p class="fs-17">At techparkit, we prioritize innovation, reliability, and client satisfaction. Let's accelerate together to your goal with our best software & IT service today.</p>
                     </div>
 				</div>
 			</div>
@@ -51,8 +51,8 @@
 			<div class="row justify-content-center">
     			<div class="col-lg-8">
                 <div class="text-center mb-5">
-                  <h2 class="fs-45 fw-bold mb-4 wow fadeInUp">Transform Your Vision Into Reality <span class="text-bdtask animate-text">Design Any Customized</span> Software</h2>
-                  <p class="wow fadeInUp sub_text mx-5" data-wow-delay="0.2s">Bdtask, Inc. focuses on the exact requirements of the clients. We design and develop the best and most advanced software for all types of businesses.</p>
+                  <h2 class="fs-45 fw-bold mb-4 wow fadeInUp">Transform Your Vision Into Reality <span class="text-techparkit animate-text">Design Any Customized</span> Software</h2>
+                  <p class="wow fadeInUp sub_text mx-5" data-wow-delay="0.2s">techparkit, Inc. focuses on the exact requirements of the clients. We design and develop the best and most advanced software for all types of businesses.</p>
                 </div>
           </div>
 			</div>
@@ -143,7 +143,7 @@
               </div>
               <div class="card-body p-0 position-relative">
                 <h5 class="card-title mb-3 fw_600">Cyber Security</h5>
-                <p class="card-text">Secure your website with our bdtask cyber security service. You can trust us to give expert guidance and deliver guaranteed results.</p>
+                <p class="card-text">Secure your website with our techparkit cyber security service. You can trust us to give expert guidance and deliver guaranteed results.</p>
               </div>
             </a>
           </div>
@@ -378,7 +378,7 @@
                 <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
                   <div class="accordion-body">
                     <p>Determining the "best" IT support company depends on various factors such as your specific requirements, budget, location, and the scope of services required.</p>
-                    <p>However, bdtask is the best IT service company in the world. They offer many IT services including</p>
+                    <p>However, techparkit is the best IT service company in the world. They offer many IT services including</p>
                     <ul>
                       <li>Custom Software Development</li>
                       <li>Website Development</li>
@@ -394,11 +394,11 @@
               </div>
               <div class="accordion-item mb-3">
                 <h2 class="accordion-header" id="flush-headingFour">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">What Is Bdtask Every Project's Average Cost?</button>
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">What Is techparkit Every Project's Average Cost?</button>
                 </h2>
                 <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
                   <div class="accordion-body">
-                    <p>It's best to contact Bdtask directly for a personalized quote based on your specific project needs.</p>
+                    <p>It's best to contact techparkit directly for a personalized quote based on your specific project needs.</p>
                   </div>
                 </div>
               </div>
@@ -467,10 +467,10 @@
                         <h3>+88-01817-584639</h3>
                         <!--Social Icon Four-->
                         <ul class="d-flex list-unstyled mt-4">
-							<li><a class="align-items-center d-flex justify-content-center me-2 text-decoration-none text-white social_icon" href="https://www.facebook.com/bdtaskteam/" title="Facebook" target="_blank"><i class="ti-facebook"></i></a></li>
-							<li><a class="align-items-center d-flex justify-content-center me-2 text-decoration-none text-white social_icon" href="https://www.pinterest.com/bdtask/" title="Pinterest" target="_blank"><i class="ti-pinterest"></i></a></li>
-							<li><a class="align-items-center d-flex justify-content-center me-2 text-decoration-none text-white social_icon" href="https://www.linkedin.com/company/bdtask/" title="Linkedin" target="_blank"><i class="ti-linkedin"></i></a></li>
-							<li><a class="align-items-center d-flex justify-content-center me-2 text-decoration-none text-white social_icon" href="https://twitter.com/bdtask" title="Twitter" target="_blank"><i class="ti-twitter"></i></a></li>
+							<li><a class="align-items-center d-flex justify-content-center me-2 text-decoration-none text-white social_icon" href="https://www.facebook.com/techparkitteam/" title="Facebook" target="_blank"><i class="ti-facebook"></i></a></li>
+							<li><a class="align-items-center d-flex justify-content-center me-2 text-decoration-none text-white social_icon" href="https://www.pinterest.com/techparkit/" title="Pinterest" target="_blank"><i class="ti-pinterest"></i></a></li>
+							<li><a class="align-items-center d-flex justify-content-center me-2 text-decoration-none text-white social_icon" href="https://www.linkedin.com/company/techparkit/" title="Linkedin" target="_blank"><i class="ti-linkedin"></i></a></li>
+							<li><a class="align-items-center d-flex justify-content-center me-2 text-decoration-none text-white social_icon" href="https://twitter.com/techparkit" title="Twitter" target="_blank"><i class="ti-twitter"></i></a></li>
 						</ul>
                     </div>
                 </div>
@@ -484,14 +484,14 @@
 			<div class="row mb_100 justify-content-center">
 				<div class="col-xl-6 col-lg-8 col-md-10">
 					<div class="text-center mb-4">
-						<h4 class="fs-17">Bdtask, Inc.</h4>
-						<h2 class="fs-1 fw-bold mb-3">Our <span class="text-bdtask animate-text">Global Clients</span></h2>
+						<h4 class="fs-17">techparkit, Inc.</h4>
+						<h2 class="fs-1 fw-bold mb-3">Our <span class="text-techparkit animate-text">Global Clients</span></h2>
 					</div>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-12">
-					<img src="asset/img/map-bdtask-2.html" class="img-fluid" alt="Bdtask Map">
+					<img src="asset/img/map-techparkit-2.html" class="img-fluid" alt="techparkit Map">
 				</div>
 			</div>
 

@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
     <title>@yield('title', 'IT Solutions | Best Software Development Company')</title>
     <meta name="description" content="@yield('meta_description', 'IT Solutions, Inc. is the best software development company that provides all types of business solutions globally with modern technology and next-level professionals.')" />
 

@@ -92,6 +92,7 @@
                             type="text"
                             class="form-control"
                             id="quoteName"
+                            name="full_name"
                             placeholder="John Doe"
                             required
                           />
@@ -110,6 +111,7 @@
                             type="email"
                             class="form-control"
                             id="quoteEmail"
+                            name="email"
                             placeholder="john@example.com"
                             required
                           />
@@ -128,6 +130,7 @@
                             type="tel"
                             class="form-control"
                             id="quotePhone"
+                            name="phone"
                             placeholder="+880 123 456 7890"
                             required
                           />
@@ -145,6 +148,7 @@
                             type="text"
                             class="form-control"
                             id="quoteCompany"
+                            name="company_name"
                             placeholder="Your Company (Optional)"
                           />
                         </div>
@@ -158,28 +162,24 @@
                           <select
                             class="form-select"
                             id="quoteService"
+                            name="service_required"
                             required
                           >
                             <option value="" selected disabled>
                               Select a service
                             </option>
-                            <option value="web-design">Web Design</option>
+                              <option value="ecommerce">
+                              E-Commerce Solution
+                            </option>
                             <option value="web-development">
-                              Web Development
+                             School Management Software
                             </option>
-                            <option value="mobile-app">
-                              Mobile App Development
-                            </option>
+                    
                             <option value="custom-software">
                               Custom Software Development
                             </option>
-                            <option value="ui-ux-design">UI/UX Design</option>
-                            <option value="graphics-design">
-                              Graphics Design
-                            </option>
-                            <option value="ecommerce">
-                              E-Commerce Solution
-                            </option>
+                
+                         
                             <option value="other">Other</option>
                           </select>
                           <div class="invalid-feedback">
@@ -192,15 +192,15 @@
                           <label for="quoteBudget" class="form-label fw-500"
                             >Budget Range</label
                           >
-                          <select class="form-select" id="quoteBudget">
+                          <select class="form-select" id="quoteBudget" name="budget_range">
                             <option value="" selected>
                               Select budget (Optional)
                             </option>
-                            <option value="under-5k">Under $5,000</option>
-                            <option value="5k-10k">$5,000 - $10,000</option>
-                            <option value="10k-25k">$10,000 - $25,000</option>
-                            <option value="25k-50k">$25,000 - $50,000</option>
-                            <option value="50k-plus">$50,000+</option>
+                            <option value="under-5k">Under 20,000 TK</option>
+                            <option value="5k-10k">50,000 - 100,000 TK</option>
+                            <option value="10k-25k">100,000 - 200,000 TK</option>
+                            <option value="25k-50k">200,000 - 500,000 TK</option>
+                            <option value="50k-plus">500,000+ TK</option>
                           </select>
                         </div>
 
@@ -213,6 +213,7 @@
                           <textarea
                             class="form-control"
                             id="quoteMessage"
+                            name="project_description"
                             rows="4"
                             placeholder="Tell us about your project requirements, goals, and timeline..."
                             required
@@ -288,3 +289,81 @@
       src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
+    ></script>
+
+    <!-- Quote Form Submission Script -->
+    <script>
+      $(document).ready(function() {
+        // Form validation and submission
+        $('#quoteForm').on('submit', function(e) {
+          e.preventDefault();
+
+          // Check form validity
+          if (!this.checkValidity()) {
+            e.stopPropagation();
+            $(this).addClass('was-validated');
+            return false;
+          }
+
+          // Collect form data and map to API field names
+          const formData = {
+            full_name: $('#quoteName').val(),
+            email: $('#quoteEmail').val(),
+            phone: $('#quotePhone').val(),
+            company_name: $('#quoteCompany').val(),
+            service_required: $('#quoteService').val(),
+            budget_range: $('#quoteBudget').val(),
+            project_description: $('#quoteMessage').val()
+          };
+
+          // Disable submit button to prevent double submission
+          const $submitButton = $(this).find('button[type="submit"]');
+          const originalButtonText = $submitButton.html();
+          $submitButton.prop('disabled', true).html(
+            '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Submitting...'
+          );
+
+          // Submit via API
+          $.ajax({
+            url: '{{ url("/api/v1/free-quotes/store") }}',
+            type: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify(formData),
+            headers: {
+              'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
+              'Accept': 'application/json'
+            },
+            success: function(response) {
+              // Show success message
+              alert('Thank you! Your quote request has been submitted successfully. We will contact you within 24 hours.');
+
+              // Reset form
+              $('#quoteForm')[0].reset();
+              $('#quoteForm').removeClass('was-validated');
+
+              // Close modal
+              $('#quoteModal').modal('hide');
+
+              // Re-enable button
+              $submitButton.prop('disabled', false).html(originalButtonText);
+            },
+            error: function(xhr) {
+              // Re-enable button
+              $submitButton.prop('disabled', false).html(originalButtonText);
+
+              // Handle validation errors
+              if (xhr.status === 422 && xhr.responseJSON && xhr.responseJSON.errors) {
+                let errorMessage = 'Please correct the following errors:\n';
+                $.each(xhr.responseJSON.errors, function(field, messages) {
+                  errorMessage += '\n- ' + messages.join(', ');
+                });
+                alert(errorMessage);
+              } else {
+                // Show generic error message
+                alert('Sorry, there was an error submitting your request. Please try again or contact us directly.');
+              }
+            }
+          });
+        });
+      });
+    </script>

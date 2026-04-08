@@ -7,6 +7,7 @@ import SettingsRoutes from "../Management/Settings/setup/routes.js";
 //UserRoutes
 import UserRoutes from "../Management/UserManagement/User/setup/routes.js";
 //routes
+import ContactRoutes from "../Management/Contact/setup/routes.js";
 import UserRoleRoutes from "../Management/UserManagement/Role/setup/routes.js";
 import FreeQuoteRoutes from "../Management/FreeQuote/setup/routes.js";
 
@@ -20,6 +21,8 @@ const routes = {
       name: "adminDashboard",
     },
     //management routes
+
+    ContactRoutes,
 
     FreeQuoteRoutes,
 

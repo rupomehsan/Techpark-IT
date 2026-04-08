@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Contact Us | Bdtask')
+@section('title', 'Contact Us | techparkit')
 
 @section('meta_description', 'Do you need any information? Our support team is eagerly waiting to solve your problem anytime. Feel free to contact us and let us know your requirements.')
 
@@ -10,11 +10,11 @@
 <meta name="yandex-verification" content="598e72dfa3eeba81"/>
 <meta name="msvalidate.01" content="93D27DC816FE2DFFE3C578BB39C17386"/>
 
-<meta property="og:title" content="Contact Us | Bdtask"/>
+<meta property="og:title" content="Contact Us | techparkit"/>
 <meta property="og:description" content="Do you need any information? Our support team is eagerly waiting to solve your problem anytime. Feel free to contact us and let us know your requirements."/>
 <meta property="og:url" content="contact.html"/>
 <meta property="og:site_name" content="index.html"/>
-<meta property="og:image" content="asset/img/bdtask-software-development-company.jpg"/>
+<meta property="og:image" content="asset/img/techparkit-software-development-company.jpg"/>
 <meta property="og:image:width" content="760"/>
 <meta property="og:image:height" content="420"/>
 @endpush
@@ -115,10 +115,10 @@
                         <h3>+880-181-758-4639</h3>
                         <!--Social Icon Four-->
                         <ul class="d-flex list-unstyled mt-4">
-							<li><a class="align-items-center d-flex justify-content-center me-2 text-decoration-none text-white social_icon" href="https://www.facebook.com/bdtaskteam/" rel="nofollow" title="Facebook" target="_blank"><i class="ti-facebook"></i></a></li>
-							<li><a class="align-items-center d-flex justify-content-center me-2 text-decoration-none text-white social_icon" href="https://www.pinterest.com/bdtask/" rel="nofollow" title="Pinterest" target="_blank"><i class="ti-pinterest"></i></a></li>
-							<li><a class="align-items-center d-flex justify-content-center me-2 text-decoration-none text-white social_icon" href="https://www.linkedin.com/company/bdtask/" rel="nofollow" title="Linkedin" target="_blank"><i class="ti-linkedin"></i></a></li>
-							<li><a class="align-items-center d-flex justify-content-center me-2 text-decoration-none text-white social_icon" href="https://twitter.com/bdtask" title="Twitter" rel="nofollow" target="_blank"><i class="ti-twitter"></i></a></li>
+							<li><a class="align-items-center d-flex justify-content-center me-2 text-decoration-none text-white social_icon" href="https://www.facebook.com/techparkitteam/" rel="nofollow" title="Facebook" target="_blank"><i class="ti-facebook"></i></a></li>
+							<li><a class="align-items-center d-flex justify-content-center me-2 text-decoration-none text-white social_icon" href="https://www.pinterest.com/techparkit/" rel="nofollow" title="Pinterest" target="_blank"><i class="ti-pinterest"></i></a></li>
+							<li><a class="align-items-center d-flex justify-content-center me-2 text-decoration-none text-white social_icon" href="https://www.linkedin.com/company/techparkit/" rel="nofollow" title="Linkedin" target="_blank"><i class="ti-linkedin"></i></a></li>
+							<li><a class="align-items-center d-flex justify-content-center me-2 text-decoration-none text-white social_icon" href="https://twitter.com/techparkit" title="Twitter" rel="nofollow" target="_blank"><i class="ti-twitter"></i></a></li>
 						</ul>
                     </div>
                 </div>
@@ -132,15 +132,15 @@
 			<div class="row g-4">
 			    <div class="col-12">
 			        <p class="text-center fw-bold fs-3">Bangladesh Office</p>
-					<iframe class="rounded-5" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3649.696066934295!2d90.41879721450367!3d23.829404491671625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8a4136c4b61%3A0x19549f5462616f04!2sBdtask%20Limited%20-%20Best%20Software%20Company%20in%20Bangladesh!5e0!3m2!1sen!2sbd!4v1648449461297!5m2!1sen!2sbd" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+					<iframe class="rounded-5" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3649.696066934295!2d90.41879721450367!3d23.829404491671625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8a4136c4b61%3A0x19549f5462616f04!2stechparkit%20Limited%20-%20Best%20Software%20Company%20in%20Bangladesh!5e0!3m2!1sen!2sbd!4v1648449461297!5m2!1sen!2sbd" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 				</div>
 				<div class="col-lg-6">
 				    <p class="text-center fw-bold fs-3">UAE Office</p>
-				    <iframe class="rounded-5" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.546332658791!2d55.26173537595974!3d25.184791932201957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6973c9d206a1%3A0x900d7d42a233fc08!2sBdtask%20IT%20Solutions!5e0!3m2!1sen!2sbd!4v1727246757656!5m2!1sen!2sbd" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				    <iframe class="rounded-5" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.546332658791!2d55.26173537595974!3d25.184791932201957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6973c9d206a1%3A0x900d7d42a233fc08!2stechparkit%20IT%20Solutions!5e0!3m2!1sen!2sbd!4v1727246757656!5m2!1sen!2sbd" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 				</div>
 				<div class="col-lg-6">
 				    <p class="text-center fw-bold fs-3">USA Office</p>
-				    <iframe class="rounded-5" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3019.565090019764!2d-73.862640317866!3d40.83159712872177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2f4c156d54319%3A0xe46b8eebbd444e20!2sBdtask%2C%20Inc.!5e0!3m2!1sen!2sbd!4v1727246686904!5m2!1sen!2sbd" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				    <iframe class="rounded-5" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3019.565090019764!2d-73.862640317866!3d40.83159712872177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2f4c156d54319%3A0xe46b8eebbd444e20!2stechparkit%2C%20Inc.!5e0!3m2!1sen!2sbd!4v1727246686904!5m2!1sen!2sbd" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 				</div>
 			</div>
 

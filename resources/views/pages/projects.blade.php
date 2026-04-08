@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
-@section('title', 'Bdtask | Best Software Development Company')
+@section('title', 'techparkit | Best Software Development Company')
 
-@section('meta_description', 'Bdtask, Inc. is the best software development company that provides all types of business solutions globally with modern technology and next-level professionals.')
+@section('meta_description', 'techparkit, Inc. is the best software development company that provides all types of business solutions globally with modern technology and next-level professionals.')
 
 @push('meta_tags')
 <link rel="canonical" href="index.html" />
@@ -12,11 +12,11 @@
 <meta name="yandex-verification" content="ccfc62f7aafcb633" />
 <meta name="p:domain_verify" content="ca21c926ce0b41c3a0276e35b512c7ce" />
 
-<meta property="og:title" content="Bdtask | Best Software Development Company" />
-<meta property="og:description" content="Bdtask, Inc. is the best software development company that provides all types of business solutions globally with modern technology and next-level professionals." />
+<meta property="og:title" content="techparkit | Best Software Development Company" />
+<meta property="og:description" content="techparkit, Inc. is the best software development company that provides all types of business solutions globally with modern technology and next-level professionals." />
 <meta property="og:url" content="index.html" />
 <meta property="og:site_name" content="index.html" />
-<meta property="og:image" content="asset/img/bdtask-software-development-company.jpg" />
+<meta property="og:image" content="asset/img/techparkit-software-development-company.jpg" />
 <meta property="og:image:width" content="760" />
 <meta property="og:image:height" content="420" />
 
@@ -330,15 +330,15 @@
 
 @section('content')
       <!-- Banner Start-->
-      <div class="main-container all-soft-bg" bis_skin_checked="1">
-        <div class="all-soft-overlay" bis_skin_checked="1">
+      <div class="main-container bg_grad" bis_skin_checked="1">
+        <div class="" bis_skin_checked="1">
           <div class="container py_100" bis_skin_checked="1">
             <div class="row justify-content-center" bis_skin_checked="1">
               <div class="col-md-8 text-center" bis_skin_checked="1">
-                <h1 class="page-title fw-bold text-center text-white">
+                <h1 class="page-title fw-bold text-center text-dark">
                   Our Professional Software Solutions
                 </h1>
-                <p class="text-white mt-3 fs-5">Transforming businesses with cutting-edge technology</p>
+                <p class="text-dark mt-3 fs-5">Transforming businesses with cutting-edge technology</p>
               </div>
             </div>
           </div>
@@ -459,7 +459,7 @@
 
         <!-- Projects Grid -->
         <div class="project-grid">
-                    @foreach($portfolioData as $p)
+                    @foreach($portfolioData as $index => $p)
                         @php
                             // derive product tags for each project (used by product tabs)
                             $prodTags = [];
@@ -476,8 +476,8 @@
                             }
                             $prodAttr = implode(' ', $prodTags);
                         @endphp
-                        <div class="project-item" data-category="{{ $p['category'] }}" data-products="{{ $prodAttr }}">
-              <div class="project-card px30_y40">
+                        <div class="project-item " data-category="{{ $p['category'] }}" data-products="{{ $prodAttr }}" style="animation-delay: {{ $index * 0.1 }}s;">
+              <div class="project-card {{ $index % 2 == 0 ? 'bg_grad' : 'bg_grad2' }} px30_y40">
                 <div class="project-image-wrapper">
                   <span class="project-category-badge">{{ ucfirst($p['category']) }}</span>
                         <img src="{{ asset($p['image']) }}" class="img-fluid" alt="{{ $p['title'] }}" onerror="this.src='frontend/asset/img/projects/placeholder.svg'" />
@@ -500,12 +500,29 @@
                                             foreach ($prodList as $pt) {
                                                 if (isset($detailMap[$pt])) { $detailUrl = $detailMap[$pt]; break; }
                                             }
+
+                                            // Map project category to service type in modal
+                                            $serviceTypeMap = [
+                                                'ecommerce' => 'ecommerce',
+                                                'education' => 'web-development', // School Management
+                                                'corporate' => 'custom-software',
+                                                'management' => 'custom-software',
+                                                'other' => 'other'
+                                            ];
+                                            $serviceType = $serviceTypeMap[$p['category']] ?? 'other';
+
+                                            // Override with product-specific types if available
+                                            if (strpos($prodAttr, 'school') !== false) {
+                                                $serviceType = 'web-development';
+                                            } elseif (strpos($prodAttr, 'tp-mart') !== false) {
+                                                $serviceType = 'ecommerce';
+                                            }
                                         @endphp
 
                                         @if($detailUrl)
                                             <a href="{{ $detailUrl }}" class="project-btn btn-buy" target="_blank">View Details</a>
                                         @else
-                                            <a href="#" class="project-btn btn-buy" data-bs-toggle="modal" data-bs-target="#appointment">Contact Us</a>
+                                            <a href="#" class="project-btn btn-buy contact-btn" data-bs-toggle="modal" data-bs-target="#appointment" data-service-type="{{ $serviceType }}" data-project-title="{{ $p['title'] }}">Contact Us</a>
                                         @endif
                                     </div>
                 </div>

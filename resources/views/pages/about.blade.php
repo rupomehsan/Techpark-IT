@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
-@section('title', 'Bdtask | Best Software Development Company')
+@section('title', 'techparkit | Best Software Development Company')
 
-@section('meta_description', 'Bdtask, Inc. is the best software development company that provides all types of business solutions globally with modern technology and next-level professionals.')
+@section('meta_description', 'techparkit, Inc. is the best software development company that provides all types of business solutions globally with modern technology and next-level professionals.')
 
 @push('meta_tags')
 
@@ -14,11 +14,11 @@
 <meta name="yandex-verification" content="ccfc62f7aafcb633" />
 <meta name="p:domain_verify" content="ca21c926ce0b41c3a0276e35b512c7ce" />
 
-<meta property="og:title" content="Bdtask | Best Software Development Company" />
-<meta property="og:description" content="Bdtask, Inc. is the best software development company that provides all types of business solutions globally with modern technology and next-level professionals." />
+<meta property="og:title" content="techparkit | Best Software Development Company" />
+<meta property="og:description" content="techparkit, Inc. is the best software development company that provides all types of business solutions globally with modern technology and next-level professionals." />
 <meta property="og:url" content="index.html" />
 <meta property="og:site_name" content="index.html" />
-<meta property="og:image" content="asset/img/bdtask-software-development-company.jpg" />
+<meta property="og:image" content="asset/img/techparkit-software-development-company.jpg" />
 <meta property="og:image:width" content="760" />
 <meta property="og:image:height" content="420" />
 
@@ -112,7 +112,7 @@
                 We Are The Business Changers Behind the shadow
               </h1>
               <p class="fs-5">
-                Let’s Start The Introduction By Presenting Our Bdtask Family.
+                Let’s Start The Introduction By Presenting Our techparkit Family.
                 Our Skilled Technical Team Is Our True Asset &amp; Client Is Our
                 Aspiration. We Give A Digital Advanced Management Solutions To
                 Your Manual Management System.
@@ -300,7 +300,7 @@
       <div class="container">
         <div class="row justify-content-center mb-5">
           <div class="col-md-8 text-center">
-            <h5 class="text-bdtask fw-semibold">{{ $teamData['tagline'] }}</h5>
+            <h5 class="text-techparkit fw-semibold">{{ $teamData['tagline'] }}</h5>
             <h2 class="fs-1 fw-bold" style="line-height:1.15">{!! $teamData['title'] !!}</h2>
             <p class="text-muted mt-3">{{ $teamData['description'] }}</p>
           </div>
@@ -339,9 +339,9 @@
         <div class="row" bis_skin_checked="1">
           <div class="col-md-8 offset-md-2" bis_skin_checked="1">
             <div class="text-center mb-5" bis_skin_checked="1">
-              <h4 class="text-bdtask fw-semibold mb-3">OUR TECHNOLOGY STACK</h4>
+              <h4 class="text-techparkit fw-semibold mb-3">OUR TECHNOLOGY STACK</h4>
               <h2 class="fs-1 fw-bold">
-                Technologies We <span class="text-bdtask">Master</span>
+                Technologies We <span class="text-techparkit">Master</span>
               </h2>
               <p class="mt-3 text-muted">We specialize in PHP/Laravel backend development and MERN stack for modern, scalable web applications</p>
             </div>
@@ -498,7 +498,7 @@
           <div class="col-xl-6 col-md-10 col-lg-8" bis_skin_checked="1">
             <div class="text-center mb-5" bis_skin_checked="1">
               <h4>Innovation &amp; Inspiration</h4>
-              <h2 class="fs-1 fw-bold text-bdtask">That's who we are</h2>
+              <h2 class="fs-1 fw-bold text-techparkit">That's who we are</h2>
             </div>
           </div>
         </div>
@@ -510,7 +510,7 @@
               style="visibility: visible; animation-name: fadeInUp"
             >
               <p>
-                Bdtask Limited is a leading software development company in
+                techparkit Limited is a leading software development company in
                 Bangladesh. Started their journey in 2013, and slowly
                 established as one of the top-class software development
                 companies in the world market. Strongly believe in perfection
@@ -530,7 +530,7 @@
               style="visibility: visible; animation-name: fadeInUp"
             >
               <p>
-                Till now, Bdtask Inc is strongly providing the most advanced
+                Till now, techparkit Inc is strongly providing the most advanced
                 software solution and fulfilling every client’s customized
                 requirement.
               </p>
@@ -553,7 +553,7 @@
           <div class="col-xl-6 col-md-10 col-lg-8" bis_skin_checked="1">
             <div class="text-center mb-5" bis_skin_checked="1">
               <h4>Innovation &amp; Inspiration</h4>
-              <h2 class="fs-1 fw-bold text-bdtask">That's who we are</h2>
+              <h2 class="fs-1 fw-bold text-techparkit">That's who we are</h2>
             </div>
           </div>
         </div>
@@ -927,7 +927,7 @@
           <div class="col-xl-6 col-md-10 col-lg-8" bis_skin_checked="1">
             <div class="text-center mb-5" bis_skin_checked="1">
               <h4 class="mb-3">Our Moral is our Treasure</h4>
-              <h2 class="fs-1 fw-bold text-bdtask">Value We Hold!!</h2>
+              <h2 class="fs-1 fw-bold text-techparkit">Value We Hold!!</h2>
             </div>
           </div>
         </div>
@@ -1007,7 +1007,7 @@
           <div class="col-xl-6 col-md-10 col-lg-8" bis_skin_checked="1">
             <div class="text-center mb-5" bis_skin_checked="1">
               <h4>Innovation &amp; Inspiration</h4>
-              <h2 class="fs-1 fw-bold text-bdtask">Experience &amp; Trust</h2>
+              <h2 class="fs-1 fw-bold text-techparkit">Experience &amp; Trust</h2>
             </div>
           </div>
         </div>

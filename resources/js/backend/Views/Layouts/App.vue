@@ -21,7 +21,6 @@ import { auth_store } from "../../GlobalStore/auth_store";
 import { site_settings_store } from "../../GlobalStore/site_settings_store";
 import { mapActions, mapState } from "pinia";
 
-
 export default {
   components: { TopHeader, Footer },
   data: () => ({
@@ -30,7 +29,6 @@ export default {
   }),
   created: async function () {
     // Initialize theme system before other operations
-    
 
     // Prevent multiple initialization calls
     if (this.isInitialized) {

@@ -41,22 +41,16 @@ include_once(__DIR__ . '/BackendModule/Validations/GetAllDataValidation.php');
 | FrontendModule Routes
 |--------------------------------------------------------------------------
 |
+| Dynamic Vue.js module generators for Management interface
+| These helpers generate optimized, type-safe Vue components
+|
 */
-include_once(__DIR__ . '/FrontendModule/SetupIndex.php');
-include_once(__DIR__ . '/FrontendModule/FormField.php');
-include_once(__DIR__ . '/FrontendModule/All.php');
-include_once(__DIR__ . '/FrontendModule/Details.php');
-include_once(__DIR__ . '/FrontendModule/Form.php');
-include_once(__DIR__ . '/FrontendModule/FormPage.php');
-// include_once(__DIR__ . '/FrontendModule/Pages/AllDataPage.php');
-// include_once(__DIR__ . '/FrontendModule/Pages/DetailsPage.php');
-// include_once(__DIR__ . '/FrontendModule/Pages/LayoutPage.php');
 
+// Setup configuration generators
+include_once(__DIR__ . '/FrontendModule/setup/index.php');
+include_once(__DIR__ . '/FrontendModule/setup/form_fields.php');
+include_once(__DIR__ . '/FrontendModule/setup/routes.php');
 
-// include_once(__DIR__ . '/FrontendModule/Setup/Router.php');
-
-// include_once(__DIR__ . '/FrontendModule/Setup/SetupType.php');
-
-// include_once(__DIR__ . '/FrontendModule/Store/Index.php');
-// include_once(__DIR__ . '/FrontendModule/Store/InitialState.php');
+// Store generator (Pinia with factory pattern)
+include_once(__DIR__ . '/FrontendModule/store/index.php');
 
