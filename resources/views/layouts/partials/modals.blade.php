@@ -294,6 +294,35 @@
     <!-- Quote Form Submission Script -->
     <script>
       $(document).ready(function() {
+        // Auto-fill form when modal opens from contact us
+        $('#appointment').on('show.bs.modal', function(e) {
+          const trigger = e.relatedTarget;
+
+          // Check if has project data
+          const serviceType = $(trigger).attr('data-service-type');
+          const projectTitle = $(trigger).attr('data-project-title');
+          const isContactBtn = $(trigger).hasClass('contact-btn') ||
+                               $(trigger).hasClass('contact-us-btn');
+
+          if (isContactBtn || serviceType || projectTitle) {
+            // Pre-select Custom Software Development if not specified
+            if (serviceType) {
+              $('#quoteService').val(serviceType);
+            } else {
+              $('#quoteService').val('custom-software');
+            }
+
+            // Auto-fill project description
+            let description = '';
+            if (projectTitle) {
+              description = `I want to discuss custom software development and software optimization for ${projectTitle}. This project needs professional development services.`;
+            } else {
+              description = 'I want to discuss custom software development and software optimization for our project.';
+            }
+            $('#quoteMessage').val(description);
+          }
+        });
+
         // Form validation and submission
         $('#quoteForm').on('submit', function(e) {
           e.preventDefault();
@@ -342,7 +371,7 @@
               $('#quoteForm').removeClass('was-validated');
 
               // Close modal
-              $('#quoteModal').modal('hide');
+              $('#appointment').modal('hide');
 
               // Re-enable button
               $submitButton.prop('disabled', false).html(originalButtonText);

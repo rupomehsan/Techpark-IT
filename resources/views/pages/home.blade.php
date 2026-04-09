@@ -1898,7 +1898,6 @@
                         <option value="general-inquiry">General Inquiry</option>
                         <option value="project-quote">Project Quote Request</option>
                         <option value="support">Technical Support</option>
-                        <option value="partnership">Business Partnership</option>
                         <option value="feedback">Feedback</option>
                         <option value="other">Other</option>
                       </select>

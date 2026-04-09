@@ -4,11 +4,11 @@
     <img src="{{ asset('frontend/asset/img/icons/whatsapp.png') }}" alt="WhatsApp" />
   </a>
 
-  <a title="Telegram" href="tg://resolve?domain=t4091" rel="nofollow" class="scl_link telegram_link" target="_blank">
+  <a title="Telegram" href="https://t.me/mdabuehsan" rel="nofollow" class="scl_link telegram_link" target="_blank">
     <img src="{{ asset('frontend/asset/img/icons/telegram.png') }}" alt="Telegram" />
   </a>
 
-  <a title="Messenger" href="https://m.me/itsolutions" rel="nofollow" class="scl_link messenger_link" target="_blank">
+  <a title="Messenger" href="https://m.me/TechParkITorg" rel="nofollow" class="scl_link messenger_link" target="_blank">
     <img src="https://img.icons8.com/?size=100&id=VFMgSms8GmnV&format=png&color=000000" alt="Messenger" />
   </a>
 </div>
