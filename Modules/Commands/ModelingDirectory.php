@@ -342,6 +342,12 @@ class ModelingDirectory extends Command
             $parent = ucwords($vue_format_dir[0]);
             $child = ucwords(end($vue_format_dir));
             $menuRoute = "All{$child}";
+
+            // Check if route already exists in the file to prevent duplicates
+            if ($this->routeExistsInSidebar($fileContent, $menuRoute)) {
+                return;
+            }
+
             $menuItem = <<<MENU
           {
             route_name: `{$menuRoute}`,
@@ -355,12 +361,9 @@ MENU;
             if (preg_match($pattern, $fileContent, $matches, PREG_OFFSET_CAPTURE)) {
                 $menusBlock = $matches[1][0];
                 $menusStart = $matches[1][1];
-
-                if (!preg_match('/route_name:\s*`' . preg_quote($menuRoute, '/') . '`/', $menusBlock)) {
-                    $insertPos = $menusStart + strlen($menusBlock);
-                    $fileContent = substr_replace($fileContent, $menuItem, $insertPos, 0);
-                    file_put_contents($filePath, $fileContent);
-                }
+                $insertPos = $menusStart + strlen($menusBlock);
+                $fileContent = substr_replace($fileContent, $menuItem, $insertPos, 0);
+                file_put_contents($filePath, $fileContent);
             } else {
                 $sidebarMenuContent = <<<HTML
 <side-bar-drop-down-menus
@@ -380,17 +383,34 @@ HTML;
         } else {
             $title = ucwords(str_replace('-', ' ', $this->ViewModuleName));
             $menuRoute = "All{$this->ViewModuleName}";
+
+            // Check if route already exists in the file to prevent duplicates
+            if ($this->routeExistsInSidebar($fileContent, $menuRoute)) {
+                return;
+            }
+
             $sidebarMenuContent = <<<HTML
-<side-bar-single-menu :icon="`fa fa-plus`" :menu_title="`{$title}`"  :route_name="`{$menuRoute}`" />\n
+<side-bar-single-menu :icon="`fa fa-plus`" :menu_title="`{$title}`" :route_name="`{$menuRoute}`" />\n
 HTML;
 
-            if (strpos($fileContent, trim($sidebarMenuContent)) === false) {
-                $managementEndPosition = strpos($fileContent, "<!-- Management end -->");
-                if ($managementEndPosition !== false) {
-                    $fileContent = substr($fileContent, 0, $managementEndPosition) . $sidebarMenuContent . substr($fileContent, $managementEndPosition);
-                    file_put_contents($filePath, $fileContent);
-                }
+            $managementEndPosition = strpos($fileContent, "<!-- Management end -->");
+            if ($managementEndPosition !== false) {
+                $fileContent = substr($fileContent, 0, $managementEndPosition) . $sidebarMenuContent . substr($fileContent, $managementEndPosition);
+                file_put_contents($filePath, $fileContent);
             }
         }
+    }
+
+    /**
+     * Check if a route already exists in the sidebar to prevent duplicates
+     */
+    protected function routeExistsInSidebar($fileContent, $routeName)
+    {
+        // Look for route_name with backticks: `AllModuleName`
+        $pattern = '/route_name:\s*`' . preg_quote($routeName, '/') . '`/';
+        // Also check in :route_name attribute: :route_name="`AllModuleName`"
+        $attributePattern = '/:route_name="`' . preg_quote($routeName, '/') . '`"/';
+
+        return preg_match($pattern, $fileContent) || preg_match($attributePattern, $fileContent);
     }
 }

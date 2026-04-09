@@ -1,7 +1,10 @@
 <template>
   <!-- {{ item }} -->
 
-  <template v-for="(row_item, index) in moduleSetup.table_row_data" :key="index">
+  <template
+    v-for="(row_item, index) in moduleSetup.table_row_data"
+    :key="index"
+  >
     <tr>
       <th>{{ row_item }}</th>
       <th class="text-center">:</th>
@@ -28,12 +31,12 @@
 </template>
 
 <script setup>
-import { inject } from 'vue';
+import { inject } from "vue";
 
 // Accept setup via dependency injection
-const moduleSetup = inject('moduleSetup');
+const moduleSetup = inject("moduleSetup");
 
-defineProps(['item']);
+defineProps(["item"]);
 
 // Methods
 const trim_content = (content, row_item = null) => {
@@ -41,7 +44,7 @@ const trim_content = (content, row_item = null) => {
     if (row_item == "created_at" || row_item == "updated_at") {
       return new Date(content).toLocaleString();
     }
-    return content.length > 50 ? content.substring(0, 50) + "..." : content;
+    return content;
   }
   if (content && typeof content === "object") {
     for (const key of Object.keys(content)) {

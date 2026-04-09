@@ -297,6 +297,12 @@
   color: #d6d2d2;
   background-color: rgba(255, 255, 255, 0.15);
 }
+.light-theme .note-editor.note-frame .note-editing-area .note-editable {
+  padding: 10px;
+  overflow: auto;
+  color: #000000;
+  background-color: rgba(255, 255, 255, 0.15);
+}
 .note-editor.note-frame
   .note-editing-area
   .note-editable[contenteditable="false"] {

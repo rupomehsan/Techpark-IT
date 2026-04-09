@@ -47,6 +47,6 @@ export default [
     type: "textarea",
     value: "",
     placeholder: "Describe your project requirements...",
-    row_col_class: 12,
+    class: 12,
   },
 ];

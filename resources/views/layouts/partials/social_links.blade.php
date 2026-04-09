@@ -8,7 +8,11 @@
     <img src="{{ asset('frontend/asset/img/icons/telegram.png') }}" alt="Telegram" />
   </a>
 
-  <a title="Messenger" href="https://m.me/TechParkITorg" rel="nofollow" class="scl_link messenger_link" target="_blank">
-    <img src="https://img.icons8.com/?size=100&id=VFMgSms8GmnV&format=png&color=000000" alt="Messenger" />
+  <a title="Messenger" href="https://m.me/TechParkITorg" rel="nofollow" class="" target="_blank">
+    <img  src="https://img.icons8.com/?size=200&id=VFMgSms8GmnV&format=png&color=000000" alt="Messenger"
+     height="40"
+          width="40"
+            style="margin-left:-5px "
+    />
   </a>
 </div>

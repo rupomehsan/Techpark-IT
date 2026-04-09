@@ -10,12 +10,22 @@
     <td>
       <select-single :data="item" />
     </td>
-    <template v-for="(row_item, index) in moduleSetup.table_row_data" :key="index">
+    <template
+      v-for="(row_item, index) in moduleSetup.table_row_data"
+      :key="index"
+    >
       <td v-if="row_item == 'id'">
         {{ dataindex + 1 }}
       </td>
-      <td v-else-if="row_item === 'thumbnail_image'" class="text-wrap max-w-120">
-        <a :href="item[row_item]" data-lightbox="blog-image" data-title="Preview">
+      <td
+        v-else-if="row_item === 'thumbnail_image'"
+        class="text-wrap max-w-120"
+      >
+        <a
+          :href="item[row_item]"
+          data-lightbox="blog-image"
+          data-title="Preview"
+        >
           <img
             :src="item[row_item]"
             style="width: 60px; height: 40px; object-fit: cover"
@@ -52,7 +62,7 @@ const trim_content = (content, row_item = null) => {
       // Show full date and time (e.g., 3/20/2026, 7:37:43 PM)
       return new Date(content).toLocaleString();
     }
-    return content.length > 50 ? content.slice(0, 50) + "..." : content;
+    return content.length > 20 ? content.slice(0, 20) + "..." : content;
   }
   return content;
 };

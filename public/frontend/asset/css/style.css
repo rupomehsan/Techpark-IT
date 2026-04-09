@@ -1867,23 +1867,6 @@ div[id] {
   z-index: -1;
 }
 
-.header_area::after {
-  content: "";
-  width: 300px;
-  height: 300px;
-  position: absolute;
-  top: 50px;
-  right: -80px;
-  background: radial-gradient(
-    circle,
-    rgba(192, 38, 46, 0.06) 0%,
-    transparent 70%
-  );
-  border-radius: 50%;
-  z-index: -1;
-  animation: pulse_slow 8s ease-in-out infinite;
-}
-
 .nav-link {
   position: relative;
   font-weight: 500;
@@ -2000,12 +1983,13 @@ div[id] {
   width: 900px;
   height: 900px;
   position: absolute;
-  top: -250px;
+  top: -300px;
   right: -80px;
   background: #e6f9ef;
-  transform: rotate(-10deg);
+  transform: rotate(-12deg);
   border-radius: 50px;
   z-index: -1;
+  overflow: hidden;
 }
 
 .banner_wrapper::after {

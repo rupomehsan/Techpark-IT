@@ -1,5 +1,5 @@
 <template>
-  <div :class="row_col_class">
+  <div :class="class">
     <div class="form-group">
       <label for="">
         {{ label || name }}
@@ -20,7 +20,11 @@
         <!-- {{ component_images }} -->
         <template v-for="(image, index) in component_images" :key="image">
           <div class="position-relative my-1">
-            <a :href="image.url ? image.url : image" data-lightbox="images-preview" data-title="Preview">
+            <a
+              :href="image.url ? image.url : image"
+              data-lightbox="images-preview"
+              data-title="Preview"
+            >
               <img
                 :src="image.url ? image.url : image"
                 :class="image != '' ? 'border' : ''"
@@ -64,7 +68,7 @@ export default {
       default: [],
       required: false,
     },
-    row_col_class: {
+    class: {
       type: String,
       default: "col-6",
     },
@@ -108,7 +112,9 @@ export default {
         const parsedData = { field: this.name, index: data.index };
         const confirmed = await window.s_confirm();
         if (!confirmed) return;
-        const response = await axios.post(`properties/proprerty-image-delete/${this.item.slug}?data=${JSON.stringify(parsedData)}`);
+        const response = await axios.post(
+          `properties/proprerty-image-delete/${this.item.slug}?data=${JSON.stringify(parsedData)}`,
+        );
         window.s_alert(response.data.message);
       }
 

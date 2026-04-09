@@ -6,7 +6,8 @@ import Dashboard from "../Management/Dashboard/Dashboard.vue";
 import SettingsRoutes from "../Management/Settings/setup/routes.js";
 //UserRoutes
 import UserRoutes from "../Management/UserManagement/User/setup/routes.js";
-//routes
+//routesimport EcommerceOrderRoutes from '../Management/EcommerceOrder/setup/routes.js';
+
 import ContactRoutes from "../Management/Contact/setup/routes.js";
 import UserRoleRoutes from "../Management/UserManagement/Role/setup/routes.js";
 import FreeQuoteRoutes from "../Management/FreeQuote/setup/routes.js";
@@ -20,7 +21,8 @@ const routes = {
       component: Dashboard,
       name: "adminDashboard",
     },
-    //management routes
+    //management routes        EcommerceOrderRoutes,
+
 
     ContactRoutes,
 

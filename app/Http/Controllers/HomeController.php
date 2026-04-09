@@ -24,6 +24,10 @@ class HomeController extends Controller
     public function projects()
     {
         return view('pages.projects');
+    }  
+    public function projectEcommerce()
+    {
+        return view('pages.ecommerce');
     }
 
     public function contactUs()

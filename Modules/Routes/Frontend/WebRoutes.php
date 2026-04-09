@@ -28,6 +28,7 @@ Route::get('/', [HomeController::class, 'index'])->name("website");
 Route::get('about-us', [HomeController::class, 'aboutUs'])->name("aboutUs");
 Route::get('services', [HomeController::class, 'services'])->name("service");
 Route::get('projects', [HomeController::class, 'projects'])->name("projects");
+Route::get('projects/ecommerce', [HomeController::class, 'projectEcommerce'])->name("projectEcommerce");
 Route::get('contact-us', [HomeController::class, 'contactUs'])->name("contact");
 Route::get('blog', [HomeController::class, 'blog'])->name("blog");
 Route::get('terms-and-conditions', [HomeController::class, 'termsAndCondition'])->name("termsAndCondition");

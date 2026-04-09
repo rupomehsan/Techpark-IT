@@ -36,3 +36,4 @@ include_once base_path("Modules/Management/UserManagement/Role/Routes/Route.php"
 */
 include_once base_path("Modules/Management/FreeQuote/Routes/Route.php");
 include_once base_path("Modules/Management/Contact/Routes/Route.php");
+include_once base_path("Modules/Management/EcommerceOrder/Routes/Route.php");

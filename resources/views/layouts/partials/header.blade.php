@@ -903,7 +903,7 @@
                             <div class="row g-3">
                               <div class="col-xl-4 col-md-6">
                                 <a
-                                  href="https://ecsolutions.techparkit.info/"
+                                  href="{{ route('projectEcommerce') }}"
                                   target="_blank"
                                   class="bg_grad p-3 align-items-start d-flex product_link h-100"
                                 >

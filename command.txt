@@ -24,4 +24,4 @@ php artisan make:module BlogManagement/BlogTag [title:string-150] --vue
 
 
 
-php artisan make:module Contact [full_name:string-150,email:string-150,phone:string-50,subject:string-150,message:text] --vue
+php artisan make:module EcommerceOrder [full_name:string-150,email:string-150,phone:string-50,service:string-150,pricing_plan:string,description:text] --vue

@@ -1,5 +1,5 @@
 <template>
-  <div :class="row_col_class" v-if="is_visible">
+  <div :class="class" v-if="is_visible">
     <div class="form-group">
       <label for="">
         {{ label || name }}
@@ -116,7 +116,7 @@ export default {
       type: Object,
       default: null,
     },
-    row_col_class: {
+    class: {
       required: false,
       type: String,
       default: "col-md-6",

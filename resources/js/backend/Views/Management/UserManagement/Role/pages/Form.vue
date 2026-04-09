@@ -4,7 +4,11 @@
       <div class="card">
         <div class="card-header d-flex justify-content-between">
           <h5 class="text-capitalize">
-            {{ param_id ? `${setup.edit_page_title}` : `${setup.create_page_title}` }}
+            {{
+              param_id
+                ? `${setup.edit_page_title}`
+                : `${setup.create_page_title}`
+            }}
           </h5>
           <div>
             <router-link
@@ -17,14 +21,20 @@
             >
               {{ setup.details_page_title }}
             </router-link>
-            <router-link class="btn btn-outline-warning btn-sm" :to="{ name: `All${setup.route_prefix}` }">
+            <router-link
+              class="btn btn-outline-warning btn-sm"
+              :to="{ name: `All${setup.route_prefix}` }"
+            >
               {{ setup.all_page_title }}
             </router-link>
           </div>
         </div>
         <div class="card-body card_body_fixed_height">
           <div class="row">
-            <template v-for="(form_field, index) in form_fields" v-bind:key="index">
+            <template
+              v-for="(form_field, index) in form_fields"
+              v-bind:key="index"
+            >
               <common-input
                 :label="form_field.label"
                 :type="form_field.type"
@@ -34,7 +44,7 @@
                 :value="form_field.value"
                 :data_list="form_field.data_list"
                 :is_visible="form_field.is_visible"
-                :row_col_class="form_field.row_col_class"
+                :class="form_field.class"
               />
             </template>
           </div>
@@ -61,7 +71,6 @@ export default {
     setup,
     form_fields,
     param_id: null,
-
   }),
   created: async function () {
     let id = (this.param_id = this.$route.params.id);

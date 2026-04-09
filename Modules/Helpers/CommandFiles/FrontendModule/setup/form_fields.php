@@ -71,7 +71,7 @@ if (!function_exists('generateFieldConfig')) {
         $config .= getFieldTypeConfig($type, $label);
         $config .= "\t\tvalue: \"\",\n";
         $config .= "\t\tis_visible: true,\n";
-        $config .= "\t\trow_col_class: \"col-md-6\",\n";
+        $config .= "\t\tclass: \"col-md-6\",\n";
         $config .= "\t},\n";
 
         return $config;
