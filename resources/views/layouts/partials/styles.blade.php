@@ -23,6 +23,9 @@
 {{-- Video Popup --}}
 <link href="{{ asset('frontend/asset/plugins/video-popup/videoPopUp.css') }}" rel="stylesheet" />
 
+{{-- Lightbox2 for Image Gallery Popups --}}
+<link href="{{ asset('backend/assets/plugins/lightbox/css/lightbox.min.css') }}" rel="stylesheet" />
+
 {{-- Main Stylesheet --}}
 <link href="{{ asset('frontend/asset/css/style.css?v=' . rand(100000, 999999)) }}" rel="stylesheet" />
 
