@@ -49,23 +49,24 @@
             <div class="row g-4 g-xl-5 align-items-center">
               <div class="col-xl-6">
                 <h1 class="fw-bold wow fadeInUp main_title">
-                  Crafting
-                  <span class="text-techparkit animate-text">Innovative </span>
-                  Software <span class="fw-light"></span>For
-                  <span class="text-techparkit">Tomorrow’s World.</span>
+                  Build 
+                  <span class="text-techparkit animate-text">Smart </span>
+                  Software Solutions <span class="fw-light"></span>For
+                  <span class="text-techparkit">Modern Enterprises With</span>
+                  <span class="animate-text"> Techpark IT.</span>
                 </h1>
                 <p
                   class="my-4 wow fadeInUp info_text text-justify"
                   data-wow-delay="0.3s"
                 >
-                  Techpark IT has 5+ years of experience and a growing
-                  reputation in delivering reliable software solutions for
-                  businesses in Bangladesh and globally. We provide a wide range
-                  of ready-made software solutions designed to automate business
-                  operations. Our expert team also offers high-quality custom
-                  software development services to help accelerate your business
-                  growth
-                </p>
+                 TechPark IT is a trusted software development company with 5+ years of experience delivering reliable and scalable digital solutions for businesses in Bangladesh and international markets.
+         </p>    <p
+                  class="my-4 wow fadeInUp info_text text-justify"
+                  data-wow-delay="0.3s"
+                >
+
+We offer a wide range of ready-to-deploy business software solutions designed to automate operations, enhance productivity, and simplify business management.
+                </p>    
                 <button
                   type="button"
                   class="btn btn-success mb-4 px-5 py-3 wow fadeInUp"
@@ -101,11 +102,11 @@
                     >
                       <div class="ratio ratio-16x9">
                         <img
-                          src="https://i.ytimg.com/vi/mmXakm_koNk/maxresdefault.jpg"
+                          src="https://i.ytimg.com/vi/2RG0iyawseA/maxresdefault.jpg"
                           alt="Web Design and Development শিখুন, আইটি প্রফেশনাল হয়ে উঠুন"
                           class="w-100 h-100 video-thumbnail"
                           style="object-fit: cover"
-                          onerror="this.src='https://i.ytimg.com/vi/mmXakm_koNk/hqdefault.jpg'"
+                          onerror="this.src='https://i.ytimg.com/vi/2RG0iyawseA/hqdefault.jpg'"
                         />
                       </div>
                       
@@ -200,17 +201,17 @@
                 class="fw-bold wow fadeInUp main_title"
                 style="visibility: visible; animation-name: fadeInUp"
               >
-                We are From
-                <span class="text-techparkit animate-text">Another Space to </span>
-                Automate
-                <span class="text-techparkit">the World.</span>
+                Transforming Ideas into Reality with
+                <span class="text-techparkit animate-text">Your Trusted </span>
+                Software Development
+                <span class="text-techparkit">Partner.</span>
               </h1>
 
               <p class="mb-4 wow fadeInUp sub_text" data-wow-delay="0.4s">
-                techparkit works in multiple areas including software development,
-                website development, customized software solution, mobile app
-                development, theme design, and development. Our dream is to
-                continue your journey with success.
+               TechPark IT operates across multiple technology domains, including software development, website development, custom software solutions, mobile application development, and theme design & development.
+              </p>
+              <p class="mb-4 wow fadeInUp sub_text" data-wow-delay="0.4s">
+               Our team is committed to delivering high-quality, scalable, and reliable digital solutions that help businesses improve efficiency, streamline operations, and achieve sustainable growth.
               </p>
               <a
                 href="{{route('aboutUs')}}"
@@ -222,7 +223,7 @@
             </div>
             <div class="col-lg-6 offset-lg-1">
               <img
-                src="{{ asset('frontend/asset/img/who-we-are.webp') }}"
+                src="{{ asset('frontend/asset/img/home_page/about_us.png') }}"
                 alt="Who We Are"
                 class="img-fluid wow fadeInLeft mt-5 mt-lg-0"
               />
@@ -1631,9 +1632,10 @@
           <div class="row">
             <div class="col-md-12">
               <img
-                src="{{ asset('frontend/asset/img/map-techparkit.webp') }}"
+                src="{{ asset('frontend/asset/img/home_page/global_clients_map.jpeg') }}"
                 class="img-fluid"
                 alt="techparkit Map"
+                style="border-top-left-radius: 50%;border-top-right-radius: 50%;"
               />
             </div>
           </div>

@@ -56,6 +56,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    {{-- Lightbox2 for Image Gallery Popups --}}
+<link href="{{ asset('backend/assets/plugins/lightbox/css/lightbox.min.css') }}" rel="stylesheet" />
+
     <!-- Bootstrap CSS -->
     <link href="{{ asset('frontend/ecommerce') }}/assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="{{ asset('frontend/ecommerce') }}/assets/css/owl.carousel.min.css" rel="stylesheet" />
@@ -1050,7 +1053,7 @@
                               <div class="row g-3">
                                 <div class="col-xl-4 col-md-6">
                                   <a
-                                    href="https://ecsolutions.techparkit.info/"
+                                     href="{{ route('projectEcommerce') }}"
                                     target="_blank"
                                     class="bg_grad p-3 align-items-start d-flex product_link h-100"
                                   >
@@ -1959,7 +1962,7 @@
                   fill="white"
                 ></path>
               </svg>
-              <span class="fs-28 text-white">750+ Sale</span>
+              <span class="fs-28 text-white">1 Sale</span>
             </div>
             <div class="d-flex align-items-center gap-2">
               <svg
@@ -1989,7 +1992,7 @@
                   fill="white"
                 ></path>
               </svg>
-              <span class="fs-28 text-white">CodeIgniter Framework</span>
+              <span class="fs-28 text-white">Laravel Framework</span>
             </div>
             <div class="d-flex align-items-center gap-2">
               <svg
@@ -2158,15 +2161,13 @@
           <div class="col">
             <div class="bg-white-smoke h-100 hover4 p-2 rounded-3">
               <div class="bg-white rounded-3 py-2 mb-4">
-                <img
-                  class="img-fluid"
-                  src="{{ asset('frontend/ecommerce') }}/assets/images/features/pos-management-system.webp"
-                  alt="POS Management System"
-                  data-pagespeed-url-hash="1068732650"
-                  onload="
-                    pagespeed.CriticalImages.checkImageForCriticality(this)
-                  "
-                />
+                <a href="{{ asset('frontend/ecommerce') }}/assets/images/features/pos.jpeg" data-lightbox="features" data-title="POS Management System">
+                  <img
+                    class="img-fluid"
+                    src="{{ asset('frontend/ecommerce') }}/assets/images/features/pos.jpeg"
+                    alt="POS Management System"
+                  />
+                </a>
               </div>
               <h3 class="mb-2 px-2 fw-600 fs-18">POS Management System</h3>
             </div>
@@ -2174,15 +2175,13 @@
           <div class="col">
             <div class="bg-white-smoke h-100 hover4 p-2 rounded-3">
               <div class="bg-white rounded-3 py-2 mb-4">
-                <img
-                  class="img-fluid"
-                  src="{{ asset('frontend/ecommerce') }}/assets/images/features/order-management.webp"
-                  alt="Order Management"
-                  data-pagespeed-url-hash="2053709236"
-                  onload="
-                    pagespeed.CriticalImages.checkImageForCriticality(this)
-                  "
-                />
+                <a href="{{ asset('frontend/ecommerce') }}/assets/images/features/order.jpeg" data-lightbox="features" data-title="Order Management">
+                  <img
+                    class="img-fluid"
+                    src="{{ asset('frontend/ecommerce') }}/assets/images/features/order.jpeg"
+                    alt="Order Management"
+                  />
+                </a>
               </div>
               <h3 class="mb-2 px-2 fw-600 fs-18">Order Management</h3>
             </div>
@@ -2190,15 +2189,13 @@
           <div class="col">
             <div class="bg-white-smoke h-100 hover4 p-2 rounded-3">
               <div class="bg-white rounded-3 py-2 mb-4">
-                <img
-                  class="img-fluid"
-                  src="{{ asset('frontend/ecommerce') }}/assets/images/features/product-management.webp"
-                  alt="Product Management"
-                  data-pagespeed-url-hash="497670325"
-                  onload="
-                    pagespeed.CriticalImages.checkImageForCriticality(this)
-                  "
-                />
+                <a href="{{ asset('frontend/ecommerce') }}/assets/images/features/product.jpeg" data-lightbox="features" data-title="Product Management">
+                  <img
+                    class="img-fluid"
+                    src="{{ asset('frontend/ecommerce') }}/assets/images/features/product.jpeg"
+                    alt="Product Management"
+                  />
+                </a>
               </div>
               <h3 class="mb-2 px-2 fw-600 fs-18">Product Management</h3>
             </div>
@@ -2206,15 +2203,13 @@
           <div class="col">
             <div class="bg-white-smoke h-100 hover4 p-2 rounded-3">
               <div class="bg-white rounded-3 py-2 mb-4">
-                <img
-                  class="img-fluid"
-                  src="{{ asset('frontend/ecommerce') }}/assets/images/features/customer-management.webp"
-                  alt="Customer Management"
-                  data-pagespeed-url-hash="3109803072"
-                  onload="
-                    pagespeed.CriticalImages.checkImageForCriticality(this)
-                  "
-                />
+                <a href="{{ asset('frontend/ecommerce') }}/assets/images/features/customer.jpeg" data-lightbox="features" data-title="Customer Management">
+                  <img
+                    class="img-fluid"
+                    src="{{ asset('frontend/ecommerce') }}/assets/images/features/customer.jpeg"
+                    alt="Customer Management"
+                  />
+                </a>
               </div>
               <h3 class="mb-2 px-2 fw-600 fs-18">Customer Management</h3>
             </div>
@@ -2222,15 +2217,13 @@
           <div class="col">
             <div class="bg-white-smoke h-100 hover4 p-2 rounded-3">
               <div class="bg-white rounded-3 py-2 mb-4">
-                <img
-                  class="img-fluid"
-                  src="{{ asset('frontend/ecommerce') }}/assets/images/features/supplier-management.webp"
-                  alt="Supplier Management"
-                  data-pagespeed-url-hash="3270618590"
-                  onload="
-                    pagespeed.CriticalImages.checkImageForCriticality(this)
-                  "
-                />
+                <a href="{{ asset('frontend/ecommerce') }}/assets/images/features/suppliyer.jpeg" data-lightbox="features" data-title="Supplier Management">
+                  <img
+                    class="img-fluid"
+                    src="{{ asset('frontend/ecommerce') }}/assets/images/features/suppliyer.jpeg"
+                    alt="Supplier Management"
+                  />
+                </a>
               </div>
               <h3 class="mb-2 px-2 fw-600 fs-18">Supplier Management</h3>
             </div>
@@ -2238,15 +2231,13 @@
           <div class="col">
             <div class="bg-white-smoke h-100 hover4 p-2 rounded-3">
               <div class="bg-white rounded-3 py-2 mb-4">
-                <img
-                  class="img-fluid"
-                  src="{{ asset('frontend/ecommerce') }}/assets/images/features/purchase-management.webp"
-                  alt="Purchase Management"
-                  data-pagespeed-url-hash="3851869743"
-                  onload="
-                    pagespeed.CriticalImages.checkImageForCriticality(this)
-                  "
-                />
+                <a href="{{ asset('frontend/ecommerce') }}/assets/images/features/purchase.jpeg" data-lightbox="features" data-title="Purchase Management">
+                  <img
+                    class="img-fluid"
+                    src="{{ asset('frontend/ecommerce') }}/assets/images/features/purchase.jpeg"
+                    alt="Purchase Management"
+                  />
+                </a>
               </div>
               <h3 class="mb-2 px-2 fw-600 fs-18">Purchase Management</h3>
             </div>
@@ -2254,15 +2245,13 @@
           <div class="col">
             <div class="bg-white-smoke h-100 hover4 p-2 rounded-3">
               <div class="bg-white rounded-3 py-2 mb-4">
-                <img
-                  class="img-fluid"
-                  src="{{ asset('frontend/ecommerce') }}/assets/images/features/quotation-management.webp"
-                  alt="Quotation Management"
-                  data-pagespeed-url-hash="4062425230"
-                  onload="
-                    pagespeed.CriticalImages.checkImageForCriticality(this)
-                  "
-                />
+                <a href="{{ asset('frontend/ecommerce') }}/assets/images/features/quotation.jpeg" data-lightbox="features" data-title="Quotation Management">
+                  <img
+                    class="img-fluid"
+                    src="{{ asset('frontend/ecommerce') }}/assets/images/features/quotation.jpeg"
+                    alt="Quotation Management"
+                  />
+                </a>
               </div>
               <h3 class="mb-2 px-2 fw-600 fs-18">Quotation Management</h3>
             </div>
@@ -2270,15 +2259,13 @@
           <div class="col">
             <div class="bg-white-smoke h-100 hover4 p-2 rounded-3">
               <div class="bg-white rounded-3 py-2 mb-4">
-                <img
-                  class="img-fluid"
-                  src="{{ asset('frontend/ecommerce') }}/assets/images/features/warantee-management.webp"
-                  alt="Content Management"
-                  data-pagespeed-url-hash="2255422857"
-                  onload="
-                    pagespeed.CriticalImages.checkImageForCriticality(this)
-                  "
-                />
+                <a href="{{ asset('frontend/ecommerce') }}/assets/images/features/content.jpeg" data-lightbox="features" data-title="Content Management">
+                  <img
+                    class="img-fluid"
+                    src="{{ asset('frontend/ecommerce') }}/assets/images/features/content.jpeg"
+                    alt="Content Management"
+                  />
+                </a>
               </div>
               <h3 class="mb-2 px-2 fw-600 fs-18">Content Management</h3>
             </div>
@@ -2286,15 +2273,13 @@
           <div class="col">
             <div class="bg-white-smoke h-100 hover4 p-2 rounded-3">
               <div class="bg-white rounded-3 py-2 mb-4">
-                <img
-                  class="img-fluid"
-                  src="{{ asset('frontend/ecommerce') }}/assets/images/features/tax-management.webp"
-                  alt="CRM Management"
-                  data-pagespeed-url-hash="708948185"
-                  onload="
-                    pagespeed.CriticalImages.checkImageForCriticality(this)
-                  "
-                />
+                <a href="{{ asset('frontend/ecommerce') }}/assets/images/features/crm.jpeg" data-lightbox="features" data-title="CRM Management">
+                  <img
+                    class="img-fluid"
+                    src="{{ asset('frontend/ecommerce') }}/assets/images/features/crm.jpeg"
+                    alt="CRM Management"
+                  />
+                </a>
               </div>
               <h3 class="mb-2 px-2 fw-600 fs-18">CRM Management</h3>
             </div>
@@ -2302,15 +2287,13 @@
           <div class="col">
             <div class="bg-white-smoke h-100 hover4 p-2 rounded-3">
               <div class="bg-white rounded-3 py-2 mb-4">
-                <img
-                  class="img-fluid"
-                  src="{{ asset('frontend/ecommerce') }}/assets/images/features/store-management.webp"
-                  alt="Store Management"
-                  data-pagespeed-url-hash="1301704939"
-                  onload="
-                    pagespeed.CriticalImages.checkImageForCriticality(this)
-                  "
-                />
+                <a href="{{ asset('frontend/ecommerce') }}/assets/images/features/warehouse.jpeg" data-lightbox="features" data-title="Warehouse Management">
+                  <img
+                    class="img-fluid"
+                    src="{{ asset('frontend/ecommerce') }}/assets/images/features/warehouse.jpeg"
+                    alt="Warehouse Management"
+                  />
+                </a>
               </div>
               <h3 class="mb-2 px-2 fw-600 fs-18">Warehouse Management</h3>
             </div>
@@ -2318,15 +2301,13 @@
           <div class="col">
             <div class="bg-white-smoke h-100 hover4 p-2 rounded-3">
               <div class="bg-white rounded-3 py-2 mb-4">
-                <img
-                  class="img-fluid"
-                  src="{{ asset('frontend/ecommerce') }}/assets/images/features/stock-analysis.webp"
-                  alt="Stock Analysis"
-                  data-pagespeed-url-hash="2916493115"
-                  onload="
-                    pagespeed.CriticalImages.checkImageForCriticality(this)
-                  "
-                />
+                <a href="{{ asset('frontend/ecommerce') }}/assets/images/features/stock.jpeg" data-lightbox="features" data-title="Stock Analysis">
+                  <img
+                    class="img-fluid"
+                    src="{{ asset('frontend/ecommerce') }}/assets/images/features/stock.jpeg"
+                    alt="Stock Analysis"
+                  />
+                </a>
               </div>
               <h3 class="mb-2 px-2 fw-600 fs-18">Stock Analysis</h3>
             </div>
@@ -2334,15 +2315,13 @@
           <div class="col">
             <div class="bg-white-smoke h-100 hover4 p-2 rounded-3">
               <div class="bg-white rounded-3 py-2 mb-4">
-                <img
-                  class="img-fluid"
-                  src="{{ asset('frontend/ecommerce') }}/assets/images/features/bank-management.webp"
-                  alt="Bank Management"
-                  data-pagespeed-url-hash="3881475134"
-                  onload="
-                    pagespeed.CriticalImages.checkImageForCriticality(this)
-                  "
-                />
+                <a href="{{ asset('frontend/ecommerce') }}/assets/images/features/accounts.jpeg" data-lightbox="features" data-title="Accounts Management">
+                  <img
+                    class="img-fluid"
+                    src="{{ asset('frontend/ecommerce') }}/assets/images/features/accounts.jpeg"
+                    alt="Accounts Management"
+                  />
+                </a>
               </div>
               <h3 class="mb-2 px-2 fw-600 fs-18">Accounts Management</h3>
             </div>
@@ -2350,15 +2329,13 @@
           <div class="col">
             <div class="bg-white-smoke h-100 hover4 p-2 rounded-3">
               <div class="bg-white rounded-3 py-2 mb-4">
-                <img
-                  class="img-fluid"
-                  src="{{ asset('frontend/ecommerce') }}/assets/images/features/report-management.webp"
-                  alt="Report Management"
-                  data-pagespeed-url-hash="4049473270"
-                  onload="
-                    pagespeed.CriticalImages.checkImageForCriticality(this)
-                  "
-                />
+                <a href="{{ asset('frontend/ecommerce') }}/assets/images/features/reporting.jpeg" data-lightbox="features" data-title="Report Management">
+                  <img
+                    class="img-fluid"
+                    src="{{ asset('frontend/ecommerce') }}/assets/images/features/reporting.jpeg"
+                    alt="Report Management"
+                  />
+                </a>
               </div>
               <h3 class="mb-2 px-2 fw-600 fs-18">Report Management</h3>
             </div>
@@ -2366,15 +2343,13 @@
           <div class="col">
             <div class="bg-white-smoke h-100 hover4 p-2 rounded-3">
               <div class="bg-white rounded-3 py-2 mb-4">
-                <img
-                  class="img-fluid"
-                  src="{{ asset('frontend/ecommerce') }}/assets/images/features/delivery-management.webp"
-                  alt="Delivery Management"
-                  data-pagespeed-url-hash="3108290622"
-                  onload="
-                    pagespeed.CriticalImages.checkImageForCriticality(this)
-                  "
-                />
+                <a href="{{ asset('frontend/ecommerce') }}/assets/images/features/delivery.jpeg" data-lightbox="features" data-title="Delivery Management">
+                  <img
+                    class="img-fluid"
+                    src="{{ asset('frontend/ecommerce') }}/assets/images/features/delivery.jpeg"
+                    alt="Delivery Management"
+                  />
+                </a>
               </div>
               <h3 class="mb-2 px-2 fw-600 fs-18">Delivery Management</h3>
             </div>
@@ -2382,15 +2357,13 @@
           <div class="col">
             <div class="bg-white-smoke h-100 hover4 p-2 rounded-3">
               <div class="bg-white rounded-3 py-2 mb-4">
-                <img
-                  class="img-fluid"
-                  src="{{ asset('frontend/ecommerce') }}/assets/images/features/backup-and-restore-management.webp"
-                  alt="Backup &amp; Restore Management"
-                  data-pagespeed-url-hash="1773919979"
-                  onload="
-                    pagespeed.CriticalImages.checkImageForCriticality(this)
-                  "
-                />
+                <a href="{{ asset('frontend/ecommerce') }}/assets/images/features/backup.jpeg" data-lightbox="features" data-title="Backup &amp; Restore Management">
+                  <img
+                    class="img-fluid"
+                    src="{{ asset('frontend/ecommerce') }}/assets/images/features/backup.jpeg"
+                    alt="Backup &amp; Restore Management"
+                  />
+                </a>
               </div>
               <h3 class="mb-2 px-2 fw-600 fs-18">
                 Backup &amp; Restore Management
@@ -2822,7 +2795,7 @@
                     <span>Product Management System</span>
                     <i class="ti-arrow-right"></i>
                   </button>
-                  <button
+                  {{-- <button
                     class="align-items-center d-flex fs-18 fw-semibold justify-content-between lh-30 link_tabs nav-link px-4 py-3 text-black"
                     id="v-pills-dynamic-tab"
                     data-bs-toggle="pill"
@@ -2834,7 +2807,7 @@
                   >
                     <span>Attractive Photo Management System</span>
                     <i class="ti-arrow-right"></i>
-                  </button>
+                  </button> --}}
                   <button
                     class="align-items-center d-flex fs-18 fw-semibold justify-content-between lh-30 link_tabs nav-link px-4 py-3 text-black"
                     id="v-pills-realtime-tab"
@@ -2884,7 +2857,7 @@
                     aria-controls="v-pills-integration"
                     aria-selected="false"
                   >
-                    <span>Store Management System </span>
+                    <span>CRM Management System </span>
                     <i class="ti-arrow-right"></i>
                   </button>
                   <button
@@ -2936,7 +2909,7 @@
                     aria-controls="v-pills-tax"
                     aria-selected="false"
                   >
-                    <span>Tax Management </span>
+                    <span>Content Management </span>
                     <i class="ti-arrow-right"></i>
                   </button>
                   <button
@@ -3003,25 +2976,16 @@
                           progress report, search keywords, top-selling
                           products, and product reviews).
                         </p>
-                        <a
-                          href="https://tpmart.techparkit.info/admin/login"
-                          target="_blank"
-                          class="btn btn-success lh-1 px-4 py-3 rounded-pill"
-                          >Request for Demo</a
-                        >
+                        
                       </div>
                       <div class="col-md-6">
-                        <img
-                          src="{{ asset('frontend/ecommerce') }}/assets/images/features/dynamic-dashboard.webp"
-                          class="img-fluid"
-                          alt="Dynamic Dashboard"
-                          data-pagespeed-url-hash="1793063797"
-                          onload="
-                            pagespeed.CriticalImages.checkImageForCriticality(
-                              this,
-                            )
-                          "
-                        />
+                        <a href="{{ asset('frontend/ecommerce') }}/assets/images/features/dashboard.png" data-lightbox="modules" data-title="Dynamic Dashboard">
+                          <img
+                            src="{{ asset('frontend/ecommerce') }}/assets/images/features/dashboard.png"
+                            class="img-fluid"
+                            alt="Dynamic Dashboard"
+                          />
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -3052,25 +3016,16 @@
                           <li>Pad print setting</li>
                           <li>Captcha Print Setting</li>
                         </ul>
-                        <a
-                          href="https://tpmart.techparkit.info/admin/login"
-                          target="_blank"
-                          class="btn btn-success lh-1 px-4 py-3 rounded-pill"
-                          >See Demo</a
-                        >
+                        
                       </div>
                       <div class="col-md-6">
-                        <img
-                          src="{{ asset('frontend/ecommerce') }}/assets/images/features/pos-management-system(1).webp"
-                          class="img-fluid"
-                          alt="E-commerce POS System"
-                          data-pagespeed-url-hash="2887929279"
-                          onload="
-                            pagespeed.CriticalImages.checkImageForCriticality(
-                              this,
-                            )
-                          "
-                        />
+                        <a href="{{ asset('frontend/ecommerce') }}/assets/images/features/pos.jpeg" data-lightbox="modules" data-title="E-commerce POS System">
+                          <img
+                            src="{{ asset('frontend/ecommerce') }}/assets/images/features/pos.jpeg"
+                            class="img-fluid"
+                            alt="E-commerce POS System"
+                          />
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -3097,25 +3052,16 @@
                           <li>New Order</li>
                           <li>Manage Order</li>
                         </ul>
-                        <a
-                          href="https://tpmart.techparkit.info/admin/login"
-                          target="_blank"
-                          class="btn btn-success lh-1 px-4 py-3 rounded-pill"
-                          >See Demo</a
-                        >
+                        
                       </div>
                       <div class="col-md-6">
-                        <img
-                          src="{{ asset('frontend/ecommerce') }}/assets/images/features/order-management(1).webp"
-                          class="img-fluid"
-                          alt="Order Management System"
-                          data-pagespeed-url-hash="4145214027"
-                          onload="
-                            pagespeed.CriticalImages.checkImageForCriticality(
-                              this,
-                            )
-                          "
-                        />
+                        <a href="{{ asset('frontend/ecommerce') }}/assets/images/features/order.jpeg" data-lightbox="modules" data-title="Order Management System">
+                          <img
+                            src="{{ asset('frontend/ecommerce') }}/assets/images/features/order.jpeg"
+                            class="img-fluid"
+                            alt="Order Management System"
+                          />
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -3151,25 +3097,16 @@
                           <li>Unit</li>
                           <li>Filtration</li>
                         </ul>
-                        <a
-                          href="https://tpmart.techparkit.info/admin/login"
-                          target="_blank"
-                          class="btn btn-success lh-1 px-4 py-3 rounded-pill"
-                          >See Demo</a
-                        >
+                        
                       </div>
                       <div class="col-md-6">
-                        <img
-                          src="{{ asset('frontend/ecommerce') }}/assets/images/features/product-management-2.webp"
-                          class="img-fluid"
-                          alt="Product Management System"
-                          data-pagespeed-url-hash="2310745295"
-                          onload="
-                            pagespeed.CriticalImages.checkImageForCriticality(
-                              this,
-                            )
-                          "
-                        />
+                        <a href="{{ asset('frontend/ecommerce') }}/assets/images/features/product.jpeg" data-lightbox="modules" data-title="Product Management System">
+                          <img
+                            src="{{ asset('frontend/ecommerce') }}/assets/images/features/product.jpeg"
+                            class="img-fluid"
+                            alt="Product Management System"
+                          />
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -3199,25 +3136,16 @@
                           <li>Manage product image</li>
                         </ul>
 
-                        <a
-                          href="https://tpmart.techparkit.info/admin/login"
-                          target="_blank"
-                          class="btn btn-success lh-1 px-4 py-3 rounded-pill"
-                          >See Demo</a
-                        >
+                        
                       </div>
                       <div class="col-md-6">
-                        <img
-                          src="./index_files/saved_resource"
-                          class="img-fluid"
-                          alt="Attractive Photo Management System"
-                          data-pagespeed-url-hash="1311413597"
-                          onload="
-                            pagespeed.CriticalImages.checkImageForCriticality(
-                              this,
-                            )
-                          "
-                        />
+                        <a href="{{ asset('frontend/ecommerce') }}/assets/images/features/content.jpeg" data-lightbox="modules" data-title="Attractive Photo Management System">
+                          <img
+                            src="{{ asset('frontend/ecommerce') }}/assets/images/features/content.jpeg"
+                            class="img-fluid"
+                            alt="Attractive Photo Management System"
+                          />
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -3249,25 +3177,16 @@
                           <li>Customer Balance Report</li>
                         </ul>
 
-                        <a
-                          href="https://tpmart.techparkit.info/admin/login"
-                          target="_blank"
-                          class="btn btn-success lh-1 px-4 py-3 rounded-pill"
-                          >See Demo</a
-                        >
+                        
                       </div>
                       <div class="col-md-6">
-                        <img
-                          src="{{ asset('frontend/ecommerce') }}/assets/images/features/customer-management(1).webp"
-                          class="img-fluid"
-                          alt="Customers Management System"
-                          data-pagespeed-url-hash="2234447533"
-                          onload="
-                            pagespeed.CriticalImages.checkImageForCriticality(
-                              this,
-                            )
-                          "
-                        />
+                        <a href="{{ asset('frontend/ecommerce') }}/assets/images/features/customer.jpeg" data-lightbox="modules" data-title="Customers Management System">
+                          <img
+                            src="{{ asset('frontend/ecommerce') }}/assets/images/features/customer.jpeg"
+                            class="img-fluid"
+                            alt="Customers Management System"
+                          />
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -3297,25 +3216,16 @@
                           <li>Supplier Ledger</li>
                           <li>Supplier Balance Report</li>
                         </ul>
-                        <a
-                          href="https://tpmart.techparkit.info/admin/login"
-                          target="_blank"
-                          class="btn btn-success lh-1 px-4 py-3 rounded-pill"
-                          >See Demo</a
-                        >
+                        
                       </div>
                       <div class="col-md-6">
-                        <img
-                          src="{{ asset('frontend/ecommerce') }}/assets/images/features/supplier-management(1).webp"
-                          class="img-fluid"
-                          alt="Suppliers Management System"
-                          data-pagespeed-url-hash="2395263051"
-                          onload="
-                            pagespeed.CriticalImages.checkImageForCriticality(
-                              this,
-                            )
-                          "
-                        />
+                        <a href="{{ asset('frontend/ecommerce') }}/assets/images/features/suppliyer.jpeg" data-lightbox="modules" data-title="Suppliers Management System">
+                          <img
+                            src="{{ asset('frontend/ecommerce') }}/assets/images/features/suppliyer.jpeg"
+                            class="img-fluid"
+                            alt="Suppliers Management System"
+                          />
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -3344,25 +3254,16 @@
                           <li>Manage Purchase Return</li>
                         </ul>
 
-                        <a
-                          href="https://tpmart.techparkit.info/admin/login"
-                          target="_blank"
-                          class="btn btn-success lh-1 px-4 py-3 rounded-pill"
-                          >See Demo</a
-                        >
+                        
                       </div>
                       <div class="col-md-6">
-                        <img
-                          src="{{ asset('frontend/ecommerce') }}/assets/images/features/purchase-management(1).webp"
-                          class="img-fluid"
-                          alt="Purchase Management System"
-                          data-pagespeed-url-hash="2976514204"
-                          onload="
-                            pagespeed.CriticalImages.checkImageForCriticality(
-                              this,
-                            )
-                          "
-                        />
+                        <a href="{{ asset('frontend/ecommerce') }}/assets/images/features/purchase.jpeg" data-lightbox="modules" data-title="Purchase Management System">
+                          <img
+                            src="{{ asset('frontend/ecommerce') }}/assets/images/features/purchase.jpeg"
+                            class="img-fluid"
+                            alt="Purchase Management System"
+                          />
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -3393,25 +3294,16 @@
                           <li>Manage Store Product</li>
                         </ul>
 
-                        <a
-                          href="https://tpmart.techparkit.info/admin/login"
-                          target="_blank"
-                          class="btn btn-success lh-1 px-4 py-3 rounded-pill"
-                          >See Demo</a
-                        >
+                        
                       </div>
                       <div class="col-md-6">
-                        <img
-                          src="{{ asset('frontend/ecommerce') }}/assets/images/features/store-management(1).webp"
-                          class="img-fluid"
-                          alt="Store Management System"
-                          data-pagespeed-url-hash="3393209730"
-                          onload="
-                            pagespeed.CriticalImages.checkImageForCriticality(
-                              this,
-                            )
-                          "
-                        />
+                        <a href="{{ asset('frontend/ecommerce') }}/assets/images/features/warehouse.jpeg" data-lightbox="modules" data-title="Store Management System">
+                          <img
+                            src="{{ asset('frontend/ecommerce') }}/assets/images/features/warehouse.jpeg"
+                            class="img-fluid"
+                            alt="Store Management System"
+                          />
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -3446,25 +3338,16 @@
                           <li>Batch Wise Stock</li>
                           <li>Add Stock Opening</li>
                         </ul>
-                        <a
-                          href="https://tpmart.techparkit.info/admin/login"
-                          target="_blank"
-                          class="btn btn-success lh-1 px-4 py-3 rounded-pill"
-                          >See Demo</a
-                        >
+                        
                       </div>
                       <div class="col-md-6">
-                        <img
-                          src="{{ asset('frontend/ecommerce') }}/assets/images/features/stock-analysis(1).webp"
-                          class="img-fluid"
-                          alt="Stock Management System"
-                          data-pagespeed-url-hash="2917616090"
-                          onload="
-                            pagespeed.CriticalImages.checkImageForCriticality(
-                              this,
-                            )
-                          "
-                        />
+                        <a href="{{ asset('frontend/ecommerce') }}/assets/images/features/stock.jpeg" data-lightbox="modules" data-title="Stock Management System">
+                          <img
+                            src="{{ asset('frontend/ecommerce') }}/assets/images/features/stock.jpeg"
+                            class="img-fluid"
+                            alt="Stock Management System"
+                          />
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -3491,25 +3374,16 @@
                           <li>New Quotation</li>
                           <li>Manage Quotation</li>
                         </ul>
-                        <a
-                          href="https://tpmart.techparkit.info/admin/login"
-                          target="_blank"
-                          class="btn btn-success lh-1 px-4 py-3 rounded-pill"
-                          >See Demo</a
-                        >
+                        
                       </div>
                       <div class="col-md-6">
-                        <img
-                          src="{{ asset('frontend/ecommerce') }}/assets/images/features/quotation-management(1).webp"
-                          class="img-fluid"
-                          alt="Quotation Management System"
-                          data-pagespeed-url-hash="1059999317"
-                          onload="
-                            pagespeed.CriticalImages.checkImageForCriticality(
-                              this,
-                            )
-                          "
-                        />
+                        <a href="{{ asset('frontend/ecommerce') }}/assets/images/features/quotation.jpeg" data-lightbox="modules" data-title="Quotation Management System">
+                          <img
+                            src="{{ asset('frontend/ecommerce') }}/assets/images/features/quotation.jpeg"
+                            class="img-fluid"
+                            alt="Quotation Management System"
+                          />
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -3543,25 +3417,16 @@
                           <li>Expiry Report</li>
                         </ul>
 
-                        <a
-                          href="https://tpmart.techparkit.info/admin/login"
-                          target="_blank"
-                          class="btn btn-success lh-1 px-4 py-3 rounded-pill"
-                          >See Demo</a
-                        >
+                        
                       </div>
                       <div class="col-md-6">
-                        <img
-                          src="{{ asset('frontend/ecommerce') }}/assets/images/features/report-management(1).webp"
-                          class="img-fluid"
-                          alt="Report &amp; Analytics"
-                          data-pagespeed-url-hash="3158693947"
-                          onload="
-                            pagespeed.CriticalImages.checkImageForCriticality(
-                              this,
-                            )
-                          "
-                        />
+                        <a href="{{ asset('frontend/ecommerce') }}/assets/images/features/reporting.jpeg" data-lightbox="modules" data-title="Report &amp; Analytics">
+                          <img
+                            src="{{ asset('frontend/ecommerce') }}/assets/images/features/reporting.jpeg"
+                            class="img-fluid"
+                            alt="Report &amp; Analytics"
+                          />
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -3589,25 +3454,16 @@
                           <li>Tax Product Service</li>
                           <li>Manage Product Tax</li>
                         </ul>
-                        <a
-                          href="https://tpmart.techparkit.info/admin/login"
-                          target="_blank"
-                          class="btn btn-success lh-1 px-4 py-3 rounded-pill"
-                          >See Demo</a
-                        >
+                        
                       </div>
                       <div class="col-md-6">
-                        <img
-                          src="{{ asset('frontend/ecommerce') }}/assets/images/features/tax-management(1).webp"
-                          class="img-fluid"
-                          alt="Tax Management"
-                          data-pagespeed-url-hash="710071160"
-                          onload="
-                            pagespeed.CriticalImages.checkImageForCriticality(
-                              this,
-                            )
-                          "
-                        />
+                        <a href="{{ asset('frontend/ecommerce') }}/assets/images/features/crm.jpeg" data-lightbox="modules" data-title="Tax Management">
+                          <img
+                            src="{{ asset('frontend/ecommerce') }}/assets/images/features/crm.jpeg"
+                            class="img-fluid"
+                            alt="Tax Management"
+                          />
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -3632,25 +3488,16 @@
                           <li>Add New Account</li>
                           <li>Manage Account</li>
                         </ul>
-                        <a
-                          href="https://tpmart.techparkit.info/admin/login"
-                          target="_blank"
-                          class="btn btn-success lh-1 px-4 py-3 rounded-pill"
-                          >See Demo</a
-                        >
+                        
                       </div>
                       <div class="col-md-6">
-                        <img
-                          src="{{ asset('frontend/ecommerce') }}/assets/images/features/accounts-management(1).webp"
-                          class="img-fluid"
-                          alt="Accounts Management"
-                          data-pagespeed-url-hash="4028584859"
-                          onload="
-                            pagespeed.CriticalImages.checkImageForCriticality(
-                              this,
-                            )
-                          "
-                        />
+                        <a href="{{ asset('frontend/ecommerce') }}/assets/images/features/accounts.jpeg" data-lightbox="modules" data-title="Accounts Management">
+                          <img
+                            src="{{ asset('frontend/ecommerce') }}/assets/images/features/accounts.jpeg"
+                            class="img-fluid"
+                            alt="Accounts Management"
+                          />
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -3678,25 +3525,16 @@
                           <li>Delivery Boy</li>
                           <li>Assigns</li>
                         </ul>
-                        <a
-                          href="https://tpmart.techparkit.info/admin/login"
-                          target="_blank"
-                          class="btn btn-success lh-1 px-4 py-3 rounded-pill"
-                          >See Demo</a
-                        >
+                        
                       </div>
                       <div class="col-md-6">
-                        <img
-                          src="{{ asset('frontend/ecommerce') }}/assets/images/features/delivery-management(1).webp"
-                          class="img-fluid"
-                          alt="Delivery Management"
-                          data-pagespeed-url-hash="2232935083"
-                          onload="
-                            pagespeed.CriticalImages.checkImageForCriticality(
-                              this,
-                            )
-                          "
-                        />
+                        <a href="{{ asset('frontend/ecommerce') }}/assets/images/features/delivery.jpeg" data-lightbox="modules" data-title="Delivery Management">
+                          <img
+                            src="{{ asset('frontend/ecommerce') }}/assets/images/features/delivery.jpeg"
+                            class="img-fluid"
+                            alt="Delivery Management"
+                          />
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -3719,25 +3557,16 @@
                           module protects business continuity and minimises
                           emergency data loss risks.
                         </p>
-                        <a
-                          href="https://tpmart.techparkit.info/admin/login"
-                          target="_blank"
-                          class="btn btn-success lh-1 px-4 py-3 rounded-pill"
-                          >See Demo</a
-                        >
+                        
                       </div>
                       <div class="col-md-6">
-                        <img
-                          src="{{ asset('frontend/ecommerce') }}/assets/images/features/backup-and-restore-management(1).webp"
-                          class="img-fluid"
-                          alt="Backup &amp; Restore"
-                          data-pagespeed-url-hash="3412789728"
-                          onload="
-                            pagespeed.CriticalImages.checkImageForCriticality(
-                              this,
-                            )
-                          "
-                        />
+                        <a href="{{ asset('frontend/ecommerce') }}/assets/images/features/backup.jpeg" data-lightbox="modules" data-title="Backup &amp; Restore">
+                          <img
+                            src="{{ asset('frontend/ecommerce') }}/assets/images/features/backup.jpeg"
+                            class="img-fluid"
+                            alt="Backup &amp; Restore"
+                          />
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -4421,7 +4250,7 @@
                   <div class="accordion-body pt-0 px-40">
                     <p>
                       TP Mart is mainly developed by PHP 8.0x and the
-                      Codeigniter framework. It is a fully responsive and
+                      Laravel framework. It is a fully responsive and
                       user-friendly system.
                     </p>
                   </div>
@@ -5268,67 +5097,68 @@
             </div>
 
             <!-- Services Column -->
-            <div class="col-lg-3 col-md-6">
+                 <div class="col-lg-3 col-md-6">
               <h5 class="footer-title text-white mb-4">Services</h5>
               <ul class="nav flex-column gap-2">
                 <li class="nav-item">
                   <a
-                    href="custom-software-development-service.html"
+                    href="{{ url('/') }}#service"
                     class="text-decoration-none footer-text lh-30"
-                    target="_blank"
+                   
                   >
                     <span class="arrow me-2">→</span>Web Design
                   </a>
                 </li>
-                <li class="nav-item">
+                 <li class="nav-item">
                   <a
-                    href="custom-software-development-service.html"
+                    href="{{ url('/') }}#service"
                     class="text-decoration-none footer-text lh-30"
-                    target="_blank"
+                  
                   >
                     <span class="arrow me-2">→</span>Web Development
                   </a>
                 </li>
                 <li class="nav-item">
                   <a
-                    href="graphic-design-services.html"
+                    href="{{ url('/') }}#service"
                     class="text-decoration-none footer-text lh-30"
-                    target="_blank"
+                  
                   >
                     <span class="arrow me-2">→</span>Graphics Design
                   </a>
                 </li>
-                <li class="nav-item">
+                 <li class="nav-item">
                   <a
-                    href="graphic-design-services.html"
+                    href="{{ url('/') }}#service"
                     class="text-decoration-none footer-text lh-30"
-                    target="_blank"
+                  
                   >
                     <span class="arrow me-2">→</span>UI/UX Design
                   </a>
                 </li>
-
+               
                 <li class="nav-item">
                   <a
-                    href="techparkit-academy/index.html"
+                    href="{{ url('/') }}#service"
                     class="text-decoration-none footer-text lh-30"
-                    target="_blank"
+                  
                   >
                     <span class="arrow me-2">→</span>App Development
                   </a>
                 </li>
-
+               
                 <li class="nav-item">
                   <a
-                    href="digital-marketing-agency-in-dubai.html"
+                    href="{{ url('/') }}#service"
                     class="text-decoration-none footer-text lh-30"
-                    target="_blank"
+                  
                   >
                     <span class="arrow me-2">→</span>Digital Marketing
                   </a>
                 </li>
               </ul>
             </div>
+
 
             <!-- Contact Info Column -->
             <div class="col-lg-3 col-md-6">
@@ -5387,7 +5217,7 @@
       </div>
     </footer>
 
-    <div class="footer_bottom py-3">
+    <div class="footer_bottom py-3 d-none">
       <div class="container">
         <div class="align-items-center justify-content-between row">
           <div class="col-lg-6">
@@ -6001,9 +5831,9 @@ Please provide additional details about your requirements.
 
     <!-- Back to top button -->
     <a
-      class="gotoTop position-fixed rounded-2 text-center text-decoration-none text-white transition show"
+      class=" position-fixed rounded-2 text-center text-decoration-none text-white transition show"
     >
-      <i class="ti-arrow-up"></i>
+      <i class="fa fa-arrow-alt-circle-up"></i>
     </a>
 
     <!-- Google Tag Manager (noscript) -->
@@ -6031,6 +5861,9 @@ Please provide additional details about your requirements.
       src="{{ asset('frontend/ecommerce') }}/assets/js/videoPopUp.jquery.js"
       type="text/javascript"
     ></script>
+    {{-- Lightbox2 for Image Gallery Popups --}}
+<script src="{{ asset('backend/assets/plugins/lightbox/js/lightbox.min.js') }}"></script>
+
     <script src="{{ asset('frontend/ecommerce') }}/assets/js/pop.js" type="text/javascript"></script>
     <script src="{{ asset('frontend/ecommerce') }}/assets/js/custom.js" type="text/javascript"></script>
     <script type="text/javascript">

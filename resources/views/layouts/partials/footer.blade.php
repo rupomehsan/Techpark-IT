@@ -179,36 +179,36 @@
               <ul class="nav flex-column gap-2">
                 <li class="nav-item">
                   <a
-                    href="custom-software-development-service.html"
+                    href="#service"
                     class="text-decoration-none footer-text lh-30"
-                    target="_blank"
+                   
                   >
                     <span class="arrow me-2">→</span>Web Design
                   </a>
                 </li>
                  <li class="nav-item">
                   <a
-                    href="custom-software-development-service.html"
+                    href="#service"
                     class="text-decoration-none footer-text lh-30"
-                    target="_blank"
+                  
                   >
                     <span class="arrow me-2">→</span>Web Development
                   </a>
                 </li>
                 <li class="nav-item">
                   <a
-                    href="graphic-design-services.html"
+                    href="#service"
                     class="text-decoration-none footer-text lh-30"
-                    target="_blank"
+                  
                   >
                     <span class="arrow me-2">→</span>Graphics Design
                   </a>
                 </li>
                  <li class="nav-item">
                   <a
-                    href="graphic-design-services.html"
+                    href="#service"
                     class="text-decoration-none footer-text lh-30"
-                    target="_blank"
+                  
                   >
                     <span class="arrow me-2">→</span>UI/UX Design
                   </a>
@@ -216,9 +216,9 @@
                
                 <li class="nav-item">
                   <a
-                    href="techparkit-academy/index.html"
+                    href="#service"
                     class="text-decoration-none footer-text lh-30"
-                    target="_blank"
+                  
                   >
                     <span class="arrow me-2">→</span>App Development
                   </a>
@@ -226,9 +226,9 @@
                
                 <li class="nav-item">
                   <a
-                    href="digital-marketing-agency-in-dubai.html"
+                    href="#service"
                     class="text-decoration-none footer-text lh-30"
-                    target="_blank"
+                  
                   >
                     <span class="arrow me-2">→</span>Digital Marketing
                   </a>
@@ -322,11 +322,11 @@
           >
             <div class="col-md-6 text-md-start mb-3 mb-md-0">
               <p class="footer-text mb-0 text-center">
-                ©
-                <script>
+               
+              
+                ⓒ Copyright   <script>
                   document.write(new Date().getFullYear());
-                </script>
-                 IT Solutions. All Rights Reserved.
+                </script> Techpark IT All rights reserved
               </p>
             </div>
           </div>
