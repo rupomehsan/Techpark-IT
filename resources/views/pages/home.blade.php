@@ -50,9 +50,9 @@
               <div class="col-xl-6">
                 <h1 class="fw-bold wow fadeInUp main_title">
                   Build 
-                  <span class="text-techparkit animate-text">Smart </span>
-                  Software Solutions <span class="fw-light"></span>For
-                  <span class="text-techparkit">Modern Enterprises With</span>
+                 Smart 
+                  <span class="text-techparkit animate-text"> Software Solutions</span> <span class="fw-light"></span>For
+                  <span class="text-techparkit">Modern Business With</span>
                   <span class="animate-text"> Techpark IT.</span>
                 </h1>
                 <p

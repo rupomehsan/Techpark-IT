@@ -8,7 +8,7 @@
     <title>TP Mart - eCommerce Solution &amp; POS System</title>
     <meta
       name="description"
-      content="E-commerce is the most trending business over the world and only with TP Mart-ecommerce shopping cart software solution you can build your own online business."
+      content="E-commerce is the most trending business over the world and only with TP Mart-ecommerce   solution you can build your own online business."
     />
 
     <link rel="shortcut icon" href="assets/images/favicon.png" />
@@ -24,11 +24,11 @@
 
     <meta
       property="og:title"
-      content="TP Mart - eCommerce Shopping Cart Software &amp; POS System"
+      content="TP Mart - eCommerce   &amp; POS System"
     />
     <meta
       property="og:description"
-      content="E-commerce is the most trending business over the world and only with TP Mart-ecommerce shopping cart software solution you can build your own online business."
+      content="E-commerce is the most trending business over the world and only with TP Mart-ecommerce   solution you can build your own online business."
     />
     <meta
       property="og:url"
@@ -63,6 +63,7 @@
     <link href="{{ asset('frontend/ecommerce') }}/assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="{{ asset('frontend/ecommerce') }}/assets/css/owl.carousel.min.css" rel="stylesheet" />
     <link href="{{ asset('frontend/ecommerce') }}/assets/css/themify-icons.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
     <link href="{{ asset('frontend/ecommerce') }}/assets/css/videoPopUp.css" rel="stylesheet" />
     <link href="{{ asset('frontend/ecommerce') }}/assets/css/tp-mart-new-style.css" rel="stylesheet" />
     <link href="{{ asset('frontend/ecommerce') }}/assets/css/related-product.css" rel="stylesheet" />
@@ -1935,7 +1936,7 @@
               <img
                 class="img-fluid"
                 src="{{ asset('frontend/ecommerce') }}/assets/images/hero/best-budget-multi-store-ecommerce-shopping-cart-software.webp"
-                alt="TP Mart Multi-Store Ecommerce Shopping Cart Software"
+                alt="TP Mart Multi-Store Ecommerce  "
                 data-pagespeed-url-hash="359266730"
                 onload="pagespeed.CriticalImages.checkImageForCriticality(this)"
               />
@@ -2071,21 +2072,7 @@
               </svg>
               <span class="fs-28 text-white">Maximize Your sale</span>
             </div>
-            <div class="d-flex align-items-center gap-2">
-              <svg
-                width="21"
-                height="20"
-                viewBox="0 0 21 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M13.4674 5.70605L19.288 4.43804L21 9.683L15.2364 10.8357L19.1739 16.4841L14.7228 20L10.5 14.2939L6.33424 20L1.82609 16.4841L5.76359 10.8934C4.8125 10.6244 3.86141 10.3939 2.91033 10.2017C1.95924 10.0096 0.98913 9.83669 0 9.683L1.71196 4.43804L7.47554 5.70605C7.47554 4.78386 7.47554 3.86167 7.47554 2.93948C7.51359 2.01729 7.55163 1.03746 7.58967 0H13.4674V5.70605Z"
-                  fill="white"
-                ></path>
-              </svg>
-              <span class="fs-28 text-white">Licensed Shopping Cart</span>
-            </div>
+           
             <div class="d-flex align-items-center gap-2">
               <svg
                 width="21"
@@ -2597,7 +2584,7 @@
             </h2>
             <p class="text-center">
               Here, you will get a detailed guideline on how you can use TP Mart
-              - ecommerce shopping cart software.
+              - ecommerce  .
             </p>
           </div>
         </div>
@@ -2606,7 +2593,7 @@
             <iframe
               class="home-video"
               src="https://www.youtube.com/embed/g0rGYTirTGk"
-              title="TP Mart - Ecommerce Shopping Cart Software | Readymade Ecommerce Website and App | Ecommerce POS"
+              title="TP Mart - Ecommerce   | Readymade Ecommerce Website and App | Ecommerce POS"
               frameborder="0"
               allow="
                 accelerometer;
@@ -2723,10 +2710,10 @@
                 <span class="underline-2 underline-gradient-6 position-relative"
                   >Main Modules</span
                 >
-                of TP Mart- eCommerce Shopping Cart Software
+                of TP Mart- Ecommerce  
               </h2>
               <p>
-                TP Mart-multi-store eCommerce shopping cart Software is full of
+                TP Mart eCommerce is full of
                 some expeditious powerful features to operate your business
                 hassle-free and smoothly.
               </p>
@@ -3011,10 +2998,8 @@
                           <li>New sale</li>
                           <li>Manage sale</li>
                           <li>Pos sale</li>
-                          <li>Invoice Text</li>
-                          <li>Order CSV Export</li>
-                          <li>Pad print setting</li>
-                          <li>Captcha Print Setting</li>
+                          <li>Invoice generation & Print</li>
+                
                         </ul>
                         
                       </div>
@@ -3042,7 +3027,7 @@
                         </h3>
                         <p class="fs-16 fw-normal">
                           An Order Management System can help you take orders
-                          from websites or different stores, and then the order
+                          from websites , and then the order
                           will be available in the order management system. From
                           there, you can make an invoice or delete the order
                           from your order management list. This module showcased
@@ -3087,15 +3072,16 @@
                         </p>
                         <ul class="mb-4">
                           <li>Add Product</li>
-                          <li>Import Product (CSV)</li>
-                          <li>Import Product (EXCEL)</li>
                           <li>Manage Product</li>
-                          <li>Product Ledger</li>
+                          
                           <li>Category</li>
                           <li>Brand</li>
                           <li>Variant</li>
                           <li>Unit</li>
-                          <li>Filtration</li>
+                          <li> Color</li>
+                          <li> Model</li>
+                          <li> Flag</li>
+                          <li> Size</li>
                         </ul>
                         
                       </div>
@@ -3173,8 +3159,6 @@
                         <ul class="mb-4">
                           <li>Add Customer</li>
                           <li>Manage Customer</li>
-                          <li>Customer Ledger</li>
-                          <li>Customer Balance Report</li>
                         </ul>
 
                         
@@ -3213,8 +3197,6 @@
                         <ul class="mb-4">
                           <li>Add Supplier</li>
                           <li>Manage Supplier</li>
-                          <li>Supplier Ledger</li>
-                          <li>Supplier Balance Report</li>
                         </ul>
                         
                       </div>
@@ -3251,7 +3233,6 @@
                           <li>Add Purchase</li>
                           <li>Manage Purchase</li>
                           <li>Purchase Order</li>
-                          <li>Manage Purchase Return</li>
                         </ul>
 
                         
@@ -3276,32 +3257,26 @@
                     <div class="align-items-center row">
                       <div class="col-md-6 px-4">
                         <h3 class="fw-semibold text-black tab_title">
-                          Store Management System
+                          CRM Management System
                         </h3>
                         <p class="fs-17 fw-normal">
-                          Store management can operate multiple stores
-                          simultaneously. Using this module, you can manage
-                          multiple stores or branches under one super
-                          administrator. Hence, making product transactions
-                          between branches or stores faster and more efficient
-                          is easy.
+                          The CRM (Customer Relationship Management) module allows you to centralize your customer interactions effectively. Enhance customer satisfaction by managing leads, organizing support tickets, and streamlining communication throughout the sales lifecycle all from one unified dashboard.
                         </p>
                         <ul class="mb-4">
-                          <li>Store Add</li>
-                          <li>Import Store (CSV)</li>
-                          <li>Manage Store</li>
-                          <li>Store Transfer</li>
-                          <li>Manage Store Product</li>
+                          <li>Support Ticket System</li>
+                          <li>Sales Pipeline Tracking</li>
+                          <li>Customer Communication</li>
+                          <li>Email sending to customers</li>
                         </ul>
 
                         
                       </div>
                       <div class="col-md-6">
-                        <a href="{{ asset('frontend/ecommerce') }}/assets/images/features/warehouse.jpeg" data-lightbox="modules" data-title="Store Management System">
+                        <a href="{{ asset('frontend/ecommerce') }}/assets/images/features/crm.jpeg" data-lightbox="modules" data-title="CRM Management System">
                           <img
-                            src="{{ asset('frontend/ecommerce') }}/assets/images/features/warehouse.jpeg"
+                            src="{{ asset('frontend/ecommerce') }}/assets/images/features/crm.jpeg"
                             class="img-fluid"
-                            alt="Store Management System"
+                            alt="CRM Management System"
                           />
                         </a>
                       </div>
@@ -3330,13 +3305,8 @@
                         </p>
                         <ul class="mb-4">
                           <li>Stock Report</li>
-                          <li>Stock Report (Supplier Wise)</li>
-                          <li>Stock Report (Product Wise)</li>
-                          <li>Stock Report (Store Wise)</li>
                           <li>Stock Adjustment</li>
                           <li>Manage Stock Adjustment</li>
-                          <li>Batch Wise Stock</li>
-                          <li>Add Stock Opening</li>
                         </ul>
                         
                       </div>
@@ -3408,13 +3378,11 @@
                           showcased :
                         </p>
                         <ul class="mb-4">
+                           <li>Income Report</li>
+                          <li>Expense Report</li>
                           <li>Sales Report</li>
                           <li>Sales Report (Store Wise)</li>
                           <li>Purchase Report</li>
-                          <li>Transfer Report</li>
-                          <li>Tax Report (Product Wise)</li>
-                          <li>Tax Report (Invoice Wise)</li>
-                          <li>Expiry Report</li>
                         </ul>
 
                         
@@ -3487,6 +3455,10 @@
                         <ul class="mb-4">
                           <li>Add New Account</li>
                           <li>Manage Account</li>
+                          <li>Journal Entry</li>
+                          <li>Ledger</li>
+                          <li>Trial Balance</li>
+                          <li>Balance Sheet</li>
                         </ul>
                         
                       </div>
@@ -3623,7 +3595,7 @@
               <li class="event">
                 <p class="mb-2 fw-bold fs-17">Step Two</p>
                 <p class="mb-0">
-                  After that set up the TP Mart eCommerce shopping cart software
+                  After that set up the TP Mart eCommerce  
                   from start to end.
                 </p>
               </li>
@@ -3656,7 +3628,7 @@
           <div class="col-lg-9">
             <div class="text-center pb-3 mb-5">
               <h2 class="fs-2 fw-bold mb-0">
-                Happy You, Happy Us <br />Platform To Customize Your Happiness
+               Happy Clients
               </h2>
             </div>
           </div>
@@ -3680,7 +3652,7 @@
                     <div class="d-block">
                       <img
                         class="rounded-circle testimonial-img"
-                        src="{{ asset('frontend/ecommerce') }}/assets/images/testimonials/testominal-04.png"
+                        src="{{ asset('frontend/ecommerce') }}/assets/images/testimonials/client-yni.png"
                         alt=""
                         data-pagespeed-url-hash="1962848523"
                         onload="
@@ -3691,316 +3663,17 @@
                       />
                     </div>
                     <div class="d-block">
-                      <div class="fs-4 fw-medium">Muhammad Umar</div>
-                      <div class="fs-16 fw-medium text-muted">Pakistan</div>
+                      <div class="fs-4 fw-medium">Jannat Tuba </div>
+                      <div class="fs-16 fw-medium text-muted">CEO, YNI Network</div>
                     </div>
                   </div>
                   <p class="fs-16 lh-base mb-0 text_Zambezi review_text">
-                    The multi-store script is well-organized and easy to use. It
-                    is flexible. At the initial stage, I was unable to install
-                    it. However, the support team of Bdtask took their time and
-                    installed it for me. Now the script is running successfully.
-                    I am happy to work with the Bdtask team.
+                    TP Mart is easy to use, reliable, and delivers excellent results. The support team is responsive and helpful. Highly recommended for growing your business.
                   </p>
                 </div>
               </div>
-              <div
-                class="owl-item cloned"
-                style="width: 418.667px; margin-right: 20px"
-              >
-                <div class="bg-white h-100 item p-4 rounded-5">
-                  <div class="align-items-center d-flex gap-3 mb-3">
-                    <div class="d-block">
-                      <img
-                        class="rounded-circle testimonial-img"
-                        src="{{ asset('frontend/ecommerce') }}/assets/images/testimonials/testominal-01.png"
-                        alt=""
-                        data-pagespeed-url-hash="1079348760"
-                        onload="
-                          pagespeed.CriticalImages.checkImageForCriticality(
-                            this,
-                          )
-                        "
-                      />
-                    </div>
-                    <div class="d-block">
-                      <div class="fs-4 fw-medium">Edward</div>
-                      <div class="fs-16 fw-medium text-muted">USA</div>
-                    </div>
-                  </div>
-                  <p class="fs-16 lh-base mb-0 text_Zambezi review_text">
-                    Bdtask is a great organization. I’m really glad I found
-                    them. I had a lot of problems when I bought the script.
-                    However, this is not a script error. It was my fault. But
-                    they took time and solved all my problems with patience. I
-                    am really happy working with them.
-                  </p>
-                </div>
-              </div>
-              <div
-                class="owl-item cloned"
-                style="width: 418.667px; margin-right: 20px"
-              >
-                <div class="bg-white h-100 item p-4 rounded-5">
-                  <div class="align-items-center d-flex gap-3 mb-3">
-                    <div class="d-block">
-                      <img
-                        class="rounded-circle testimonial-img"
-                        src="{{ asset('frontend/ecommerce') }}/assets/images/testimonials/testominal.jpg"
-                        alt=""
-                        data-pagespeed-url-hash="69248368"
-                        onload="
-                          pagespeed.CriticalImages.checkImageForCriticality(
-                            this,
-                          )
-                        "
-                      />
-                    </div>
-                    <div class="d-block">
-                      <div class="fs-4 fw-medium">Satish Kumar</div>
-                      <div class="fs-16 fw-medium text-muted">India</div>
-                    </div>
-                  </div>
-                  <p class="fs-16 lh-base mb-0 text_Zambezi review_text">
-                    The multi-store inventory system is complete. Here you can
-                    add unlimited stores and control all account-related
-                    activities. The Bdtask team has done a great job with this
-                    script.
-                  </p>
-                </div>
-              </div>
-              <div
-                class="owl-item active"
-                style="width: 418.667px; margin-right: 20px"
-              >
-                <div class="bg-white h-100 item p-4 rounded-5">
-                  <div class="align-items-center d-flex gap-3 mb-3">
-                    <div class="d-block">
-                      <img
-                        class="rounded-circle testimonial-img"
-                        src="{{ asset('frontend/ecommerce') }}/assets/images/testimonials/testominal-02.png"
-                        alt=""
-                        data-pagespeed-url-hash="1373848681"
-                        onload="
-                          pagespeed.CriticalImages.checkImageForCriticality(
-                            this,
-                          )
-                        "
-                      />
-                    </div>
-                    <div class="d-block">
-                      <div class="fs-4 fw-medium">Mansuroglu</div>
-                      <div class="fs-16 fw-medium text-muted">Belgium</div>
-                    </div>
-                  </div>
-                  <p class="fs-16 lh-base mb-0 text_Zambezi review_text">
-                    Great customer support. Bdtask guys are doing great work. If
-                    you have zero knowledge about code, you can purchase the
-                    script, You don’t need any extra work using this script.
-                    Following the documentation you can install and set up
-                    easily. I highly recommend this script to anyone who has a
-                    multi-store.
-                  </p>
-                </div>
-              </div>
-              <div
-                class="owl-item active"
-                style="width: 418.667px; margin-right: 20px"
-              >
-                <div class="bg-white h-100 item p-4 rounded-5">
-                  <div class="align-items-center d-flex gap-3 mb-3">
-                    <div class="d-block">
-                      <img
-                        class="rounded-circle testimonial-img"
-                        src="{{ asset('frontend/ecommerce') }}/assets/images/testimonials/testominal-04.png"
-                        alt=""
-                        data-pagespeed-url-hash="1962848523"
-                        onload="
-                          pagespeed.CriticalImages.checkImageForCriticality(
-                            this,
-                          )
-                        "
-                      />
-                    </div>
-                    <div class="d-block">
-                      <div class="fs-4 fw-medium">Muhammad Umar</div>
-                      <div class="fs-16 fw-medium text-muted">Pakistan</div>
-                    </div>
-                  </div>
-                  <p class="fs-16 lh-base mb-0 text_Zambezi review_text">
-                    The multi-store script is well-organized and easy to use. It
-                    is flexible. At the initial stage, I was unable to install
-                    it. However, the support team of Bdtask took their time and
-                    installed it for me. Now the script is running successfully.
-                    I am happy to work with the Bdtask team.
-                  </p>
-                </div>
-              </div>
-              <div
-                class="owl-item active"
-                style="width: 418.667px; margin-right: 20px"
-              >
-                <div class="bg-white h-100 item p-4 rounded-5">
-                  <div class="align-items-center d-flex gap-3 mb-3">
-                    <div class="d-block">
-                      <img
-                        class="rounded-circle testimonial-img"
-                        src="{{ asset('frontend/ecommerce') }}/assets/images/testimonials/testominal-01.png"
-                        alt=""
-                        data-pagespeed-url-hash="1079348760"
-                        onload="
-                          pagespeed.CriticalImages.checkImageForCriticality(
-                            this,
-                          )
-                        "
-                      />
-                    </div>
-                    <div class="d-block">
-                      <div class="fs-4 fw-medium">Edward</div>
-                      <div class="fs-16 fw-medium text-muted">USA</div>
-                    </div>
-                  </div>
-                  <p class="fs-16 lh-base mb-0 text_Zambezi review_text">
-                    Bdtask is a great organization. I’m really glad I found
-                    them. I had a lot of problems when I bought the script.
-                    However, this is not a script error. It was my fault. But
-                    they took time and solved all my problems with patience. I
-                    am really happy working with them.
-                  </p>
-                </div>
-              </div>
-              <div
-                class="owl-item"
-                style="width: 418.667px; margin-right: 20px"
-              >
-                <div class="bg-white h-100 item p-4 rounded-5">
-                  <div class="align-items-center d-flex gap-3 mb-3">
-                    <div class="d-block">
-                      <img
-                        class="rounded-circle testimonial-img"
-                        src="{{ asset('frontend/ecommerce') }}/assets/images/testimonials/testominal.jpg"
-                        alt=""
-                        data-pagespeed-url-hash="69248368"
-                        onload="
-                          pagespeed.CriticalImages.checkImageForCriticality(
-                            this,
-                          )
-                        "
-                      />
-                    </div>
-                    <div class="d-block">
-                      <div class="fs-4 fw-medium">Satish Kumar</div>
-                      <div class="fs-16 fw-medium text-muted">India</div>
-                    </div>
-                  </div>
-                  <p class="fs-16 lh-base mb-0 text_Zambezi review_text">
-                    The multi-store inventory system is complete. Here you can
-                    add unlimited stores and control all account-related
-                    activities. The Bdtask team has done a great job with this
-                    script.
-                  </p>
-                </div>
-              </div>
-              <div
-                class="owl-item cloned"
-                style="width: 418.667px; margin-right: 20px"
-              >
-                <div class="bg-white h-100 item p-4 rounded-5">
-                  <div class="align-items-center d-flex gap-3 mb-3">
-                    <div class="d-block">
-                      <img
-                        class="rounded-circle testimonial-img"
-                        src="{{ asset('frontend/ecommerce') }}/assets/images/testimonials/testominal-02.png"
-                        alt=""
-                        data-pagespeed-url-hash="1373848681"
-                        onload="
-                          pagespeed.CriticalImages.checkImageForCriticality(
-                            this,
-                          )
-                        "
-                      />
-                    </div>
-                    <div class="d-block">
-                      <div class="fs-4 fw-medium">Mansuroglu</div>
-                      <div class="fs-16 fw-medium text-muted">Belgium</div>
-                    </div>
-                  </div>
-                  <p class="fs-16 lh-base mb-0 text_Zambezi review_text">
-                    Great customer support. Bdtask guys are doing great work. If
-                    you have zero knowledge about code, you can purchase the
-                    script, You don’t need any extra work using this script.
-                    Following the documentation you can install and set up
-                    easily. I highly recommend this script to anyone who has a
-                    multi-store.
-                  </p>
-                </div>
-              </div>
-              <div
-                class="owl-item cloned"
-                style="width: 418.667px; margin-right: 20px"
-              >
-                <div class="bg-white h-100 item p-4 rounded-5">
-                  <div class="align-items-center d-flex gap-3 mb-3">
-                    <div class="d-block">
-                      <img
-                        class="rounded-circle testimonial-img"
-                        src="{{ asset('frontend/ecommerce') }}/assets/images/testimonials/testominal-04.png"
-                        alt=""
-                        data-pagespeed-url-hash="1962848523"
-                        onload="
-                          pagespeed.CriticalImages.checkImageForCriticality(
-                            this,
-                          )
-                        "
-                      />
-                    </div>
-                    <div class="d-block">
-                      <div class="fs-4 fw-medium">Muhammad Umar</div>
-                      <div class="fs-16 fw-medium text-muted">Pakistan</div>
-                    </div>
-                  </div>
-                  <p class="fs-16 lh-base mb-0 text_Zambezi review_text">
-                    The multi-store script is well-organized and easy to use. It
-                    is flexible. At the initial stage, I was unable to install
-                    it. However, the support team of Bdtask took their time and
-                    installed it for me. Now the script is running successfully.
-                    I am happy to work with the Bdtask team.
-                  </p>
-                </div>
-              </div>
-              <div
-                class="owl-item cloned"
-                style="width: 418.667px; margin-right: 20px"
-              >
-                <div class="bg-white h-100 item p-4 rounded-5">
-                  <div class="align-items-center d-flex gap-3 mb-3">
-                    <div class="d-block">
-                      <img
-                        class="rounded-circle testimonial-img"
-                        src="{{ asset('frontend/ecommerce') }}/assets/images/testimonials/testominal-01.png"
-                        alt=""
-                        data-pagespeed-url-hash="1079348760"
-                        onload="
-                          pagespeed.CriticalImages.checkImageForCriticality(
-                            this,
-                          )
-                        "
-                      />
-                    </div>
-                    <div class="d-block">
-                      <div class="fs-4 fw-medium">Edward</div>
-                      <div class="fs-16 fw-medium text-muted">USA</div>
-                    </div>
-                  </div>
-                  <p class="fs-16 lh-base mb-0 text_Zambezi review_text">
-                    Bdtask is a great organization. I’m really glad I found
-                    them. I had a lot of problems when I bought the script.
-                    However, this is not a script error. It was my fault. But
-                    they took time and solved all my problems with patience. I
-                    am really happy working with them.
-                  </p>
-                </div>
-              </div>
+             
+             
             </div>
           </div>
           <div class="owl-nav">
@@ -4036,255 +3709,130 @@
         </div>
         <div class="row justify-content-center align-items-center">
           <div class="col-lg-8">
-            <div class="accordion" id="accordionExample">
-              <div class="accordion-item mb-3">
-                <h3 class="accordion-header" id="headingOne">
-                  <button
-                    class="accordion-button px-40 py-4 collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapseOne"
-                    aria-expanded="false"
-                    aria-controls="collapseOne"
-                  >
-                    <i class="fas fa-question-circle me-2"></i> What is the main
-                    purpose to use shopping cart software?
-                  </button>
-                </h3>
-                <div
-                  id="collapseOne"
-                  class="accordion-collapse collapse show"
-                  aria-labelledby="headingOne"
-                  data-bs-parent="#accordionExample"
-                >
-                  <div class="accordion-body pt-0 px-40">
-                    <p>
-                      The main reason for using any shopping cart software is
-                      that it can create a platform between the merchant and the
-                      customers. Also, this software can help the merchant sell
-                      their products easily. As well as, the customers can
-                      purchase using this system smoothly.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item mb-3">
-                <h3 class="accordion-header" id="headingTwo">
-                  <button
-                    class="accordion-button px-40 py-4 collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapseTwo"
-                    aria-expanded="false"
-                    aria-controls="collapseTwo"
-                  >
-                    <i class="fas fa-question-circle me-2"></i> Can I resell the
-                    TP Mart eCommerce shopping cart software by my brand?
-                  </button>
-                </h3>
-                <div
-                  id="collapseTwo"
-                  class="accordion-collapse collapse"
-                  aria-labelledby="headingTwo"
-                  data-bs-parent="#accordionExample"
-                >
-                  <div class="accordion-body pt-0 px-40">
-                    <p>
-                      Never. You don't have permission to do that. If you want
-                      to resell it, then you will need to contact us.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item mb-3">
-                <h3 class="accordion-header" id="headingThree">
-                  <button
-                    class="accordion-button px-40 py-4 collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapseThree"
-                    aria-expanded="false"
-                    aria-controls="collapseThree"
-                  >
-                    <i class="fas fa-question-circle me-2"></i> Why Choose TP
-                    Mart?
-                  </button>
-                </h3>
-                <div
-                  id="collapseThree"
-                  class="accordion-collapse collapse"
-                  aria-labelledby="headingThree"
-                  data-bs-parent="#accordionExample"
-                >
-                  <div class="accordion-body pt-0 px-40">
-                    <p>
-                      Here are some reasons to choose this e-commerce shopping
-                      cart software:
-                    </p>
-                    <p class="fs-22 fw-bold mb-2">
-                      Multi-Store E-commerce Shopping Cart Software
-                    </p>
-                    <p>
-                      Indeed, TP Mart can effortlessly manage and operate
-                      multiple online stores from a single centralised system.
-                    </p>
-                    <p class="fs-22 fw-bold mb-2">Licensed Shopping Cart</p>
-                    <p>
-                      TP Mart is licensed shopping cart software, which means
-                      online entrepreneurs have to buy the source code from us.
-                      TP Mart comes up with a premium source code, conveying
-                      that you get more security and more advanced features.
-                    </p>
-                    <p class="fs-22 fw-bold mb-2">E-commerce Android App</p>
-                    <p>
-                      As an add-on, you can integrate an e-commerce Android app
-                      that allows users to browse, shop, and make purchases from
-                      phones or tablets.
-                    </p>
-                    <p class="fs-22 fw-bold mb-2">Customization</p>
-                    <p>
-                      With TP Mart, it’s very easy to customise and design your
-                      online Cheapest ecommerce platform according to your
-                      needs.
-                    </p>
-                    <p class="fs-22 fw-bold mb-2">Fast &amp; Secure</p>
-                    <p>
-                      TP Mart provides a quick loading speed to ensure your
-                      customer gets a smooth shopping experience.
-                    </p>
-                    <p class="fs-22 fw-bold mb-2">Responsive Design</p>
-                    <p>
-                      TP Mart offers many exclusive types of design templates
-                      which play a big role in making your eCommerce website
-                      attractive and user-friendly.
-                    </p>
-                    <p class="fs-22 fw-bold mb-2">Multiple Payment Gateways</p>
-                    <p>
-                      TP Mart supports various payment methods, including
-                      credit/debit cards, digital wallets, and other popular
-                      payment gateways.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item mb-3">
-                <h3 class="accordion-header" id="headingFour">
-                  <button
-                    class="accordion-button px-40 py-4 collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapseFour"
-                    aria-expanded="true"
-                    aria-controls="collapseFour"
-                  >
-                    <i class="fas fa-question-circle me-2"></i> What is Shopping
-                    Cart software?
-                  </button>
-                </h3>
-                <div
-                  id="collapseFour"
-                  class="accordion-collapse collapse"
-                  aria-labelledby="headingFour"
-                  data-bs-parent="#accordionExample"
-                >
-                  <div class="accordion-body pt-0 px-40">
-                    <p>
-                      Shopping Cart Software is a solution that helps the
-                      customer's shopping experience be more vibrant and smooth.
-                      The customer easily selects the product and adds
-                      everything to the virtual cart.
-                    </p>
-                  </div>
-                </div>
-              </div>
+          <div class="accordion" id="accordionExample">
 
-              <div class="accordion-item mb-3">
-                <h3 class="accordion-header" id="headingFive">
-                  <button
-                    class="accordion-button px-40 py-4 collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapseFive"
-                    aria-expanded="true"
-                    aria-controls="collapseFive"
-                  >
-                    <i class="fas fa-question-circle me-2"></i> How many domains
-                    can I use with one license?
-                  </button>
-                </h3>
-                <div
-                  id="collapseFive"
-                  class="accordion-collapse collapse"
-                  aria-labelledby="headingFive"
-                  data-bs-parent="#accordionExample"
-                >
-                  <div class="accordion-body pt-0 px-40">
-                    <p>
-                      Per license is for one domain. If you want to use multiple
-                      domains, then you will need to purchase a new license.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item mb-3">
-                <h3 class="accordion-header" id="headingSix">
-                  <button
-                    class="accordion-button px-40 py-4 collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapseSix"
-                    aria-expanded="true"
-                    aria-controls="collapseSix"
-                  >
-                    <i class="fas fa-question-circle me-2"></i> What language
-                    and framework are used in shopping cart software in
-                    e-commerce?
-                  </button>
-                </h3>
-                <div
-                  id="collapseSix"
-                  class="accordion-collapse collapse"
-                  aria-labelledby="headingSix"
-                  data-bs-parent="#accordionExample"
-                >
-                  <div class="accordion-body pt-0 px-40">
-                    <p>
-                      TP Mart is mainly developed by PHP 8.0x and the
-                      Laravel framework. It is a fully responsive and
-                      user-friendly system.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item mb-3">
-                <h3 class="accordion-header" id="headingSeven">
-                  <button
-                    class="accordion-button px-40 py-4 collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapseSeven"
-                    aria-expanded="true"
-                    aria-controls="collapseSeven"
-                  >
-                    Is TP Mart Free ecommerce shopping cart software?
-                  </button>
-                </h3>
-                <div
-                  id="collapseSeven"
-                  class="accordion-collapse collapse"
-                  aria-labelledby="headingSeven"
-                  data-bs-parent="#accordionExample"
-                >
-                  <div class="accordion-body pt-0 px-40">
-                    <p>
-                      No. You can check the demo for free. For more price
-                      details information, please check
-                      <a href="#pricing-plans?s_rank=18">this page</a>.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+  <!-- Q1 -->
+  <div class="accordion-item mb-3">
+    <h3 class="accordion-header" id="headingOne">
+      <button class="accordion-button px-40 py-4 collapsed" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapseOne"
+        aria-expanded="false" aria-controls="collapseOne">
+        <i class="fas fa-question-circle me-2"></i> What is eCommerce software and why do I need it?
+      </button>
+    </h3>
+    <div id="collapseOne" class="accordion-collapse collapse show"
+      aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body pt-0 px-40">
+        <p>eCommerce software is a platform that allows businesses to sell products or services online. It handles everything from product listings and shopping carts to payment processing and order management — giving both merchants and customers a seamless buying and selling experience.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Q2 -->
+  <div class="accordion-item mb-3">
+    <h3 class="accordion-header" id="headingTwo">
+      <button class="accordion-button px-40 py-4 collapsed" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+        aria-expanded="false" aria-controls="collapseTwo">
+        <i class="fas fa-question-circle me-2"></i> What core features does TP Mart eCommerce software include?
+      </button>
+    </h3>
+    <div id="collapseTwo" class="accordion-collapse collapse"
+      aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+      <div class="accordion-body pt-0 px-40">
+        <p>TP Mart includes essential features such as product catalog management, a smart shopping cart, multiple payment gateway integrations, order tracking, inventory management, customer accounts, discount & coupon management, and a responsive storefront design — covering the full lifecycle of an online store.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Q3 -->
+  <div class="accordion-item mb-3">
+    <h3 class="accordion-header" id="headingThree">
+      <button class="accordion-button px-40 py-4 collapsed" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapseThree"
+        aria-expanded="false" aria-controls="collapseThree">
+        <i class="fas fa-question-circle me-2"></i> Is TP Mart suitable for small businesses as well as large enterprises?
+      </button>
+    </h3>
+    <div id="collapseThree" class="accordion-collapse collapse"
+      aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+      <div class="accordion-body pt-0 px-40">
+        <p>Yes. TP Mart is designed to scale with your business. Whether you are a small boutique launching your first online store or a large enterprise managing thousands of SKUs, TP Mart's flexible architecture adapts to your needs — including multi-store management from a single dashboard.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Q4 -->
+  <div class="accordion-item mb-3">
+    <h3 class="accordion-header" id="headingFour">
+      <button class="accordion-button px-40 py-4 collapsed" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapseFour"
+        aria-expanded="false" aria-controls="collapseFour">
+        <i class="fas fa-question-circle me-2"></i> Which payment gateways are supported?
+      </button>
+    </h3>
+    <div id="collapseFour" class="accordion-collapse collapse"
+      aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+      <div class="accordion-body pt-0 px-40">
+        <p>TP Mart supports a wide range of payment methods including credit and debit cards, digital wallets, and popular local and international payment gateways. You can configure the gateways that best suit your target market directly from the admin panel.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Q5 -->
+  <div class="accordion-item mb-3">
+    <h3 class="accordion-header" id="headingFive">
+      <button class="accordion-button px-40 py-4 collapsed" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapseFive"
+        aria-expanded="false" aria-controls="collapseFive">
+        <i class="fas fa-question-circle me-2"></i> How does TP Mart handle shipping and delivery management?
+      </button>
+    </h3>
+    <div id="collapseFive" class="accordion-collapse collapse"
+      aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+      <div class="accordion-body pt-0 px-40">
+        <p>TP Mart includes a built-in shipping management module that lets you define shipping zones, set flat or weight-based rates, and integrate with popular courier services. Real-time order tracking is available so your customers always know where their order is.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Q6 -->
+  <div class="accordion-item mb-3">
+    <h3 class="accordion-header" id="headingSix">
+      <button class="accordion-button px-40 py-4 collapsed" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapseSix"
+        aria-expanded="false" aria-controls="collapseSix">
+        <i class="fas fa-question-circle me-2"></i> What technology stack is TP Mart built on?
+      </button>
+    </h3>
+    <div id="collapseSix" class="accordion-collapse collapse"
+      aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+      <div class="accordion-body pt-0 px-40">
+        <p>TP Mart is developed using PHP 8.0+ and the Laravel framework, ensuring a modern, secure, and high-performance foundation. The frontend is fully responsive and mobile-friendly, offering a smooth experience across all devices.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Q7 -->
+  <div class="accordion-item mb-3">
+    <h3 class="accordion-header" id="headingSeven">
+      <button class="accordion-button px-40 py-4 collapsed" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapseSeven"
+        aria-expanded="false" aria-controls="collapseSeven">
+        <i class="fas fa-question-circle me-2"></i> Can I customize the storefront design to match my brand?
+      </button>
+    </h3>
+    <div id="collapseSeven" class="accordion-collapse collapse"
+      aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+      <div class="accordion-body pt-0 px-40">
+        <p>Absolutely. if your want to customize the storefront design to match your brand, we will help you achieve that.</p>
+      </div>
+    </div>
+  </div>
+
+
+
+</div>
           </div>
         </div>
       </div>

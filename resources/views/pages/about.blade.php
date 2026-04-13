@@ -880,7 +880,7 @@
     </div>
 
     <!-- Start-->
-    <div class="py_100 position-relative" bis_skin_checked="1">
+    {{-- <div class="py_100 position-relative" bis_skin_checked="1">
       <div class="container-md" bis_skin_checked="1">
         <div class="row justify-content-center" bis_skin_checked="1">
           <div class="col-xl-6 col-md-10 col-lg-8" bis_skin_checked="1">
@@ -955,12 +955,12 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> --}}
 
     <!-- Mission & Vision - Hidden/Optimized Section -->
     {{-- Mission & Vision section removed for cleaner page layout --}}
 
-    <div class="glance bg_grad2 py_100 position-relative" bis_skin_checked="1">
+    {{-- <div class="glance bg_grad2 py_100 position-relative" bis_skin_checked="1">
       <div class="container-md" bis_skin_checked="1">
         <div class="row justify-content-center" bis_skin_checked="1">
           <div class="col-xl-6 col-md-10 col-lg-8" bis_skin_checked="1">
@@ -1365,9 +1365,198 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> --}}
 
-  
+     <!-- Client Logo Start-->
+      <div class="py_100">
+        <div class="container-md">
+          <div class="row mb_100 justify-content-center">
+            <div class="col-xl-6 col-lg-8 col-md-10">
+              <div class="text-center mb-4">
+                <h2 class="fs-1 fw-bold mb-3">
+                  
+                  <span class="text-techparkit animate-text">Our Clients</span>
+                </h2>
+              </div>
+            </div>
+          </div>
+        
+          <div
+            class="align-items-center justify-content-center row text-center clients_logo"
+          >
+            <div
+              class="align-items-center col-xl-2 col-sm-4 col-6 d-flex logo_box justify-content-center"
+            >
+              <div class="d-block">
+                <img
+                  src="{{ asset('frontend/asset/img/work_company_name/alhelalmotor.png') }}"
+                  class="client_logo transition"
+                  alt="Al Helal Motor"
+                />
+              </div>
+            </div>
+
+            <div
+              class="align-items-center col-xl-2 col-sm-4 col-6 d-flex logo_box justify-content-center"
+            >
+              <div class="d-block">
+                <img
+                  src="{{ asset('frontend/asset/img/work_company_name/bme.png') }}"
+                  class="client_logo transition"
+                  alt="BME"
+                />
+              </div>
+            </div>
+
+            <div
+              class="align-items-center col-xl-2 col-sm-4 col-6 d-flex logo_box justify-content-center"
+            >
+              <div class="d-block">
+                <img
+                  src="{{ asset('frontend/asset/img/work_company_name/cdc_concreate.png') }}"
+                  class="client_logo transition"
+                  alt="CDC Concreate"
+                />
+              </div>
+            </div>
+
+            <div
+              class="align-items-center col-xl-2 col-sm-4 col-6 d-flex logo_box justify-content-center"
+            >
+              <div class="d-block">
+                <img
+                  src="{{ asset('frontend/asset/img/work_company_name/cdc_furniture.png') }}"
+                  class="client_logo transition"
+                  alt="CDC Furniture"
+                />
+              </div>
+            </div>
+
+            <div
+              class="align-items-center col-xl-2 col-sm-4 col-6 d-flex logo_box justify-content-center"
+            >
+              <div class="d-block">
+                <img
+                  src="{{ asset('frontend/asset/img/work_company_name/ctg.png') }}"
+                  class="client_logo transition"
+                  alt="CTG"
+                />
+              </div>
+            </div>
+
+            <div
+              class="align-items-center col-xl-2 col-sm-4 col-6 d-flex logo_box justify-content-center"
+            >
+              <div class="d-block">
+                <img
+                  src="{{ asset('frontend/asset/img/work_company_name/etek.png') }}"
+                  class="client_logo transition"
+                  alt="Etek"
+                />
+              </div>
+            </div>
+
+            <div
+              class="align-items-center col-xl-2 col-sm-4 col-6 d-flex logo_box justify-content-center"
+            >
+              <div class="d-block">
+                <img
+                  src="{{ asset('frontend/asset/img/work_company_name/fabarif.png') }}"
+                  class="client_logo transition"
+                  alt="Fabarif"
+                />
+              </div>
+            </div>
+
+            <div
+              class="align-items-center col-xl-2 col-sm-4 col-6 d-flex logo_box justify-content-center"
+            >
+              <div class="d-block">
+                <img
+                  src="{{ asset('frontend/asset/img/work_company_name/hlmotors.png') }}"
+                  class="client_logo transition"
+                  alt="HL Motors"
+                />
+              </div>
+            </div>
+
+            <div
+              class="align-items-center col-xl-2 col-sm-4 col-6 d-flex logo_box justify-content-center"
+            >
+              <div class="d-block">
+                <img
+                  src="{{ asset('frontend/asset/img/work_company_name/meritcare.png') }}"
+                  class="client_logo transition"
+                  alt="MeritCare"
+                />
+              </div>
+            </div>
+
+            <div
+              class="align-items-center col-xl-2 col-sm-4 col-6 d-flex logo_box justify-content-center"
+            >
+              <div class="d-block">
+                <img
+                  src="{{ asset('frontend/asset/img/work_company_name/roseroyal.png') }}"
+                  class="client_logo transition"
+                  alt="Rose Royal"
+                />
+              </div>
+            </div>
+
+            <div
+              class="align-items-center col-xl-2 col-sm-4 col-6 d-flex logo_box justify-content-center"
+            >
+              <div class="d-block">
+                <img
+                  src="{{ asset('frontend/asset/img/work_company_name/starlit.png') }}"
+                  class="client_logo transition"
+                  alt="Starlit"
+                />
+              </div>
+            </div>
+
+            <div
+              class="align-items-center col-xl-2 col-sm-4 col-6 d-flex logo_box justify-content-center"
+            >
+              <div class="d-block">
+                <img
+                  src="{{ asset('frontend/asset/img/work_company_name/yni.png') }}"
+                  class="client_logo transition"
+                  alt="Superb"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xl-10 offset-xl-1">
+              <div
+                class="align-items-center bg-dark d-xl-flex justify-content-between py-5 rounded-5 join_box mt-5"
+              >
+                <div class="d-block mw_560">
+                  <h3 class="fs-3 fw-bold mb-2 text-white">
+                    Be with Us to Wheel Up Your Revenue
+                  </h3>
+                  <p class="text-white mb-0">
+                    We are always ready to serve you. Please share your ideas
+                    and values with us.
+                  </p>
+                </div>
+                <div class="d-block mt-4 mt-xl-0">
+                  <a
+                    href="{{ url('/') }}#contact"
+                    target="_blanks"
+                    class="btn btn-success px-5 py-3"
+                    >Contact Us</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
 
 @endsection
 
