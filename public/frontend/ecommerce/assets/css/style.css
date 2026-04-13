@@ -380,8 +380,11 @@ body {
 
 .menu_tray {
   height: 2px;
-  background-color: #212529;
+  background-color: #ffffff;
   margin: 6px 0;
+}
+.header_area .bg-white .menu_tray {
+  background-color: #212529;
 }
 
 .menu_tray:first-child {

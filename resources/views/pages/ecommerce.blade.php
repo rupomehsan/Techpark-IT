@@ -65,9 +65,9 @@
     <link href="{{ asset('frontend/ecommerce') }}/assets/css/themify-icons.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
     <link href="{{ asset('frontend/ecommerce') }}/assets/css/videoPopUp.css" rel="stylesheet" />
-    <link href="{{ asset('frontend/ecommerce') }}/assets/css/tp-mart-new-style.css" rel="stylesheet" />
+    <link href="{{ asset('frontend/ecommerce') }}/assets/css/tp-mart-new-style.css?v={{ rand(9999,1000000) }}" rel="stylesheet" />
     <link href="{{ asset('frontend/ecommerce') }}/assets/css/related-product.css" rel="stylesheet" />
-    <link href="{{ asset('frontend/ecommerce') }}/assets/css/style.css" rel="stylesheet" />
+    <link href="{{ asset('frontend/ecommerce') }}/assets/css/style.css?v={{ rand(9999,1000000) }}" rel="stylesheet" />
     <link href="{{ asset('frontend/ecommerce') }}/assets/css/www-player.css" rel="stylesheet" />
 
     <!-- Google Tag Manager -->
@@ -128,31 +128,7 @@
     </div>
 
     <div class="banner_wrapper position-relative header-section">
-      <div
-        class="header_area bg-white end-0 navbar_fixed position-fixed start-0 top-0"
-      >
-        <!--<div class="align-items-center d-flex justify-content-center midSaleBg px-4 py-2 text-white">-->
-        <!--	<span class="me-2">Mid-Year Software Sale 2023 | Save Upto 50% </span> <a href="https://bdtask.com/mid-year-sale.php" target="_blank" class="btn btn-sm btn-warning" style="white-space: nowrap;">Grab it now</a>-->
-        <!--</div>-->
-
-        {{-- <div
-          class="align-items-center d-flex justify-content-center midSaleBg px-4 py-2 text-white"
-        >
-          <span class="me-2">Save Extra Cost &amp; Increase Your ROI </span>
-          <a
-            href="https://www.bdtask.com/software-list.php"
-            target="_blank"
-            class="btn btn-sm btn-warning"
-            style="white-space: nowrap"
-            >Grab it now</a
-          >
-        </div> --}}
-
-        <!--<div class="align-items-center d-flex justify-content-center midSaleBg px-4 py-2 text-white">-->
-        <!--	<span class="me-4">Black Friday & Cyber Monday Deals | Up To 80% Off </span> <a href="https://www.bdtask.com/cyber-week-sale.php" target="_blank" class="btn btn-sm btn-warning" style="white-space: nowrap;">Buy Now</a>-->
-        <!--</div>-->
-        <div class="container-lg">
-          <!-- Start Navigation -->
+   
 
           <div class="header_area">
             <!--<div class="align-items-center d-flex justify-content-center midSaleBg px-4 py-2 text-white">-->
@@ -1381,8 +1357,7 @@
               </li>
             </ul>
           </div>
-        </div>
-      </div>
+     
 
         <div
           class="bg-white bottom-0 flex-shrink-0 px-4 position-fixed top-0 sideNav"
@@ -3079,7 +3054,7 @@
     </div>
 
     <!-- Easy Steps -->
-    <section class="py_100">
+    {{-- <section class="py_100">
       <div class="container">
         <div class="row justify-content-center pt-5 mb-5">
           <div class="col-md-8">
@@ -3131,7 +3106,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> --}}
 
     <!-- Happy You, Happy Us -->
     <div class="testimonial_part bg_grad py_100">

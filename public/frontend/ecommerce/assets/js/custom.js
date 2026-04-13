@@ -58,19 +58,37 @@ $(document).ready(function ($) {
 		});
 	});
 
+	// Sticky menu optimization with throttling
+	var scrollThreshold = 80;
+	var headerSticky = false;
+	var lastScrollTime = 0;
+	var scrollDelay = 50; // Throttle scroll events to every 50ms
+
 	$(window).scroll(function () {
+		var currentTime = new Date().getTime();
+
+		// Throttle scroll event
+		if (currentTime - lastScrollTime < scrollDelay) {
+			return;
+		}
+		lastScrollTime = currentTime;
 
 		var scroll = $(window).scrollTop();
-		var isMobile = $(window).width() <= 768;
-		var scrollThreshold = isMobile ? 100 : 1; // Show sticky menu on mobile after 100px scroll, on desktop immediately
 
+		// Show/hide sticky menu based on scroll threshold
 		if (scroll > scrollThreshold) {
-			$(".header_area").addClass("bg-white end-0 navbar_fixed position-fixed start-0 top-0");
+			if (!headerSticky) {
+				$(".header_area").addClass("bg-white end-0 navbar_fixed position-fixed start-0 top-0");
+				headerSticky = true;
+			}
 		} else {
-			$(".header_area").removeClass("bg-white end-0 navbar_fixed position-fixed start-0 top-0");
+			if (headerSticky) {
+				$(".header_area").removeClass("bg-white end-0 navbar_fixed position-fixed start-0 top-0");
+				headerSticky = false;
+			}
 		}
 
-		if ($(window).scrollTop() > 300) {
+		if (scroll > 300) {
 			$('.gotoTop').addClass('show');
 		} else {
 			$('.gotoTop').removeClass('show');
