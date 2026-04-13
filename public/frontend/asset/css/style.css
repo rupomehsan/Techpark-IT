@@ -1417,11 +1417,18 @@ body.menu-open {
 
   .banner .main_title {
     line-height: 44px;
+    font-size: 30px !important;
   }
 
   .join_box {
     padding-left: 40px;
     padding-right: 40px;
+  }
+
+  .page-title {
+    font-size: 32px;
+    margin-top: 20px;
+    margin-bottom: 30px;
   }
 
   .slider_nav.owl-carousel .owl-nav .owl-prev,
@@ -1435,6 +1442,10 @@ body.menu-open {
     right: 0px;
     top: -30px;
   }
+
+  .shape_rotated::after {
+    left: -100px;
+  }
 }
 
 @media (max-width: 575px) {
@@ -1445,6 +1456,12 @@ body.menu-open {
   .banner .info_text {
     font-size: 16px;
     line-height: 25px;
+  }
+
+  .page-title {
+    font-size: 24px;
+    margin-top: 15px;
+    margin-bottom: 20px;
   }
 
   .logo_box:nth-child(2n) {
@@ -1940,7 +1957,7 @@ div[id] {
 } */
 
 .banner .main_title {
-  font-size: 41px !important;
+  font-size: 41px;
   line-height: 1.2 !important;
   font-weight: 700 !important;
   margin-bottom: 24px;
@@ -2533,6 +2550,7 @@ div[id] {
   .banner_wrapper::after {
     width: 300px;
     height: 300px;
+    right: 40px;
   }
 
   .banner::before,

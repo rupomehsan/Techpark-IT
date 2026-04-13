@@ -580,16 +580,30 @@ We offer a wide range of ready-to-deploy business software solutions designed to
               id="pills-tab"
               role="tablist"
             >
-              <li class="nav-item" role="presentation">
+            <li class="nav-item" role="presentation">
                 <button
                   class="nav-link active px-4 py-2 rounded-0 fs-17 transition"
+                  id="pills-ourproducts2-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-ourproducts2"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-ourproducts2"
+                  aria-selected="true"
+                >
+                  Our Products
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link  px-4 py-2 rounded-0 fs-17 transition"
                   id="pills-education2-tab"
                   data-bs-toggle="pill"
                   data-bs-target="#pills-education2"
                   type="button"
                   role="tab"
                   aria-controls="pills-education"
-                  aria-selected="true"
+                  aria-selected="false"
                 >
                   Education
                 </button>
@@ -650,11 +664,89 @@ We offer a wide range of ready-to-deploy business software solutions designed to
                   Other
                 </button>
               </li>
+              
             </ul>
             <div class="tab-content" id="pills-tabContent">
-              <!-- Education Tab (5 projects) -->
+              <!-- Our Products Tab (6 products) -->
               <div
                 class="tab-pane fade show active"
+                id="pills-ourproducts2"
+                role="tabpanel"
+                aria-labelledby="pills-ourproducts2-tab"
+              >
+                <div class="row g-3">
+                  <div class="col-xl-4 col-md-6">
+                    <a href="{{ route('projectEcommerce') }}" target="_blank" class="bg_grad p-4 align-items-start d-flex product_link h-100">
+                      <div class="d-block">
+                        <img loading="lazy" src="https://img.icons8.com/fluency/96/shopping-cart.png" class="product_icon" alt="TP-Mart"/>
+                      </div>
+                      <div class="d-block ms-4">
+                        <p class="mb-2 fw_500 fs-16 lh-sm">TP-Mart E-Commerce</p>
+                        <p class="mb-0 fs-14">Complete e-commerce solution with admin panel and inventory management.</p>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-xl-4 col-md-6">
+                    <a href="https://smssolutions.techparkit.info/" target="_blank" class="bg_grad2 p-4 align-items-start d-flex product_link h-100">
+                      <div class="d-block">
+                        <img loading="lazy" src="https://img.icons8.com/fluency/96/school.png" class="product_icon" alt="School Management"/>
+                      </div>
+                      <div class="d-block ms-4">
+                        <p class="mb-2 fw_500 fs-16 lh-sm">School Management System</p>
+                        <p class="mb-0 fs-14">Comprehensive school management with student records and attendance tracking.</p>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-xl-4 col-md-6">
+                    <a href="https://invsolutions.techparkit.info/" target="_blank" class="bg_grad p-4 align-items-start d-flex product_link h-100">
+                      <div class="d-block">
+                        <img loading="lazy" src="https://img.icons8.com/fluency/96/warehouse-1.png" class="product_icon" alt="Inventory"/>
+                      </div>
+                      <div class="d-block ms-4">
+                        <p class="mb-2 fw_500 fs-16 lh-sm">Inventory Management</p>
+                        <p class="mb-0 fs-14">Advanced inventory tracking system for efficient stock management.</p>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-xl-4 col-md-6">
+                    <a href="#" target="_blank" class="bg_grad2 p-4 align-items-start d-flex product_link h-100">
+                      <div class="d-block">
+                        <img loading="lazy" src="https://img.icons8.com/?size=100&id=8GXfjQAEc8uB&format=png&color=000000" class="product_icon" alt="Asset"/>
+                      </div>
+                      <div class="d-block ms-4">
+                        <p class="mb-2 fw_500 fs-16 lh-sm">Asset Management</p>
+                        <p class="mb-0 fs-14">Complete asset tracking and management solution for organizations.</p>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-xl-4 col-md-6">
+                    <a href="#" target="_blank" class="bg_grad p-4 align-items-start d-flex product_link h-100">
+                      <div class="d-block">
+                        <img loading="lazy" src="https://img.icons8.com/fluency/96/restaurant.png" class="product_icon" alt="Meal"/>
+                      </div>
+                      <div class="d-block ms-4">
+                        <p class="mb-2 fw_500 fs-16 lh-sm">Meal Management</p>
+                        <p class="mb-0 fs-14">Complete meal and catering solution with online ordering system.</p>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-xl-4 col-md-6">
+                    <a href="#" target="_blank" class="bg_grad2 p-4 align-items-start d-flex product_link h-100">
+                      <div class="d-block">
+                        <img loading="lazy" src="https://img.icons8.com/fluency/96/project.png" class="product_icon" alt="Project"/>
+                      </div>
+                      <div class="d-block ms-4">
+                        <p class="mb-2 fw_500 fs-16 lh-sm">Project Management</p>
+                        <p class="mb-0 fs-14">Professional project management platform for team collaboration.</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Education Tab (5 projects) -->
+              <div
+                class="tab-pane fade"
                 id="pills-education2"
                 role="tabpanel"
                 aria-labelledby="pills-education2-tab"
@@ -682,17 +774,7 @@ We offer a wide range of ready-to-deploy business software solutions designed to
                       </div>
                     </a>
                   </div>
-                  <div class="col-xl-4 col-md-6">
-                    <a href="https://sms.techparkit.info/" target="_blank" class="bg_grad p-4 align-items-start d-flex product_link h-100">
-                      <div class="d-block">
-                        <img loading="lazy" src="https://img.icons8.com/fluency/96/administrative-tools.png" class="product_icon" alt="TechPark SMS"/>
-                      </div>
-                      <div class="d-block ms-4">
-                        <p class="mb-2 fw_500 fs-16 lh-sm">TechPark School Management System</p>
-                        <p class="mb-0 fs-14">Advanced SMS platform for educational institutions with complete automation.</p>
-                      </div>
-                    </a>
-                  </div>
+                  
                   <div class="col-xl-4 col-md-6">
                     <a href="https://techparkenglish.org/" target="_blank" class="bg_grad2 p-4 align-items-start d-flex product_link h-100">
                       <div class="d-block">
@@ -770,17 +852,7 @@ We offer a wide range of ready-to-deploy business software solutions designed to
                       </div>
                     </a>
                   </div>
-                  <div class="col-xl-4 col-md-6">
-                    <a href="https://tpmart.techparkit.info/" target="_blank" class="bg_grad p-4 align-items-start d-flex product_link h-100">
-                      <div class="d-block">
-                        <img loading="lazy" src="https://img.icons8.com/fluency/96/shopping-cart.png" class="product_icon" alt="TechPark Mart"/>
-                      </div>
-                      <div class="d-block ms-4">
-                        <p class="mb-2 fw_500 fs-16 lh-sm">TechPark Mart E-Commerce</p>
-                        <p class="mb-0 fs-14">Modern e-commerce platform with admin panel and complete inventory system.</p>
-                      </div>
-                    </a>
-                  </div>
+                 
                 </div>
               </div>
 
