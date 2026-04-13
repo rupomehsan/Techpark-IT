@@ -1986,3 +1986,9 @@ button.depth {
   margin-top: 0;
   transition: all 0.2s ease-in-out;
 }
+
+@media (max-width: 768px) {
+  .underline-2:after {
+    width: 80%;
+  }
+}

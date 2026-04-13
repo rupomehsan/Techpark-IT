@@ -491,7 +491,7 @@
                                         @php
                                             // mapping for special product detail pages
                                             $detailMap = [
-                                                'tp-mart' => 'https://ecsolutions.techparkit.info/',
+                                                'tp-mart' => '/projects/ecommerce',
                                                 'inventory' => 'https://invsolutions.techparkit.info/',
                                                 'school' => 'https://smssolutions.techparkit.info/'
                                             ];

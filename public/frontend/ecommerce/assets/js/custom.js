@@ -59,14 +59,17 @@ $(document).ready(function ($) {
 	});
 
 	$(window).scroll(function () {
-		
+
 		var scroll = $(window).scrollTop();
-		if (scroll) {
+		var isMobile = $(window).width() <= 768;
+		var scrollThreshold = isMobile ? 100 : 1; // Show sticky menu on mobile after 100px scroll, on desktop immediately
+
+		if (scroll > scrollThreshold) {
 			$(".header_area").addClass("bg-white end-0 navbar_fixed position-fixed start-0 top-0");
 		} else {
 			$(".header_area").removeClass("bg-white end-0 navbar_fixed position-fixed start-0 top-0");
 		}
-		
+
 		if ($(window).scrollTop() > 300) {
 			$('.gotoTop').addClass('show');
 		} else {
